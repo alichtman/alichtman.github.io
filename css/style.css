@@ -1,6 +1,6 @@
 * {
   margin: 20
-  padding: 20;
+  padding: 10;
   font-family: "Avenir Next", "Roboto", "sans-serif";
   background-color: #00A1FA;
 }
@@ -19,7 +19,6 @@ a {
 
 p {
     color: white;
-    padding-top: 20px;
 }
 
 .menu-bar {
@@ -28,40 +27,37 @@ p {
   width: 100%;
   }
 
-#container {
-  
-}
-
 #header {
   padding-top: 30px;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 #links1 {
-  padding-left: 80px;
+  padding-left: 130px;
   text-align: left;
   float: left;
 }
 
 #links1 .left-item {
-    padding-left: 40px;
+    padding-left: 30px;
+    text-decoration:  none;
 }
 
 #links2 {
-  padding-right: 120px;
+  padding-right: 105px;
   text-align: right;
   float: right;
 }
 
 #links2 .logo {
     padding-right: 15px;
-    width:28px;
-    height:28px;
+    width: 25px;
+    height: 25px;
 }
 
 #dead_space {
   padding: 10px;
-  height:  200px;
+  height:  150px;
 }
 
 #avatar {
@@ -82,44 +78,68 @@ p {
 
 #bio .intro {
    margin-left: 165px;
-    color: antiquewhite;
-    font-size: 26px;
+    color: white;
+    font-size: 25px;
 }
 
 #contact-section {
     margin-left: 165px;
 }
 
-.get-in-touch-button {
-    border: 50%;
-    border-radius: 40px;
-    border-width:  2px;
+#contact-section .get-in-touch-button {
     color: white;
-    margin-left: 8px;
+    border-radius: 40px;
+    border-width:  3px;
+    border-color: white;
+    margin-left: 2px;
+    margin-right: 5px;
     padding: 15px 25px;
     text-align: center;
     font-size: 16px;
 }
 
-/* Gradient transparent - color - transparent */
-hr.bar {
-    width: 95%;
-    border: 10px;
-    height: 1px;
-    background-color: antiquewhite;
+#contact-section .inline-link {
+    display: inline;
+    color: white;
+    margin-left: 5px;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+#contact-section .about {
+    display: inline;
+    color: white;
+    font-size: 15px;
+}
+
+#contact-section .learn-more {
+    display: inline;
+    color: white;
+    font-size: 15px;
+    font-weight: 475;
 }
 
 #footer {
     padding: 10px;
     margin-left: 20px;
     clear: both;
-    height: 50px; 
-	bottom: 3px;  
-	width: inherit;
+    height: 50px;
+    position: fixed;
+	bottom: 0px;
+	width: 95%;
+}
+
+hr.bar {
+    width: 80%;
+    border: 10px;
+    height: 3px;
+    background-color: white;
 }
 
 #footer .details {
-    padding-top: 10px;
-    font-size: 11px;
-    color: antiquewhite;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    margin-left:  135px;
+    font-size: 13px;
+    color: white;
 }
