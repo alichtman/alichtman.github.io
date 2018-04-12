@@ -15,7 +15,19 @@ nav {
 
 a {
     color: white;
+    display: inline-block;
+    position: relative; 
+    height: 100%;
 };
+
+span {
+    display: inline-block;
+    height: 100%;
+}
+
+object {
+    pointer-events: none;
+}
 
 p {
     color: white;
@@ -47,6 +59,7 @@ p {
   padding-right: 105px;
   text-align: right;
   float: right;
+  display: inline-block;
 }
 
 #links2 .logo {
@@ -96,6 +109,7 @@ p {
     padding: 15px 25px;
     text-align: center;
     font-size: 16px;
+    cursor:pointer;
 }
 
 #contact-section .inline-link {
