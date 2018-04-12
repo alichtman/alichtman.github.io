@@ -1,24 +1,22 @@
 * {
-  margin: 20
-  padding: 10;
-  font-family: "Avenir Next", "Roboto", "sans-serif";
-  background-color: #00A1FA;
+    font-family: "Avenir Next", "Roboto", "sans-serif";
+    background-color: #00A1FA;
 }
 
 body {
-    font-size:  20px;
+    font-size: 20px;
 }
 
 nav {
-  padding: 5px;
+    padding: 5px;
 }
 
 a {
     color: white;
     display: inline-block;
-    position: relative; 
+    position: relative;
     height: 100%;
-};
+}
 
 span {
     display: inline-block;
@@ -33,33 +31,36 @@ p {
     color: white;
 }
 
-.menu-bar {
-  padding: 10px;
-  height: 30px;
-  width: 100%;
-  }
-
 #header {
-  padding-top: 30px;
-  font-size: 18px;
+    padding-top: 30px;
+    font-size: 18px;
+    margin-left: 150px;
 }
 
 #links1 {
-  padding-left: 130px;
-  text-align: left;
-  float: left;
+    text-align: left;
+    float: left;
 }
 
-#links1 .left-item {
-    padding-left: 30px;
-    text-decoration:  none;
+#links1 a{
+    text-decoration: none;
+    padding-left: 20px;
+}
+
+#links1 a.left-item-active {
+    font-weight: 600;
+}
+
+#links1 a:hover {
+    text-decoration-color: #ddd;
+    color: black;
 }
 
 #links2 {
-  padding-right: 105px;
-  text-align: right;
-  float: right;
-  display: inline-block;
+    padding-right: 105px;
+    text-align: right;
+    float: right;
+    display: inline-block;
 }
 
 #links2 .logo {
@@ -69,8 +70,8 @@ p {
 }
 
 #dead_space {
-  padding: 10px;
-  height:  150px;
+    padding: 10px;
+    height: 150px;
 }
 
 #avatar {
@@ -82,15 +83,15 @@ p {
     margin-left: 160px;
     width: 140px;
     resize: both;
-};
+}
 
 #bio {
-    display: inline-block;
+    display: block;
     position: relative;
 }
 
 #bio .intro {
-   margin-left: 165px;
+    margin-left: 165px;
     color: white;
     font-size: 25px;
 }
@@ -102,14 +103,14 @@ p {
 #contact-section .get-in-touch-button {
     color: white;
     border-radius: 40px;
-    border-width:  3px;
+    border-width: 3px;
     border-color: white;
     margin-left: 2px;
     margin-right: 5px;
     padding: 15px 25px;
     text-align: center;
     font-size: 16px;
-    cursor:pointer;
+    cursor: pointer;
 }
 
 #contact-section .inline-link {
@@ -139,8 +140,8 @@ p {
     clear: both;
     height: 50px;
     position: fixed;
-	bottom: 0px;
-	width: 95%;
+    bottom: 0px;
+    width: 95%;
 }
 
 hr.bar {
@@ -153,7 +154,7 @@ hr.bar {
 #footer .details {
     margin-bottom: 15px;
     padding-bottom: 15px;
-    margin-left:  135px;
+    margin-left: 135px;
     font-size: 13px;
     color: white;
 }
