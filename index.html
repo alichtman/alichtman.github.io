@@ -3,6 +3,7 @@
 	<head>
 		<title>Aaron Lichtman</title>
 		<link rel="stylesheet" type="text/css" href="css/style.css">
+        <script type="text/javascript" src="js/script.js"></script>
 		<meta charset="UTF-8">
 		<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859">
 		<meta content="width=device-width, initial-scale=1" name="viewport">
@@ -13,13 +14,32 @@
 	</head>
 	<body>
 
+        <div id="sliding-drawer">
+
+            <div id="drawer_button" onclick="close_drawer()">
+                <object class="open-arrows" type="image/svg+xml" data="assets/vectors/arrows-right.svg">
+                    Your browser does not support SVG
+                </object>
+            </div>
+
+            <div id="sliding-drawer-content">
+
+            </div>
+
+            <!--<div id="drawer-close-button" onClick="open_drawer()">-->
+                <!--<object class="close-arrows" type="image/svg+xml" data="assets/vectors/arrows-right.svg">-->
+                    <!--Your browser does not support SVG-->
+                <!--</object>-->
+            <!--</div>-->
+
+        </div>
+
 		<div id="container">
 
 			<nav id="header">
 				<div id="links1">
 					<!-- about and portfolio -->
                     <a href="/" class="left-item-active">Home</a>
-					<a href="#about" >About</a>
                     <a href="https://medium.com/@aaronlichtman">Blog</a>
 			  		<a href="/portfolio.html">Portfolio</a>
                     <a href="/resume.pdf">Resume</a>
@@ -50,12 +70,6 @@
 
             <div id=avatar>
                  <img  class="headshot" type = "image/png" src="assets/img/headshot.png" alt="Avatar">
-            </div>
-
-            <div id="about-circle-button">
-                <object class="about-arrows" type="image/svg+xml" data="assets/vectors/arrows-right.svg">
-                     Your browser does not support SVG
-                </object>
             </div>
 
             <div id="bio">

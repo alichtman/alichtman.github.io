@@ -85,20 +85,88 @@ p {
     resize: both;
 }
 
-#about-circle-button {
+/*Small shake animation*/
+@keyframes shake {
+    10%, 90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+
+    20%, 80% {
+        transform: translate3d(2px, 0, 0);
+    }
+
+    30%, 50%, 70% {
+        transform: translate3d(-2px, 0, 0);
+    }
+
+    40%, 60% {
+        transform: translate3d(2px, 0, 0);
+    }
+}
+
+#sliding-drawer {
+    z-index: 2;
+    display: inline-block;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: white;
+    margin-right: 0;
+    float: right;
+    width: 500px;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    color: white;
+    position: fixed;
+    box-shadow: -6px 0 40px 2px rgba(0, 0, 0, 0.4);
+}
+
+#drawer_closed_button {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background: white;
+    margin-right: 200px;
+    padding-top: 400px;
+    overflow: hidden;
+    margin-top: 320px;
+    position: absolute;
+    display: none;
+    z-index: 3;
+}
+
+#drawer_closed_button .close-arrows {
+    width: 50%;
+    align-items: center;
+    display: none;
+    visibility: hidden;
+    justify-content: center;
+    background-color: white;
+}
+
+#drawer_button {
     width: 50px;
     height: 50px;
     border-radius: 25px;
     background: white;
     float: right;
-    margin-right: 70px;
+    margin-right: 475px;
     display: flex;
     text-align: center;
     overflow: hidden;
-    margin-top: 60px;
+    margin-top: 330px;
+    z-index: 5;
+    box-shadow: -10px 0 40px 1px rgba(0, 0, 0, 0.4);
 }
 
-#about-circle-button .about-arrows {
+#drawer_button:hover {
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+#drawer_button .open-arrows {
     width: 50%;
     display: flex;
     margin-left: 14px;
@@ -116,6 +184,8 @@ p {
     margin-left: 165px;
     color: white;
     font-size: 25px;
+    width: 800px;
+    margin-right: 500px;
 }
 
 #contact-section {
@@ -162,8 +232,8 @@ p {
 #contact-section .learn-more {
     display: inline;
     color: white;
-    font-size: 15px;
-    font-weight: 475;
+    font-size: 16px;
+    font-weight: 500;
 }
 
 #footer {
