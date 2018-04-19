@@ -130,6 +130,16 @@ p {
     cursor: pointer;
 }
 
+#contact-section .get-in-touch-button:hover {
+    color: black;
+    border-width: 3px;
+    border-color: black;
+}
+
+#contact-section .learn-more:hover {
+    color: black;
+}
+
 #contact-section .inline-link {
     display: inline;
     color: white;
