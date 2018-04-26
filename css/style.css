@@ -115,13 +115,24 @@ p {
     overflow: hidden;
 }
 
-#about-header {
-    padding-left: 15px;
-    position: relative;
+/*TODO: CLEAN THIS SECTION UP*/
+
+#skills-section {
     background-color: white;
-    color: white;
 }
 
+#skills-title {
+    background-color: white;
+    color: #00A1FA;
+    align-content: center;
+    margin-right: 80px;
+}
+
+#tech-stack-left .ul {
+    float: left;
+    align-content: left;
+    background-color: white;
+}
 
 #closed-drawer-button {
     width: 50px;
@@ -242,7 +253,7 @@ p {
 #contact-section .learn-more {
     display: inline;
     color: white;
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 500;
 }
 
