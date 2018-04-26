@@ -13,40 +13,45 @@
 
 	</head>
 	<body>
-
         <div id="sliding-drawer">
-
-            <div id="drawer_button" onclick="close_drawer()">
+            <div id="closed-drawer-button" onclick="open_drawer()">
                 <object class="arrows" type="image/svg+xml" data="assets/vectors/arrows-left.svg">
                     Your browser does not support SVG
                 </object>
             </div>
 
-            <div id="sliding-drawer-content">
-
+            <div id="opened-drawer-button" onclick="close_drawer()">
+                <object class="arrows" type="image/svg+xml" data="assets/vectors/arrows-right.svg">
+                    Your browser does not support SVG
+                </object>
             </div>
 
-            <!--<div id="drawer-close-button" onClick="open_drawer()">-->
+            <div id="sliding-drawer-content">
+                <div id="about-header">
+                    <h4>About</h4>
+                </div>
+
+            </div>
+            <!--<div id="drawer-close-button" onClick="close_drawer()">-->
                 <!--<object class="close-arrows" type="image/svg+xml" data="assets/vectors/arrows-right.svg">-->
                     <!--Your browser does not support SVG-->
                 <!--</object>-->
             <!--</div>-->
-
         </div>
 
 		<div id="container">
-
 			<nav id="header">
+                <!-- left side links -->
 				<div id="links1">
-					<!-- about and portfolio -->
                     <a href="/" class="left-item-active">Home</a>
                     <a href="https://medium.com/@aaronlichtman">Blog</a>
-			  		<a href="/portfolio.html">Portfolio</a>
+                    <!--TODO: ADD PORTFOLIO-->
+			  		<!--<a href="/portfolio.html">Portfolio</a>-->
                     <a href="/resume.pdf">Resume</a>
 				</div>
 
+                <!-- right side links -->
 				<div id="links2">
-					<!-- github and linkedin -->
 					<a href="https://www.linkedin.com/in/aaron-lichtman/">
                         <span>
                             <object class="logo" type="image/svg+xml" data="assets/vectors/linkedin-logo.svg">
@@ -75,8 +80,9 @@
             <div id="bio">
                 <p class="intro">
                     Hello! My name is Aaron. <br>
-                    I’m a Software Developer with a passion for cybersecurity and edtech.<br>
-                    I study CS and Linguistics at UIUC and teach a computer science class.
+                    I’m a Software Developer studying CS + Linguistics at UIUC.<br>
+                    I'm a cybersecurity nerd with a passion for edtech.<br>
+                    <!--I open-source almost all of my work.-->
                 </p>
             </div>
 
@@ -96,8 +102,6 @@
                 <hr class="bar">
 				<p class="details">Copyright &copy; 2018 by <b>Aaron Lichtman</b></p>
 			</div>
-
 		</div>
-
 	</body>
 </html>
