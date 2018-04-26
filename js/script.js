@@ -1,6 +1,7 @@
 function open_drawer() {
     console.log("open_drawer() called.");
-    document.getElementById("sliding-drawer").style.width = "500px";
+    var drawer = document.getElementById("sliding-drawer");
+    drawer.style.width = "600px";
     document.getElementById("closed-drawer-button").style.display = "none";
     document.getElementById("opened-drawer-button").style.display = "flex";
     document.getElementById("sliding-drawer-content").style.display = "flex";

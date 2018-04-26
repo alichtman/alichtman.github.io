@@ -113,6 +113,8 @@ p {
     padding-left: 220px;
     background-color: white;
     overflow: hidden;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
 }
 
 /*TODO: CLEAN THIS SECTION UP*/
