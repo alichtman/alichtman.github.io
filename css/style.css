@@ -117,7 +117,7 @@ p {
     border-bottom-left-radius: 15px;
 }
 
-/*TODO: CLEAN THIS SECTION UP*/
+/* TODO: CLEAN THIS SECTION UP*/
 
 #skills-section {
     background-color: white;
@@ -126,8 +126,11 @@ p {
 #skills-title {
     background-color: white;
     color: #00A1FA;
-    align-content: center;
-    margin-right: 80px;
+    margin-right: 60px;
+    position: relative;
+    margin-top: -15px;
+    overflow:  visible;
+    z-index: 4;
 }
 
 #tech-stack-left .ul {
@@ -171,10 +174,9 @@ p {
     border-radius: 25px;
     float: right;
     background: white;
-    margin-right: 200px;
-    /*padding-top: 400px;*/
+    margin-right: 570px;
     overflow: hidden;
-    position: absolute;
+    position: relative;
     margin-top: 330px;
     display: none;
     text-align: center;
@@ -189,7 +191,6 @@ p {
 
 #opened-drawer-button .arrows {
     width: 50%;
-    /*display: flex;*/
     display: flex;
     margin-left: 12px;
     align-items: center;
