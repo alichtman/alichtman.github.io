@@ -93,7 +93,7 @@ p {
     height: 100vh;
     color: white;
     position: fixed;
-    box-shadow: -6px 0 40px 2px rgba(0, 0, 0, 0.4);
+    /*box-shadow: -6px 0 40px 2px rgba(0, 0, 0, 0.4);*/
     display: inline-block;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
@@ -151,7 +151,7 @@ p {
     overflow: hidden;
     margin-top: 330px;
     z-index: 3;
-    box-shadow: -10px 0 40px 1px rgba(0, 0, 0, 0.4);
+    /*box-shadow: -10px 0 40px 1px rgba(0, 0, 0, 0.4);*/
 }
 
 #closed-drawer-button:hover {
@@ -174,14 +174,14 @@ p {
     border-radius: 25px;
     float: right;
     background: white;
-    margin-right: 570px;
+    margin-right: 575px;
     overflow: hidden;
     position: relative;
     margin-top: 330px;
     display: none;
     text-align: center;
     z-index: 3;
-    box-shadow: -10px 0 40px 1px rgba(0, 0, 0, 0.4);
+    /*box-shadow: -10px 0 40px 1px rgba(0, 0, 0, 0.4);*/
 }
 
 #opened-drawer-button:hover {
