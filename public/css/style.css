@@ -1,0 +1,193 @@
+* {
+    font-family: "Avenir Next", "Roboto", "sans-serif";
+    background-color: #00A1FA;
+}
+
+body {
+    font-size: 20px;
+}
+
+nav {
+    padding: 5px;
+}
+
+a {
+    color: white;
+    display: inline-block;
+    position: relative;
+    height: 100%;
+}
+
+span {
+    display: inline-block;
+    height: 100%;
+}
+
+object {
+    pointer-events: none;
+}
+
+p {
+    color: white;
+}
+
+#header {
+    padding-top: 30px;
+    font-size: 18px;
+    margin-left: 150px;
+}
+
+#links-left {
+    padding-top: 5px;
+    text-align: left;
+    float: left;
+    opacity: 0.9;
+}
+
+#links-left a {
+    text-decoration: none;
+    padding-left: 20px;
+}
+
+#links-left a.left-item-active {
+    font-weight: 600;
+}
+
+#links-left a:hover {
+    text-decoration-color: #ddd;
+    color: #073B4C;
+}
+
+#links-right {
+    padding-right: 105px;
+    padding-top: 5px;
+    text-align: right;
+    float: right;
+    display: inline-block;
+}
+
+#links-right .github-logo {
+    padding-right: 15px;
+    width: 30px;
+    height: 30px;
+}
+
+#links-right .github-logo:hover {
+    fill: #black;
+}
+
+#links-right .linkedin-logo {
+    padding-right: 15px;
+    width: 30px;
+    height: 30px;
+}
+
+#links-right .linkedin-logo:hover {
+    fill: black;
+}
+
+#dead_space {
+    padding: 10px;
+    height: 140px;
+}
+
+#avatar {
+    display: inline-block;
+    position: relative;
+}
+
+#avatar .headshot {
+    margin-left: 160px;
+    width: 200px;
+    resize: both;
+}
+
+#bio {
+    display: block;
+    position: relative;
+}
+
+#bio .intro {
+    margin-left: 165px;
+    color: white;
+    font-size: 25px;
+    width: 900px;
+    margin-right: 500px;
+}
+
+#contact-section {
+    margin-left: 165px;
+}
+
+#contact-section .get-in-touch-button {
+    color: white;
+    border-radius: 40px;
+    /*DO NOT OPTIMIZE*/
+    border-width: 3px;
+    border-color: white;
+    margin-left: 2px;
+    margin-right: 5px;
+    padding: 15px 25px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#contact-section .get-in-touch-button:hover {
+    color: #073B4C;
+    border-width: 3px;
+    border-color: #073B4C;
+    opacity: .9
+}
+
+#contact-section .learn-more {
+    display: inline;
+    color: white;
+    font-size: 17px;
+    font-weight: 490;
+}
+
+#contact-section .learn-more:hover {
+    color: #073B4C;
+    cursor: pointer
+    opacity: .9
+}
+
+#contact-section .inline-link {
+    display: inline;
+    color: white;
+    margin-left: 5px;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+#contact-section .about {
+    display: inline;
+    color: white;
+    font-size: 15px;
+}
+
+#footer {
+    padding: 10px;
+    margin-left: 20px;
+    clear: both;
+    height: 50px;
+    position: fixed;
+    bottom: 0px;
+    width: 95%;
+}
+
+hr.bar {
+    width: 80%;
+    border: 10px;
+    height: 3px;
+    background-color: white;
+}
+
+#footer .details {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    margin-left: 135px;
+    font-size: 13px;
+    color: white;
+}
