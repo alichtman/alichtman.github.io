@@ -167,7 +167,7 @@ p {
 
 #closed-drawer-button .arrows {
     width: 50%;
-    display: flex;
+    display: inline-block;
     margin-left: 12px;
     align-items: center;
     justify-content: center;
@@ -181,9 +181,9 @@ p {
     float: right;
     background: white;
     margin-right: 575px;
+    margin-top: 330px;
     overflow: hidden;
     position: relative;
-    margin-top: 330px;
     display: none;
     text-align: center;
     z-index: 3;
@@ -197,7 +197,7 @@ p {
 
 #opened-drawer-button .arrows {
     width: 50%;
-    display: flex;
+    display: inline-block;
     margin-left: 12px;
     align-items: center;
     justify-content: center;
