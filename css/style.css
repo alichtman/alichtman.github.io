@@ -3,6 +3,12 @@
     background-color: #00A1FA;
 }
 
+html, body {
+    text-align: left;
+    height: 100%;
+    overflow: hidden;
+}
+
 nav {
     padding: 5px;
 }
@@ -12,10 +18,13 @@ a {
     display: inline-block;
     position: relative;
     height: 100%;
+    text-decoration: underline dotted;
+    text-decoration-color: black;
+
 }
 
 span {
-    display: inline-block;
+    display: block;
     height: 100%;
 }
 
@@ -25,6 +34,7 @@ object {
 
 p {
     color: white;
+    display: inline-block;
 }
 
 #header {
@@ -62,9 +72,12 @@ p {
 }
 
 #links-right .github-logo {
-    max-padding-right: 10%;
     width: 2.8vw;
     height: 2.8vw;
+}
+
+#links-right .github-logo:hover {
+    fill: black;
 }
 
 #links-right .linkedin-logo {
@@ -73,8 +86,12 @@ p {
     height: 2.8vw;
 }
 
+#links-right .linkedin-logo:hover {
+    fill: black;
+}
+
 #avatar {
-    display: left;
+    display: block;
     position: relative;
     max-width: 150%;
     margin-top: 7.8vw;
@@ -83,7 +100,7 @@ p {
 #avatar .headshot {
     margin-left: 11.5%;
     min-width: 140px;
-    width: 14.0vw;
+    width: 12.5vw;
     resize: both;
 }
 
@@ -92,81 +109,69 @@ p {
     position: relative;
     margin-left: 12%;
     width: 80%;
-    initial-scale: 5;
-    minimum-scale: 3;
-    /*min-height: 200px;*/
 }
 
 #bio .intro {
     color: white;
-    font-weight: 400;
-    font-size: 1.8vw;
-    max-margin-right: 10%;
+    font-weight: lighter;
+    font-size: 2.1vw;
     min-width: 0.7vw;
+    z-index: 4;
 }
 
 #contact-section {
     margin-left: 12%;
-    margin-top: 1.0vw;
+    margin-top: 0%;
+    overflow-clip: true;
 }
 
-#contact-section .get-in-touch-button {
-    color: white;
-    border-radius: 40px;
-    /*DO NOT OPTIMIZE*/
-    border-width: 3px;
-    border-color: white;
-    margin-left: 2px;
-    margin-right: 5px;
-    padding: 15px 25px;
-    text-align: center;
-    font-size: 17px;
-    /*min-height: 160%;*/
+#contact-section .svg-wrapper {
+    display: inline-block;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 3% auto 20px;
+    min-width: 300px;
     cursor: pointer;
 }
 
-#contact-section .get-in-touch-button:hover {
-    color: #073B4C;
-    border-width: 3px;
-    border-color: #073B4C;
-    opacity: .9
+#contact-section .svg-wrapper:hover .shape {
+    stroke-width: 2px;
+    stroke-dashoffset: 0;
+    stroke-dasharray: 760;
 }
 
-#contact-section .learn-more {
-    display: inline;
-    color: white;
-    font-size: 1.2vw;
-    font-weight: 490;
+#contact-section .shape {
+    stroke-dasharray: 140 540;
+    stroke-dashoffset: -435;
+    stroke-width: 4px;
+    fill: transparent;
+    stroke: #000;
+    border-bottom: 5px solid black;
+    transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
 }
 
-#contact-section .learn-more:hover {
-    color: #073B4C;
-    cursor: pointer
-    opacity: .9
-}
-
-#contact-section .inline-link {
-    display: inline;
-    color: white;
-    margin-left: 5px;
-    font-size: 15px;
-    text-decoration: none;
-}
-
-#contact-section .about {
-    display: inline;
-    color: white;
-    font-size: 15px;
+#contact-section .text {
+    font-family: 'Avenir Next', serif;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 28px;
+    letter-spacing: 2px;
+    text-align: center;
+    color: #fff;
+    top: -48px;
+    position: relative;
 }
 
 #footer {
     padding: 10px;
     margin-left: 10px;
     margin-top: 3.5%;
+    margin-bottom: 1.0vw;
     clear: both;
     height: 7%;
-    /*position: fixed;*/
-    bottom: 0px;
+    position: fixed;
+    bottom: 0;
     width: 95%;
 }
 
