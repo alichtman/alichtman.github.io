@@ -6,8 +6,9 @@
 		<meta charset="UTF-8">
 		<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859">
 		<meta content="width=device-width, initial-scale=1" name="viewport">
-		<meta name="description" content="Aaron Lichtman's Website">
+		<meta name="description" content="Aaron Lichtman">
 		<meta name="keywords" content="Aaron Lichtman, Computer Science, Software">
+		 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="author" content="Aaron Lichtman">
 
 	</head>
@@ -17,7 +18,7 @@
                 <!-- left side links -->
 				<div id="links-left">
                     <a href="/" class="left-item-active">Home</a>
-                    <!--TODO-->
+                    <!--TODO: Add Portfolio and Medium Pages-->
                     <!-- <a href="https://medium.com/@aaronlichtman">Medium</a> -->
                     <!-- <a href="/portfolio.html">Portfolio</a> -->
                     <a href="/resume.pdf">Resume</a>
@@ -39,31 +40,32 @@
 				</div>
 			</nav>
 
-			<div id="dead_space">
-			</div>
-
             <div id=avatar>
                  <img class="headshot" type = "image/png" src="assets/img/headshot.png" alt="Avatar">
             </div>
 
             <div id="bio">
-                <p class="intro">
+            	<p class="intro">
                     Hello, my name is Aaron!<br>
-                    I’m a Software Developer studying CS + Linguistics at UIUC<br>
-                    and a cybersecurity nerd with a passion for edtech and building cool things.<br>
+                    I’m a Software Developer <a href="https://www.linkedin.com/in/aaron-lichtman/">studying CS + Ling at UIUC</a>.<br>
+                    I'm really excited about security, behavioral profiling and edtech.<br>
                 </p>
             </div>
 
             <div id=contact-section>
-                <button class="get-in-touch-button" type="button" onclick="location.href='https://m.me/aaron.lichtman'">Get in Touch!</button>
-                <p class="about">
-                    or
-                </p>
-                <a href="https://github.com/alichtman/"class="inline-link">
-                    <b class="learn-more">
-                        Check out my GitHub!
-                    </b>
-                </a>
+                <div class="svg-wrapper" onclick="location.href='mailto:aaronlichtman@gmail.com'">
+                  <svg height="60" width="300" xmlns="http://www.w3.org/2000/svg">
+                    <rect class="shape" height="60" width="300" ></rect>
+                    <div class="text">Drop me an email</div>
+                  </svg>
+                </div>
+
+                <div class="svg-wrapper" onclick="location.href='https://github.com/alichtman/'">
+                  <svg height="60" width="300" xmlns="http://www.w3.org/2000/svg">
+                    <rect class="shape" height="60" width="300" ></rect>
+                    <div class="text">Check out my Github</div>
+                  </svg>
+                </div>
             </div>
 
 			<div id="footer">
