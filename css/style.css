@@ -4,7 +4,7 @@
 }
 
 html, body {
-    text-align: left;
+    text-align: center;
     height: 100%;
     overflow: hidden;
 }
@@ -72,22 +72,19 @@ p {
 }
 
 #links-right .github-logo {
-    width: 2.8vw;
-    height: 2.8vw;
-}
-
-#links-right .github-logo:hover {
-    fill: black;
+    width: 2vw;
+    height: 2vw;
 }
 
 #links-right .linkedin-logo {
     padding-right: 1.3vw;
-    width: 2.8vw;
-    height: 2.8vw;
+    width: 2vw;
+    height: 2vw;
 }
 
-#links-right .linkedin-logo:hover {
-    fill: black;
+#about-section {
+    clear: both;
+    z-index: 1;
 }
 
 #avatar {
@@ -98,16 +95,15 @@ p {
 }
 
 #avatar .headshot {
-    margin-left: 11.5%;
+    /*margin-left: 11.5%;*/
     min-width: 140px;
-    width: 12.5vw;
+    width: 13.5vw;
     resize: both;
 }
 
 #bio {
     display: inline-block;
     position: relative;
-    margin-left: 12%;
     width: 80%;
 }
 
@@ -116,21 +112,19 @@ p {
     font-weight: lighter;
     font-size: 2.1vw;
     min-width: 0.7vw;
-    z-index: 4;
 }
 
 #contact-section {
-    margin-left: 12%;
-    margin-top: 0%;
+    margin-top: 1%;
+    padding: 5px;
     overflow-clip: true;
+    clear: top;
 }
 
 #contact-section .svg-wrapper {
     display: inline-block;
-    position: relative;
-    top: 50%;
     transform: translateY(-50%);
-    margin: 3% auto 20px;
+    margin: 3% auto 30vw;
     min-width: 300px;
     cursor: pointer;
 }
@@ -165,7 +159,7 @@ p {
 
 #footer {
     padding: 10px;
-    margin-left: 10px;
+    /*margin-left: 10px;*/
     margin-top: 3.5%;
     margin-bottom: 1.0vw;
     clear: both;
@@ -176,17 +170,19 @@ p {
 }
 
 hr.bar {
-    width: 84%;
-    margin-left: 10%;
+    width: 90%;
+    /*margin-left: 10%;*/
     border: 0.001vw;
     height: 3px;
     background-color: white;
+    display: inline-block;
+    align-content: center;
 }
 
 #footer .details {
     margin-bottom: 15px;
     padding-bottom: 15px;
-    margin-left: 12%;
+    /*margin-left: 12%;*/
     font-size: 0.8vw;
     color: white;
 }
