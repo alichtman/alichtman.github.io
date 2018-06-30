@@ -3,10 +3,6 @@
     background-color: #00A1FA;
 }
 
-body {
-    font-size: 20px;
-}
-
 nav {
     padding: 5px;
 }
@@ -32,13 +28,13 @@ p {
 }
 
 #header {
-    padding-top: 30px;
-    font-size: 18px;
-    margin-left: 150px;
+    padding-top: 2.5%;
+    margin-left: 11%;
+    font-size: 1.3vw;
+    min-height: 20px;
 }
 
 #links-left {
-    padding-top: 5px;
     text-align: left;
     float: left;
     opacity: 0.9;
@@ -59,64 +55,59 @@ p {
 }
 
 #links-right {
-    padding-right: 105px;
-    padding-top: 5px;
+    padding-right: 10%;
     text-align: right;
     float: right;
     display: inline-block;
 }
 
 #links-right .github-logo {
-    padding-right: 15px;
-    width: 30px;
-    height: 30px;
-}
-
-#links-right .github-logo:hover {
-    fill: #black;
+    max-padding-right: 10%;
+    width: 2.8vw;
+    height: 2.8vw;
 }
 
 #links-right .linkedin-logo {
-    padding-right: 15px;
-    width: 30px;
-    height: 30px;
-}
-
-#links-right .linkedin-logo:hover {
-    fill: black;
-}
-
-#dead_space {
-    padding: 10px;
-    height: 140px;
+    padding-right: 1.3vw;
+    width: 2.8vw;
+    height: 2.8vw;
 }
 
 #avatar {
-    display: inline-block;
+    display: left;
     position: relative;
+    max-width: 150%;
+    margin-top: 7.8vw;
 }
 
 #avatar .headshot {
-    margin-left: 160px;
-    width: 200px;
+    margin-left: 11.5%;
+    min-width: 140px;
+    width: 14.0vw;
     resize: both;
 }
 
 #bio {
-    display: block;
+    display: inline-block;
     position: relative;
+    margin-left: 12%;
+    width: 80%;
+    initial-scale: 5;
+    minimum-scale: 3;
+    /*min-height: 200px;*/
 }
 
 #bio .intro {
-    margin-left: 165px;
     color: white;
-    font-size: 25px;
-    width: 900px;
-    margin-right: 500px;
+    font-weight: 400;
+    font-size: 1.8vw;
+    max-margin-right: 10%;
+    min-width: 0.7vw;
 }
 
 #contact-section {
-    margin-left: 165px;
+    margin-left: 12%;
+    margin-top: 1.0vw;
 }
 
 #contact-section .get-in-touch-button {
@@ -129,7 +120,8 @@ p {
     margin-right: 5px;
     padding: 15px 25px;
     text-align: center;
-    font-size: 16px;
+    font-size: 17px;
+    /*min-height: 160%;*/
     cursor: pointer;
 }
 
@@ -143,7 +135,7 @@ p {
 #contact-section .learn-more {
     display: inline;
     color: white;
-    font-size: 17px;
+    font-size: 1.2vw;
     font-weight: 490;
 }
 
@@ -169,17 +161,19 @@ p {
 
 #footer {
     padding: 10px;
-    margin-left: 20px;
+    margin-left: 10px;
+    margin-top: 3.5%;
     clear: both;
-    height: 50px;
-    position: fixed;
+    height: 7%;
+    /*position: fixed;*/
     bottom: 0px;
     width: 95%;
 }
 
 hr.bar {
-    width: 80%;
-    border: 10px;
+    width: 84%;
+    margin-left: 10%;
+    border: 0.001vw;
     height: 3px;
     background-color: white;
 }
@@ -187,7 +181,7 @@ hr.bar {
 #footer .details {
     margin-bottom: 15px;
     padding-bottom: 15px;
-    margin-left: 135px;
-    font-size: 13px;
+    margin-left: 12%;
+    font-size: 0.8vw;
     color: white;
 }
