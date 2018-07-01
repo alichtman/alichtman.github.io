@@ -1,11 +1,11 @@
 * {
-    font-family: "Avenir Next", "Roboto", "sans-serif";
+    font-family: "Avenir Next" !important;
     background-color: #00A1FA;
 }
 
 html, body {
-    text-align: center;
-    height: 100%;
+    text-align: left;
+    /*height: 100%;*/
     overflow: hidden;
 }
 
@@ -20,7 +20,6 @@ a {
     height: 100%;
     text-decoration: underline dotted;
     text-decoration-color: black;
-
 }
 
 span {
@@ -34,12 +33,14 @@ object {
 
 p {
     color: white;
-    display: inline-block;
+    display: relative;
 }
+
+/*HEADER -- START*/
 
 #header {
     padding-top: 2.5%;
-    margin-left: 11%;
+    margin-left: 10%;
     font-size: 1.3vw;
     min-height: 20px;
 }
@@ -47,12 +48,12 @@ p {
 #links-left {
     text-align: left;
     float: left;
-    opacity: 0.9;
+    font-size: 1.3vw;
 }
 
 #links-left a {
     text-decoration: none;
-    padding-left: 20px;
+    padding-right: 20px;
 }
 
 #links-left a.left-item-active {
@@ -60,8 +61,8 @@ p {
 }
 
 #links-left a:hover {
-    text-decoration-color: #ddd;
-    color: #073B4C;
+    color: #000;
+    opacity: 0.6
 }
 
 #links-right {
@@ -82,22 +83,26 @@ p {
     height: 2vw;
 }
 
+/*HEADER -- END*/
+
+/*ABOUT -- START*/
+
 #about-section {
     clear: both;
-    z-index: 1;
+    /*z-index: 1;*/
+    margin-left: 10%;
 }
 
 #avatar {
     display: block;
     position: relative;
-    max-width: 150%;
+    max-width: 130%;
     margin-top: 7.8vw;
 }
 
 #avatar .headshot {
-    /*margin-left: 11.5%;*/
-    min-width: 140px;
-    width: 13.5vw;
+    min-width: 120px;
+    width: 12vw;
     resize: both;
 }
 
@@ -107,21 +112,62 @@ p {
     width: 80%;
 }
 
-#bio .intro {
+#bio .first-line {
+    opacity: 1;
+    max-height: 10px;
+}
+
+#bio p {
     color: white;
-    font-weight: lighter;
+    font-weight: 200;
     font-size: 2.1vw;
     min-width: 0.7vw;
+    /*opacity: 0.9;*/
+    line-height: 10px;
 }
+
+/*ABOUT -- END*/
+
 
 #contact-section {
-    margin-top: 1%;
-    padding: 5px;
-    overflow-clip: true;
-    clear: top;
+    margin-left: 10%;
+    padding-top: 15px;
+    color: white;
 }
 
-#contact-section .svg-wrapper {
+#contact-section button {
+    -moz-appearance: button;
+    width: 15%;
+    padding-top: 50px;
+    margin-right: 25px;
+    padding: 10px 24px;
+    font-weight: 500;
+    font-size: 20px;
+    border-radius: 40px;
+    border-width: 3px;
+    color: white;
+    border-color: white;
+    text-align: center;
+    cursor: pointer;
+}
+
+#contact-section button:hover {
+    border-color: : #00A1FA;
+    color: #00A1FA;
+    background-color: #fff;
+    opacity: .9;
+}
+
+/*CONTACT -- START*/
+
+/*#contact-section-stylized-button {
+    overflow-clip: true;
+    clear: top;
+    height: 10%;
+    margin-left: 10%;
+}
+
+#contact-section-stylized-button .svg-wrapper {
     display: inline-block;
     transform: translateY(-50%);
     margin: 3% auto 30vw;
@@ -129,23 +175,24 @@ p {
     cursor: pointer;
 }
 
-#contact-section .svg-wrapper:hover .shape {
+#contact-section-stylized-button .svg-wrapper:hover .shape {
     stroke-width: 2px;
     stroke-dashoffset: 0;
     stroke-dasharray: 760;
 }
 
-#contact-section .shape {
+#contact-section-stylized-button .shape {
     stroke-dasharray: 140 540;
     stroke-dashoffset: -435;
     stroke-width: 4px;
     fill: transparent;
-    stroke: #000;
+    opacity: .9;
+    stroke: #fff;
     border-bottom: 5px solid black;
     transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
 }
 
-#contact-section .text {
+#contact-section-stylized-button .text {
     font-family: 'Avenir Next', serif;
     font-weight: normal;
     font-size: 22px;
@@ -155,34 +202,6 @@ p {
     color: #fff;
     top: -48px;
     position: relative;
-}
+}*/
 
-#footer {
-    padding: 10px;
-    /*margin-left: 10px;*/
-    margin-top: 3.5%;
-    margin-bottom: 1.0vw;
-    clear: both;
-    height: 7%;
-    position: fixed;
-    bottom: 0;
-    width: 95%;
-}
-
-hr.bar {
-    width: 90%;
-    /*margin-left: 10%;*/
-    border: 0.001vw;
-    height: 3px;
-    background-color: white;
-    display: inline-block;
-    align-content: center;
-}
-
-#footer .details {
-    margin-bottom: 15px;
-    padding-bottom: 15px;
-    /*margin-left: 12%;*/
-    font-size: 0.8vw;
-    color: white;
-}
+/*CONTACT -- END*/
