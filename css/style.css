@@ -141,7 +141,8 @@ p {
     stroke-width: 4px;
     fill: transparent;
     stroke: #000;
-    border-bottom: 5px solid black;
+    border-color: white;
+    border-bottom: 5px solid white;
     transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
 }
 
@@ -155,34 +156,4 @@ p {
     color: #fff;
     top: -48px;
     position: relative;
-}
-
-#footer {
-    padding: 10px;
-    /*margin-left: 10px;*/
-    margin-top: 3.5%;
-    margin-bottom: 1.0vw;
-    clear: both;
-    height: 7%;
-    position: fixed;
-    bottom: 0;
-    width: 95%;
-}
-
-hr.bar {
-    width: 90%;
-    /*margin-left: 10%;*/
-    border: 0.001vw;
-    height: 3px;
-    background-color: white;
-    display: inline-block;
-    align-content: center;
-}
-
-#footer .details {
-    margin-bottom: 15px;
-    padding-bottom: 15px;
-    /*margin-left: 12%;*/
-    font-size: 0.8vw;
-    color: white;
 }
