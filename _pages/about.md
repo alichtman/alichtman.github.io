@@ -3,6 +3,13 @@ permalink: /about/
 title: "About"
 ---
 
-Tempor velit sint sunt ipsum tempor enim ad qui ullamco. Est dolore anim ad velit duis dolore minim sunt aliquip amet commodo labore. Ut eu pariatur aute ea aute excepteur laborum. Esse ea esse excepteur minim mollit qui cillum excepteur ex dolore magna. Labore deserunt fugiat incididunt incididunt sint ea. Consequat dolore aute laboris quis proident quis non et est consectetur ex eiusmod sit culpa.
+Hey! My name is Aaron. I'm a senior at the University of Illinois in Urbana-Champaign. I study CS + Linguistics with a focus on computer security. Most of my projects have a strong security focus to them, but I don't do exclusively security work. The grand majority of the code I've written is open-sourced, and you can check it out on [GitHub](https://www.github.com/alichtman)! At the end of the day, it makes me happy to build cool things.
 
-Cupidatat ea do et in excepteur in. Ad nostrud ut est esse eu duis ea sunt eiusmod. Aliquip tempor veniam sint elit fugiat. Velit incididunt laboris amet incididunt labore dolore irure velit excepteur commodo deserunt laborum. Consectetur eu fugiat veniam veniam Lorem labore magna eiusmod. Ea occaecat reprehenderit pariatur consectetur minim labore ut aliquip.
+Last summer, I interned on the iOS core team at Wayfair. I'm excited to be heading out to San Francisco this summer to work on Facebook's Authentication service!
+
+Feel free to reach out! Two good ways to contact me are:
+
+```
+	- keybase.io/alichtman
+	- alichtman@protonmail.com
+```
