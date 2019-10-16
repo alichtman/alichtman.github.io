@@ -8,8 +8,6 @@ tags:
   - macOS
 ---
 
-## Fuzzy Launching Applications from the Shell on macOS
-
 Using [fzf](https://www.github.com/junegunn/fzf) and some UNIX pipes, I wrote a fuzzy command line launcher for `zsh`. You can add this snippet to your `.zshrc` to get this functionality. Remember to run `$ source ~/.zshrc` to process your changes.
 
 ```zsh
@@ -18,7 +16,7 @@ launch () {
 }
 ```
 
-### How it works
+## How it works
 
 Let's break down how this command works.
 
