@@ -1,5 +1,5 @@
 ---
-title: "Fuzzy Launching Applications from the Shell on macOS"
+title: "Easily Launching Apps from the Terminal on macOS"
 date: 2019-10-18T15:34:30-04:00
 categories:
   - blog
@@ -8,7 +8,9 @@ tags:
   - macOS
 ---
 
-Using [fzf](https://www.github.com/junegunn/fzf) and some UNIX pipes, I wrote a fuzzy command line launcher for `zsh`. You can add this snippet to your `.zshrc` to get this functionality. Remember to run `$ source ~/.zshrc` to process your changes.
+![launch demo](/assets/images/launch-demo.gif)
+
+Using [fzf](https://www.github.com/junegunn/fzf) and UNIX pipes, I hacked together a fuzzy command line launcher for `zsh`. You can add this snippet to your `.zshrc` to get this functionality. Remember to source your `~/.zshrc` to process the changes in your shell session.
 
 ```zsh
 launch () {
@@ -63,12 +65,11 @@ $ find /Applications -name '*app' -maxdepth 1 | cut -d'/' -f 3 | cut -d'.' -f 1 
 ```
 
 ![fzf find demo](/assets/images/fzf-demo-find.gif)
-![fzf find demo](https://gfycat.com/PointlessShyAsiaticmouflon)
 
-That's nice, but sometimes I'd like to be able to start searching in the initial command that I run. Luckily, we can do that with `fzf`'s `--query` option. If we wrap this command inside a `zsh` or `bash` function, we can pass arguments to it from the command prompt.
+That's nice, but sometimes I know a portion of the app name and can start searching before the `fzf` prompt is brought up. We can implement that with `fzf`'s `--query` option. If we wrap this command inside a `zsh` function, arguments can be passed to it.
 
 ```bash
-app_search_demo () {
+launch () {
 	find /Applications -name '*app' -maxdepth 1 | cut -d'/' -f 3 | cut -d'.' -f 1 | fzf --query=$1
 }
 ```
@@ -76,9 +77,9 @@ app_search_demo () {
 This function will go through the process of extracting all application names and displaying them in a `fzf` window, and will also pre-fill the `fzf` search with an argument you can pass in, like this:
 
 ```bash
-$ app_search_demo Spotif
+$ launch Spotif
 # Note that it will still work with no search parameters
-$ app_search_demo
+$ launch
 ```
 
 At this point, we are able to search through a list of applications and get whichever one is selected printed to standard output by `fzf`. Now, we need to actually open whatever is selected. `macOS` comes with a nice tool to open files and applications, called `open`. Check out `$ man open` if you're interested in learning more about it. We can use it by simply piping the output from `fzf` into the `open` command with the `-a` flag, specifying we want to open an Application. To make this work, we need to use a `bash` feature called ["Command Substitution"](https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Command-Substitution). This will allow us to use the standard output of the `fzf` command in another command to actually open the application. Think of this sort of like order of operations in a mathematical expression, where you must first evaluate the expressions in parenthesis and then you can complete the evaluation of the other expressions. 
