@@ -62,7 +62,8 @@ And now we can pipe this into `fzf` to get a nice, fuzzy-searchable interface.
 $ find /Applications -name '*app' -maxdepth 1 | cut -d'/' -f 3 | cut -d'.' -f 1 | fzf
 ```
 
-![fzf find demo](../assets/gifs/fzf-demo-find.gif)
+![fzf find demo](/assets/images/fzf-demo-find.gif)
+![fzf find demo](https://gfycat.com/PointlessShyAsiaticmouflon)
 
 That's nice, but sometimes I'd like to be able to start searching in the initial command that I run. Luckily, we can do that with `fzf`'s `--query` option. If we wrap this command inside a `zsh` or `bash` function, we can pass arguments to it from the command prompt.
 
