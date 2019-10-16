@@ -105,4 +105,8 @@ $ open -a "QuickTime Player.app"
 
 In the first example, the shell split the arguments to `open -a` on the space, treating `QuickTime` and `Player.app` as two separate files to open. The double-quotes tell the shell not to word split.
 
+### Parting Words
+
 Shell scripting is a little tricky at first (and continues to be tricky, even as you get better at it), but you can create some incredibly powerful workflows with it. It's well worth investing the time in learning some basic shell scripting!
+
+If you enjoyed reading this walkthrough, take a look at my [dotfiles](https://www.github.com/alichtman/dotfiles) to find some more shell workflows I use regularly.
