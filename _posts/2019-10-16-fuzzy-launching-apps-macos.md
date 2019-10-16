@@ -18,11 +18,11 @@ launch () {
 }
 ```
 
-## How it works
+## How It Works
 
-Let's break down how this command works.
+Let's walk through the process of building this tool.
 
-First, we have to get a list of all the applications in the `/Applications` directory. We'll do this using the `find` command.
+The first thing we need is a list of all the applications in the `/Applications` directory. We can get this with the `find` command.
 
 ```bash
 $ find /Applications -name '*app' -maxdepth 1
