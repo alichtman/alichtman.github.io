@@ -1,5 +1,5 @@
 ---
-title: "Easily Launching Apps from the Terminal on macOS"
+title: "Launching Apps from the Terminal on macOS"
 date: 2019-10-18T15:34:30-04:00
 categories:
   - blog
@@ -10,7 +10,7 @@ tags:
 
 ![launch demo](/assets/images/launch-demo.gif)
 
-Using [fzf](https://www.github.com/junegunn/fzf) and UNIX pipes, I hacked together a fuzzy command line launcher for `zsh`. You can add this snippet to your `.zshrc` to get this functionality. Remember to source your `~/.zshrc` to process the changes in your shell session.
+Using [fzf](https://www.github.com/junegunn/fzf) and Unix pipes, I hacked together a fuzzy command line launcher for `zsh`. You can add this snippet to your `.zshrc` to get this functionality. Remember to source your `~/.zshrc` to process the changes in your shell session.
 
 ```zsh
 launch () {
@@ -34,7 +34,7 @@ $ find /Applications -name '*app' -maxdepth 1
 ...
 ```
 
-Now, we could just display this list in `fzf` for a user to choose from, but we could clean up the interface by removing `/Applications/` and `.app` from each of the options. We can do that by joining two `cut` commands. This first cut trims everything before the 2nd `/`.
+Now, we could just display this list in `fzf` for a user to choose from, but I'd like to clean up the app names by removing `/Applications/` and `.app` from each option. We can do that by joining two `cut` commands. This first cut trims everything before the 2nd `/`.
 
 ```bash
 $ find /Applications -name '*app' -maxdepth 1 | cut -d'/' -f 3
@@ -78,11 +78,13 @@ This function will go through the process of extracting all application names an
 
 ```bash
 $ launch Spotif
-# Note that it will still work with no search parameters
+# Note that this will still work with no search parameters, since the first argument ($1) will evaluate to ""
 $ launch
 ```
 
-At this point, we are able to search through a list of applications and get whichever one is selected printed to standard output by `fzf`. Now, we need to actually open whatever is selected. `macOS` comes with a nice tool to open files and applications, called `open`. Check out `$ man open` if you're interested in learning more about it. We can use it by simply piping the output from `fzf` into the `open` command with the `-a` flag, specifying we want to open an Application. To make this work, we need to use a `bash` feature called ["Command Substitution"](https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Command-Substitution). This will allow us to use the standard output of the `fzf` command in another command to actually open the application. Think of this sort of like order of operations in a mathematical expression, where you must first evaluate the expressions in parenthesis and then you can complete the evaluation of the other expressions. 
+At this point, we are able to search through a list of applications and get whichever one is selected printed to standard output by `fzf`. Now, we need to actually open whatever is selected. `macOS` comes with a nice tool to open files and applications, called `open`. Check out `$ man open` if you're interested in learning more about it.
+
+We can use it by simply piping the output from `fzf` into the `open` command with the `-a` flag, specifying we want to open an Application. To make this work, we need to use a `bash` feature called ["Command Substitution"](https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Command-Substitution). This will allow us to use the standard output of the `fzf` command in another command to actually open the application.
 
 ```zsh
 launch () {
@@ -90,3 +92,17 @@ launch () {
 }
 ```
 
+Note: The surrounding double-quotes on the command substitution are important for handling cases where the app name contains a space. Let's take a look at an example:
+
+```zsh
+$ open -a QuickTime Player.app
+The file /Users/alichtman/Player.app does not exist.
+# Error!
+
+$ open -a "QuickTime Player.app"
+# QuickTime opens
+```
+
+In the first example, the shell split the arguments to `open -a` on the space, treating `QuickTime` and `Player.app` as two separate files to open. The double-quotes tell the shell not to word split.
+
+Shell scripting is a little tricky at first (and continues to be tricky, even as you get better at it), but you can create some incredibly powerful workflows with it. It's well worth investing the time in learning some basic shell scripting!
