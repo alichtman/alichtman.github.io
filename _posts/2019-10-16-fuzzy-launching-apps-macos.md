@@ -1,5 +1,5 @@
 ---
-title: "Launching Apps from the Terminal on macOS"
+title: "Launching Apps from the macOS Terminal"
 date: 2019-10-18T15:34:30-04:00
 categories:
   - blog
