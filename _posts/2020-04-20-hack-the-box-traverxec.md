@@ -17,7 +17,7 @@ In this box, we find a vulnerable `HTTP` server (`nostromo`) and use an RCE expl
 
 ### Enumeration
 
-As always, the first step of the boxes is enumeration. Let's find out what services are running on the box. We'll use `nmap` for this.
+As always, the first step of the box is enumeration. Let's find out what services are running on the box. We'll use `nmap` for this.
 
 ```bash
 $ nmap -vvv -sCV -oN traverxec.nmap 10.10.10.165
