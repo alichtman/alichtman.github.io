@@ -18,6 +18,17 @@ Replace sample content with your own and [configure as necessary](https://mmista
 
 ---
 
+## Development Commands
+
+```bash
+# Start dev server
+$ jekyll serve --incremental
+
+# Build for publishing
+$ jekyll build
+```
+
+
 ## Troubleshooting
 
 If you have a question about using Jekyll, start a discussion on the [Jekyll Forum](https://talk.jekyllrb.com/) or [StackOverflow](https://stackoverflow.com/questions/tagged/jekyll). Other resources:
