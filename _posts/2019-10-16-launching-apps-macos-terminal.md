@@ -10,6 +10,18 @@ tags:
 
 ![launch demo](/assets/images/launch-demo.gif)
 
+> 9/5/2020 Update: Siddharth Dushantha cleaned up this function and added the ability to launch system apps in this [PR](https://github.com/alichtman/dotfiles/pull/2/files). The updated function is:
+
+```zsh
+function launch() {
+	open -a "$(find /Applications /System/Applications/ /System/Applications/Utilities -name '*app' -maxdepth 1 -exec basename {} .app \; | fzf --query "$1")"
+}
+```
+
+> The original post can be found below.
+
+----
+
 Using [fzf](https://www.github.com/junegunn/fzf) and Unix pipes, I hacked together a fuzzy command line launcher for `zsh`. You can add this snippet to your `.zshrc` to get this functionality. Remember to source your `~/.zshrc` to process the changes in your shell session.
 
 ```zsh
