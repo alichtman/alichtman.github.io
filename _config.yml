@@ -61,7 +61,7 @@ plugins:
 author:
   name   : "Aaron Lichtman"
   avatar : "/assets/images/bio-photo.jpg"
-  bio    : "I’m a software engineer focusing on security at Facebook. I have a strong passion for working on too many projects at the same time."
+  bio    : "I’m a security / software engineer at Facebook. I have a strong passion for working on too many projects at the same time. This is not a problem I plan on fixing."
   links:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"

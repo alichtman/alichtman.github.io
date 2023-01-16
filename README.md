@@ -1,33 +1,19 @@
-# Minimal Mistakes remote theme starter
+# `alichtman`'s Blog -- Forked from Minimal Mistakes
 
-Fork this repo for the quickest method of getting started with the [Minimal Mistakes Jekyll theme](https://github.com/mmistakes/minimal-mistakes).
+[Minimal Mistakes Jekyll theme](https://github.com/mmistakes/minimal-mistakes).
 
-Contains basic configuration to get you a site with:
-
-- Sample posts.
-- Sample top navigation.
-- Sample author sidebar with social links.
-- Sample footer links.
-- Paginated home page.
-- Archive pages for posts grouped by year, category, and tag.
-- Sample about page.
-- Sample 404 page.
-- Site wide search.
-
-Replace sample content with your own and [configure as necessary](https://mmistakes.github.io/minimal-mistakes/docs/configuration/).
+[Configuration Notes](https://mmistakes.github.io/minimal-mistakes/docs/configuration/).
 
 ---
 
 ## Development Commands
 
 ```bash
-# Start dev server
-$ jekyll serve --incremental
-
-# Build for publishing
-$ jekyll build
+$ bundle config set --local path 'vendor/bundle'
+$ bundle install
+$ bundle add webrick # https://github.com/jekyll/jekyll/issues/8523#issuecomment-751409319
+$ bundle exec jekyll serve --incremental
 ```
-
 
 ## Troubleshooting
 
