@@ -27,6 +27,9 @@ Here are the meals I like, and how much water I use for them:
 + [Peak Refuel Chicken Teriyaki Rice](https://www.amazon.com/Peak-Refuel-Chicken-Teriyaki-Backpacking/dp/B07BQYXWX1?th=1)
     + Suggested ratio works.
     + Not as good as the Mountain House Pad Thai, but not bad!
++ [ProPak Chicken & Rice](https://www.rei.com/product/184159/mountain-house-chicken-rice-pro-pak-1-serving)
+    + Slightly less than the suggested ratio -- 1.25 cups
+    + It's alright! I guess. Nice quantity of food.
 
 _more to come..._
 
