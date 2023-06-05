@@ -46,7 +46,7 @@ $ find /Applications -name '*app' -maxdepth 1
 ...
 ```
 
-Now, we could just display this list in `fzf` for a user to choose from, but I'd like to clean up the app names by removing `/Applications/` and `.app` from each option. We can do that by joining two `cut` commands. This first cut trims everything before the 2nd `/`.
+We could just display this list in `fzf` for a user to choose from, but I'd like to clean up the app names by removing `/Applications/` and `.app` from each option. We can do that by joining two `cut` commands. This first cut trims everything before the 2nd `/`.
 
 ```bash
 $ find /Applications -name '*app' -maxdepth 1 | cut -d'/' -f 3
