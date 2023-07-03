@@ -28,6 +28,9 @@ Here are the meals I like, and how much water I use for them:
 -   [ProPak Chicken & Rice](https://www.rei.com/product/184159/mountain-house-chicken-rice-pro-pak-1-serving)
     -   Slightly less than the suggested ratio -- 1.25 cups
     -   It's alright! I guess. Nice quantity of food.
+-   [Good To-Go Chicken Pho](https://www.rei.com/product/200704/good-to-go-chicken-pho)
+    -   I make this as a noodle dish, not a soup.
+    -   Used ~250mL of water for the double serving while in Seattle. Probably need a bit more water at elevation.
 
 _more to come..._
 
