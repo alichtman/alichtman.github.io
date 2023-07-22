@@ -31,6 +31,9 @@ Here are the meals I like, and how much water I use for them:
 -   [Good To-Go Chicken Pho](https://www.rei.com/product/200704/good-to-go-chicken-pho)
     -   I make this as a noodle dish, not a soup.
     -   Used ~250mL of water for the double serving while in Seattle. Probably need a bit more water at elevation.
+- [Firepot Porcini Mushroom Risotto](https://www.rei.com/product/192147/firepot-porcini-mushroom-risotto-2-servings)
+    -   Pretty good. Probably needs to be stirred a few minutes in to making it.
+    -   Water suggestion is fairly accurate.   
 
 _more to come..._
 
