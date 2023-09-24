@@ -33,7 +33,10 @@ Here are the meals I like, and how much water I use for them:
     -   Used ~250mL of water for the double serving while in Seattle. Probably need a bit more water at elevation.
 - [Firepot Porcini Mushroom Risotto](https://www.rei.com/product/192147/firepot-porcini-mushroom-risotto-2-servings)
     -   Pretty good. Probably needs to be stirred a few minutes in to making it.
-    -   Water suggestion is fairly accurate.   
+    -   Water suggestion is fairly accurate.
+-   [Trailtopia Ramen Noodles with Chicken Flavor and Broccoli](https://www.rei.com/product/188960/trailtopia-gluten-free-ramen-noodles-with-chicken-flavor-and-broccoli-1-serving)
+    -   Tastes decent. Not a ton of food.
+    -   Water suggestion is accurate.
 
 _more to come..._
 
