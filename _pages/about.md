@@ -1,13 +1,19 @@
 ---
 permalink: /about/
 title: "About"
+layout: single
 ---
 
-Hey! My name is Aaron. I'm graduated from the University of Illinois in Urbana-Champaign with a degree in CS + Linguistics. I've been a software / security engineer at Facebook since Sept 2020. Before that, I was very passionate about open-source work, and you can check it out on my [GitHub](https://www.github.com/alichtman)!
+Hey! My name is Aaron.
 
-Feel free to reach out!
+I graduated from UIUC with a degree in CS + Linguistics.
 
-```
-	- keybase.io/alichtman
-	- aaronlichtman@gmail.com or alichtman@protonmail.com
-```
+I've been a software / security engineer at Facebook since Sept 2020.
+
+I've contributed a bunch of open-source software, command line tooling, etc that you can check out on my [GitHub](https://www.github.com/alichtman).
+
+Feel free to reach out using any of the following methods:
+
+- `aaronlichtman@gmail.com`
+- `alichtman@protonmail.com`
+- Carrier Pigeon, sent generally in the direction of Seattle
