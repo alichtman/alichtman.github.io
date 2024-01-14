@@ -242,3 +242,6 @@ Jeff Atwood (Stack Overflow co-founder) had similar things to say about the Wind
 {: .small}
 
 I wish macOS and GNOME provided these clipboard manager features by default -- _batteries included_. More people would use them, and the effort to figure out how to nicely build and integrate these features wouldn't be duplicated by me and other engineers.
+
+#### Thanks
+- [`grht`](https://gr.ht/) for providing feedback on this post.
