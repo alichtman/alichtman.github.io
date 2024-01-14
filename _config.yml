@@ -87,9 +87,8 @@ author:
   location: "$HOME"
   avatar: "/assets/images/bio.jpg"
   bio: |
-    SecEng / SWE @ FB.
-    I have a strong passion for working on too many projects at the same time.
-    This is not an issue I plan on resolving.
+    SecEng / SWE @ FB with a strong passion for working on too many projects at the same time.
+    Not an issue I plan on resolving.
   links:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
