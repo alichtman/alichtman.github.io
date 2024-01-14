@@ -6,11 +6,7 @@
 # `jekyll serve`. If you change this file, please restart the server process.
 
 # Theme Settings
-#
-# Review documentation to determine if you should use `theme` or `remote_theme`
-# https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
-#theme: "minimal-mistakes-jekyll"
 remote_theme: "mmistakes/minimal-mistakes"
 minimal_mistakes_skin: "contrast" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
@@ -19,7 +15,7 @@ locale: "en-US"
 title: "Bits and Pieces"
 name: "Aaron Lichtman"
 email: alichtman@gmail.com
-description: Software / security engineering blog. I also like rocks.
+description: Software / security engineering blog. Also some discussion about rocks.
 twitter_username: aaronlichtman
 github_username: alichtman
 
@@ -32,9 +28,9 @@ teaser: # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo: # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title: "Bits and Pieces" # overrides the website title displayed in the masthead, use " " for no title
 breadcrumbs: true
-words_per_minute: 200
+words_per_minute: 150
 comments:
-  provider: # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
+  provider: "giscus" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
   disqus:
     shortname: # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
@@ -43,17 +39,14 @@ comments:
     theme: # "github-light" (default), "github-dark"
     issue_term: # "pathname" (default)
   giscus:
-    repo_id: # Shown during giscus setup at https://giscus.app
-    category_name: # Full text name of the category
-    category_id: # Shown during giscus setup at https://giscus.app
+    repo_id: "MDEwOlJlcG9zaXRvcnkxMjYxNjk5NDI" # Shown during giscus setup at https://giscus.app
+    category_name: "Announcements" # Full text name of the category
+    category_id: "DIC_kwDOB4UzVs4CcaS3" # Shown during giscus setup at https://giscus.app
     discussion_term: # "pathname" (default), "url", "title", "og:title"
     reactions_enabled: # '1' for enabled (default), '0' for disabled
-    theme: # "light" (default), "dark", "dark_dimmed", "transparent_dark", "preferred_color_scheme"
-  staticman:
-    branch: # "master"
-    endpoint: # "https://{your Staticman v3 API}/v3/entry/github/"
+    theme: "noborder_light" # "light" (default), "dark", "dark_dimmed", "transparent_dark", "preferred_color_scheme"
   path: # blank (default) uses feed.xml
-  hide: # true, false (default)
+  hide: false # true, false (default)
 search: true
 search_full_content: # true, false (default)
 search_provider: # lunr (default), algolia, google
@@ -88,7 +81,7 @@ author:
   avatar: "/assets/images/bio.jpg"
   bio: |
     SecEng / SWE @ FB with a strong passion for working on too many projects at the same time.
-    Not an issue I plan on resolving.
+    Not a bug I plan on fixing.
   links:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
@@ -175,7 +168,7 @@ sass:
 
 # Outputting
 permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
+paginate: 10 # amount of posts to show
 paginate_path: /page:num/
 timezone: America/Los_Angeles
 

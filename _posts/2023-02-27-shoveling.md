@@ -2,6 +2,7 @@
 title: "When you have depression, it’s like it snows every day."
 date: 2023-02-27T16:34:30-04:00
 hidden: true
+search: false
 ---
 
 > I found this post [on Reddit](https://www.reddit.com/r/AskReddit/comments/8pks1u/suicide_prevention_megathread/e0cbafs/) originally. It's one of the best descriptions of depression I've ever read. As things on the internet tend to disappear, here's a copy:

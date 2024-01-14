@@ -6,7 +6,7 @@
    Typography
    ========================================================================== */
 
-$doc-font-size: 16 !default;
+$doc-font-size: 15 !default;
 
 /* paragraph indention */
 $paragraph-indent: false !default; // true, false (default)
@@ -58,14 +58,14 @@ $h-size-6: 1em !default; // ~16px
    Colors
    ========================================================================== */
 
-$gray: #7a8288 !default;
+$gray: #363740 !default;
 $dark-gray: mix(#000, $gray, 50%) !default;
 $darker-gray: mix(#000, $gray, 60%) !default;
 $light-gray: mix(#fff, $gray, 50%) !default;
 $lighter-gray: mix(#fff, $gray, 90%) !default;
 
-$background-color: #fff !default;
-$code-background-color: #fafafa !default;
+$background-color: #F5F5F0 !default;
+$code-background-color: #bab9b9 !default;
 $code-background-color-dark: $light-gray !default;
 $text-color: $dark-gray !default;
 $muted-text-color: mix(#fff, $text-color, 20%) !default;
@@ -126,23 +126,39 @@ $notice-background-mix: 80% !default;
 $code-notice-background-mix: 90% !default;
 
 /* syntax highlighting (base16) */
-$base00: #263238 !default;
-$base01: #2e3c43 !default;
-$base02: #314549 !default;
-$base03: #546e7a !default;
-$base04: #b2ccd6 !default;
-$base05: #eeffff !default;
-$base06: #eeffff !default;
-$base07: #ffffff !default;
-$base08: #f07178 !default;
-$base09: #f78c6c !default;
-$base0a: #ffcb6b !default;
-$base0b: #c3e88d !default;
-$base0c: #89ddff !default;
-$base0d: #82aaff !default;
-$base0e: #c792ea !default;
-$base0f: #ff5370 !default;
+//$base00: #263238 !default;
+//$base01: #2e3c43 !default;
+//$base02: #314549 !default;
+//$base03: #546e7a !default;
+//$base04: #b2ccd6 !default;
+//$base05: #eeffff !default;
+//$base06: #eeffff !default;
+//$base07: #ffffff !default;
+//$base08: #f07178 !default;
+//$base09: #f78c6c !default;
+//$base0a: #ffcb6b !default;
+//$base0b: #c3e88d !default;
+//$base0c: #89ddff !default;
+//$base0d: #82aaff !default;
+//$base0e: #c792ea !default;
+//$base0f: #ff5370 !default;
 
+$base00: #1d2021 !default;
+$base01: #fb4934 !default;
+$base02: #b8bb26 !default;
+$base03: #fabd2f !default;
+$base04: #83a598 !default;
+$base05: #d3869b !default;
+$base06: #8ec07c !default;
+$base07: #d5c4a1 !default;
+$base08: #665c54 !default;
+$base09: #fb4934 !default;
+$base0a: #b8bb26 !default;
+$base0b: #fabd2f !default;
+$base0c: #83a598 !default;
+$base0d: #d3869b !default;
+$base0e: #8ec07c !default;
+$base0f: #fbf1c7 !default;
 /*
    Breakpoints
    ========================================================================== */
