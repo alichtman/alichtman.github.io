@@ -20,7 +20,7 @@ twitter_username: aaronlichtman
 github_username: alichtman
 
 title_separator: "-"
-subtitle: "Engineering and Mountains"
+subtitle: "Mountains and Engineering"
 url: "https://alichtman.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl: # the subpath of your site, e.g. "/blog"
 repository: "alichtman/alichtman.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
