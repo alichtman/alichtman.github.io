@@ -197,7 +197,7 @@ Using GNOME Keyboard Custom Shortcuts, I map `rofi -modi 'clipboard:~/bin/greenc
 
 I install [`Maccy`](https://github.com/p0deje/Maccy) with `brew`. It looks like a native macOS app, is free and open-source, and is intuitive to use.
 {% capture fig_img %}
-![maccy](/assets/images/maccy.png){: .align-center}
+![maccy](/assets/images/maccy.png)
 {% endcapture %}
 
 {% capture fig_caption %}
