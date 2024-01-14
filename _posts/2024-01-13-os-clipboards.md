@@ -76,7 +76,7 @@ You can perform the above task in `vim` without ever taking your hands off the k
 
 > Image attributed to Facebook [here](https://medium.com/swlh/move-fast-and-break-things-is-not-dead-8260b0718d90)
 
-The thing holding me back is certainly not the speed at which I can operate my computer. If only it were as easy to type _things that are higher quality_ as is to to type _them faster_. :)
+The thing holding me back is certainly not the speed at which I can operate my computer. If only it were as easy to type _things that are better_ as is to to type _them faster_. :)
 
 ### `vim` Workflow
 

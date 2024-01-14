@@ -227,8 +227,9 @@ defaults:
     values:
       show_date: true
       layout: single
+      classes: wide
       author_profile: true
       read_time: true
       comments: # true
-      share: true
+      share: false
       related: false

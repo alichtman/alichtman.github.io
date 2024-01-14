@@ -14,7 +14,9 @@ I've contributed a bunch of open-source software, command line tooling, etc that
 
 ## Website Design
 
-I borrowed a lot of ideas from [Fabien Sanglard's website](https://fabiensanglard.net/), which is maybe the best-designed minimal static blog I've ever seen. Seriously, it's gorgeous.
+I borrowed a lot of ideas from [Fabien Sanglard's website](https://fabiensanglard.net/). I am pretty sure it's the best-designed minimal static blog I've ever seen.
+
+Seriously, it's **gorgeous**.
 
 ## Contact Me
 
