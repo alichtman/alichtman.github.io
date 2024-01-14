@@ -80,7 +80,7 @@ author:
   location: "$HOME"
   avatar: "/assets/images/bio.jpg"
   bio: |
-    SecEng / SWE @ FB with a strong passion for working on too many projects at the same time.
+    SWE / SecEng @ FB with a strong passion for working on too many projects at the same time.
     Not a bug I plan on fixing.
   links:
     - label: "Twitter"
@@ -104,6 +104,9 @@ footer:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       url: "https://instagram.com/aaronlichtman"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/aaron-lichtman/"
 
 # Reading Files
 include:
