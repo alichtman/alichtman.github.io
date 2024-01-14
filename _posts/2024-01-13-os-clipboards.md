@@ -6,6 +6,9 @@ categories:
 tags:
     - macOS
     - linux
+toc: true
+toc_label: "Table of Contents"
+toc_icon: "cog"
 ---
 
 A clipboard manager that retains extended history is a core part of an OS that should be configured by default.
@@ -69,14 +72,14 @@ With a clipboard that retained your copy history, the workflow could be:
 
 ## Moving at the speed of thought: `vim` and `tmux`
 
-You can perform the above task in `vim` without ever taking your hands off the keyboard. You'll ~~break things~~ **build stable infra** faster by cutting the mouse out of your workflows (and obsessing over [`nvim` and `tmux` configs](https://github.com/alichtman/dotfiles)).
+You can perform the above task in `vim` without ever taking your hands off the keyboard. You'll ~~break things~~ **build stable infra** faster by learning CLI / modal-editing workflows (and obsessing over [`nvim` and `tmux` configs](https://github.com/alichtman/dotfiles)).
 {: .notice--info}
 
 ![break things faster](/assets/images/move-fast.webp)
 
 > Image attributed to Facebook [here](https://medium.com/swlh/move-fast-and-break-things-is-not-dead-8260b0718d90)
 
-The thing holding me back is certainly not the speed at which I can operate my computer. If only it were as easy to type _things that are better_ as is to to type _them faster_. :)
+What slows me down is definitely not the speed at which I can operate my computer. If only it were as straightforward to type _things that are better_ as it is to _type things faster_. :)
 
 ### `vim` Workflow
 
