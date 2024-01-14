@@ -2,7 +2,6 @@
 title: "HackTheBox -- Traverxec"
 date: 2020-04-20T05:56:30-04:00
 categories:
-  - blog
   - hack-the-box
 tags:
   - OSCP
@@ -84,7 +83,7 @@ Let's do a simple test to check that this exploit works.
 $ python 47837.py 10.10.10.165 80 whoami
 www-data
 ```
-This gets us command execution! 
+This gets us command execution!
 
 ### Reverse Shell
 
@@ -283,7 +282,7 @@ echo "Last 5 journal log lines:"
 /usr/bin/sudo /usr/bin/journalctl -n5 -unostromo.service | /usr/bin/cat
 ```
 
-Running this script does **not** prompt us for a sudo password. This is a fantastic sign. I checked out the `journalctl` page on [GTFObins](https://gtfobins.github.io/gtfobins/journalctl/) and found that `journalctl` invokes the default pager, which is normally `less`. We can see that `less` has root privileges with: 
+Running this script does **not** prompt us for a sudo password. This is a fantastic sign. I checked out the `journalctl` page on [GTFObins](https://gtfobins.github.io/gtfobins/journalctl/) and found that `journalctl` invokes the default pager, which is normally `less`. We can see that `less` has root privileges with:
 
 ```bash
 david@traverxec:~/bin$ ls -l `which less`
@@ -299,4 +298,4 @@ root@traverxec:/home/david/bin# wc /root/root.txt
  1  1 33 /root/root.txt
 ```
 
-And there we have it! I really enjoyed this box, even though I struggled for hours to figure out the `root` privilege escalation 
+And there we have it! I really enjoyed this box, even though I struggled for hours to figure out the `root` privilege escalation

