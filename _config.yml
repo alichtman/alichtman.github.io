@@ -92,6 +92,9 @@ author:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       url: "https://instagram.com/aaronlichtman"
+    - label: "Résumé"
+      icon: "fa fa-fw fa-id-badge"
+      url: https://rawgit.com/alichtman/resume/master/resume/resume.pdf
 
 footer:
   links:
