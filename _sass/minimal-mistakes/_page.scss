@@ -64,6 +64,7 @@ body {
       float: left;
       margin-left: 0;
       margin-right: 0;
+      margin-bottom: 0.5em;
       width: 100%;
       clear: both;
     }
@@ -116,11 +117,12 @@ body {
   li,
   dl {
     font-size: 0.9em; // Change font size of paragraphs
+    margin-bottom: 0.5em;
   }
 
   /* paragraph indents */
   p {
-    margin: 0 0 $indent-var;
+    margin: 0 0 0.8em;
 
     /* sibling indentation*/
     @if $paragraph-indent == true {
