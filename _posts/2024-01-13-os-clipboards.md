@@ -8,7 +8,7 @@ tags:
     - linux
 ---
 
-Basic functionality, which should really be configured by default.
+A clipboard manager that retains extended history is a core part of an OS that should be configured by default.
 {: .notice--info}
 
 # Where does it hurt?
