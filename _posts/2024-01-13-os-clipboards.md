@@ -245,9 +245,9 @@ I wish macOS and GNOME provided these clipboard manager features by default -- _
 
 ## Security Issues with the Clipboard Manager Experience
 
-I'd love to see a clipboard manager that had first class support for sensitive strings (passwords, SSNs, SSH private keys, etc). The current "all text in the clipboard is equal" approach has a few flaws:
+I'd love to see clipboard managers provide first class support for sensitive strings (passwords, SSNs, SSH private keys, etc). The current _"all text in the clipboard is equal"_ approach has a few flaws:
 
-1. Imagine you normally get toast confirmations when you copy a string. If you are streaming your desktop somewhere and you copy a password from a password manager, the toast will leak your password.
+1. Imagine you get toast confirmations when you copy a string. If you are streaming your desktop somewhere and you copy a password from a password manager, the toast will leak your password.
 
 2. `greenclip` will happily write your copied password to the clipboard manager cache file, where it can be read by any program running with your user permissions.
 
@@ -279,7 +279,7 @@ The test username and test password are clearly seen in the first `50B` of the f
 
 Ignoring the fact that the [clipboard text is sniffable by any application on the system](https://attack.mitre.org/techniques/T1115/), it's not great to leave sensitive data sitting around unencrypted.
 
-The native `macOS` clipboard doesn't suffer from the same issue that `greenclip` does since it only remembers one item. After copying a password from a password manager, many password managers will save an empty string to the clipboard after a short timeout -- effectively destroying the sensitive data.
+The native `macOS` clipboard doesn't suffer from the same issue that `greenclip` does since it only remembers one item. A short time after copying a password to the clipboard, many password managers will copy an empty string -- effectively removing the sensitive data from the clipboard.
 
 ### Sensitive String Protocol
 
