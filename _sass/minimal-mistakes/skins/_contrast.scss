@@ -44,8 +44,11 @@ $base0F: #d65d0e;
 }
 
 .page__footer {
+  display: flex;
   color: #fff !important; // override
 }
+
+.page__footer .copyright
 
 .page__footer-follow .social-icons i,
 .page__footer-follow .social-icons .svg-inline--fa  {
