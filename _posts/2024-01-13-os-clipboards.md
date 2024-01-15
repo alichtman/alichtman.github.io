@@ -14,7 +14,7 @@ toc_icon: "cog"
 An easily searchable clipboard manager that retains extended history is a part of key workflows; and should be configured by default.
 {: .notice--info}
 
-# Where does it hurt?
+## Where does it hurt?
 
 ![where does it hurt](/assets/images/where-does-it-hurt-clipboard.jpg){: .align-center}
 
@@ -185,7 +185,7 @@ You might be saying to yourself: _"Those are definitely different keychords, man
 
 ### Ubuntu Linux (with GNOME)
 
-I use [`greenclip`](https://github.com/erebe/greenclip) integrated with [`rofi`](https://github.com/davatorium/rofi) to manage my clipboard history. Note that it does not provide media previews. If that's a critical feature set, check out [Pano](https://github.com/oae/gnome-shell-pano).
+I use [`greenclip`](https://github.com/erebe/greenclip) integrated with [`rofi`](https://github.com/davatorium/rofi) to manage my clipboard history. Note that it does not provide media previews, and can only handle [small images](https://github.com/erebe/greenclip#faq). If that's a critical feature set, check out [Pano](https://github.com/oae/gnome-shell-pano).
 
 ![greenclip](/assets/images/rofi-greenclip.jpg){: .align-center}
 
@@ -218,7 +218,7 @@ The clipboard manager **does NOT Just Work™**.
 
 ---
 
-Interesting note: `Cut / Copy / Paste` was  [invented by Larry Tesler](http://worrydream.com/refs/Tesler%20-%20A%20Personal%20History%20of%20Modeless%20Text%20Editing%20and%20Cut-Copy-Paste.pdf) in the 70s. Tessler became the systems software lead for the Apple Lisa, and eventually Apple's chief scientist in 1993.
+Interesting note: `Cut / Copy / Paste` was  [invented by Larry Tesler](http://worrydream.com/refs/Tesler%20-%20A%20Personal%20History%20of%20Modeless%20Text%20Editing%20and%20Cut-Copy-Paste.pdf) in the 70s. Tesler became the systems software lead for the Apple Lisa, and eventually Apple's chief scientist in 1993.
 
 
 ### Windows
@@ -243,5 +243,47 @@ Jeff Atwood (Stack Overflow co-founder) had similar things to say about the Wind
 
 I wish macOS and GNOME provided these clipboard manager features by default -- _batteries included_. More people would use them, and the effort to figure out how to nicely build and integrate these features wouldn't be duplicated by me and other engineers.
 
-#### Thanks
+## Security Issues with the Clipboard Manager Experience
+
+I'd love to see a clipboard manager that had first class support for sensitive strings (passwords, SSNs, SSH private keys, etc). The current "all text in the clipboard is equal" approach has a few flaws:
+
+1. Imagine you normally get toast confirmations when you copy a string. If you are streaming your desktop somewhere and you copy a password from a password manager, the toast will leak your password.
+
+2. `greenclip` will happily write your copied password to the clipboard manager cache file, where it can be read by any program running with your user permissions.
+
+I'll demonstrate this with a password copied from [`1Password`](https://1password.com/).
+
+![](/assets/images/1password.png){: .align-center}
+
+```bash
+$ ls -lah $XDG_CACHE_HOME/greenclip.history
+.rw------- alichtman alichtman 6.2 KB Sun Jan 14 2024 02:57:41 PM  /home/alichtman/.cache/greenclip.history
+
+$ xxd -l 200 $XDG_CACHE_HOME/greenclip.history
+00000000: 0000 0000 0000 0064 0000 0000 0000 0000  .......d........
+00000010: 0000 0000 0000 0000 1531 7061 7373 776f  .........1passwo
+00000020: 7264 5465 7374 5061 7373 776f 7264 0000  rdTestPassword..
+00000030: 0000 0000 0000 0000 0000 0000 0000 1531  ...............1
+00000040: 7061 7373 776f 7264 5465 7374 5573 6572  passwordTestUser
+00000050: 6e61 6d65 0000 0000 0000 0000 0000 0000  name............
+00000060: 0000 0000 5359 6f75 2061 7265 2065 6974  ....SYou are eit
+00000070: 6865 7220 7265 7370 6f6e 7369 626c 6520  her responsible
+00000080: 666f 7220 636c 6561 7269 6e67 2074 6865  for clearing the
+00000090: 2063 6163 6865 206f 6e20 796f 7572 206f   cache on your o
+000000a0: 776e 2028 6024 2067 7265 656e 636c 6970  wn (`$ greenclip
+000000b0: 2063 6c65 6172 6029 0000 0000 0000 0000   clear`)........
+000000c0: 0000 0000 0000 0000                      ........
+```
+
+The test username and test password are clearly seen in the first `50B` of the file. You are either responsible for clearing the cache on your own (`$ greenclip clear`) or waiting for the sensitive string to get paged out of the cache (the default is 50 copied items).
+
+Ignoring the fact that the [clipboard text is sniffable by any application on the system](https://attack.mitre.org/techniques/T1115/), it's not great to leave sensitive data sitting around unencrypted.
+
+The native `macOS` clipboard doesn't suffer from the same issue that `greenclip` does since it only remembers one item. After copying a password from a password manager, many password managers will save an empty string to the clipboard after a short timeout -- effectively destroying the sensitive data.
+
+### Sensitive String Protocol
+
+What if password managers made a deal with clipboard managers (that opted in by setting some environment variable) that they'll prepend the string `THIS_IS_AN_EXTREMELY_SENSITIVE_STRING_DO_NOT_LOSE_THIS_PLEASE!` to all sensitive info when copied. The clipboard manager can then know to dispose of the string after it's used one time, not show a notification containing it, or prompt for a password to paste the data.
+
+## Thanks
 - [`grht`](https://gr.ht/) for providing feedback on this post.
