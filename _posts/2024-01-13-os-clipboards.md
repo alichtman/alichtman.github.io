@@ -210,17 +210,15 @@ It leaves you wondering: Why hasn't Apple shipped this as part of the core OS?
   <figcaption>{{ fig_caption | markdownify | remove: "<p>" | remove: "</p>" }}</figcaption>
 </figure>
 
-`macOS` has a reputation for **Just Working™**.
+- `macOS` has a reputation for **Just Working™**
 
-The `macOS` clipboard manager **does NOT Just Work™**.
-
---
+- The `macOS` clipboard manager **does NOT Just Work™**
 
 Interesting note: `Cut / Copy / Paste` was [invented by Larry Tesler](http://worrydream.com/refs/Tesler%20-%20A%20Personal%20History%20of%20Modeless%20Text%20Editing%20and%20Cut-Copy-Paste.pdf) in the 70s. Tesler became the systems software lead for the Apple Lisa, and eventually Apple's chief scientist in 1993.
 
 ### Windows
 
-Surprisingly, `Windows` seems to be the only OS that gets this right. The default clipboard manager has a built-in clipboard history. But the default file manager (in **2024!!!**) still reports all file sizes in `KB`, so rest assured that there is plenty left to complain about.
+Surprisingly, `Windows` seems to be the only OS that gets this part right. The default clipboard manager has a built-in clipboard history. However, the default file manager (in **2024!!!**) still reports all file sizes in `KB`, so rest assured that there is plenty left to complain about.
 
 ## Sane Defaults
 
@@ -277,7 +275,7 @@ $ xxd -l 200 $XDG_CACHE_HOME/greenclip.history
 
 The test username and test password are clearly seen in the first `50B` of the file. You are either responsible for clearing the cache on your own (`$ greenclip clear`) or waiting for the sensitive string to get paged out of the cache (the default is 50 copied items).
 
-Ignoring the fact that the [clipboard text is sniffable by any application on the system](https://attack.mitre.org/techniques/T1115/), it's not great to leave sensitive data sitting around unencrypted.
+In addition to the [clipboard text being sniffable by any application that can run as you](https://attack.mitre.org/techniques/T1115/), it's just not great to leave sensitive data sitting around unencrypted.
 
 The native `macOS` clipboard doesn't suffer from the same issue that `greenclip` does since it only remembers one item. A short time after copying a password to the clipboard, many password managers will copy an empty string -- effectively removing the sensitive data from the clipboard.
 
@@ -289,7 +287,7 @@ If I copy an SSH private key and go to paste it into a GitHub comment, I want my
 
 ![you sure about that?](/assets/gifs/you-sure-about-that.gif){: .align-center}
 
-Or if I copy my Google password out of 1Password and some random app tries to read the clipboard:
+Or if I copy my Google password out of 1Password and [some random app tries to read the clipboard](https://attack.mitre.org/techniques/T1115/):
 
 ![no clipboard for you](/assets/images/no-clipboard-meme.jpg){: .align-center}
 
