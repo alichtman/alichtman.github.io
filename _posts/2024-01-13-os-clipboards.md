@@ -250,9 +250,11 @@ I'd love to see clipboard managers provide first class support for sensitive str
 
 1. Imagine you get toast confirmations when you copy a string. If you are streaming your desktop somewhere and you copy a password from a password manager, the toast will leak your password.
 
-1. Some clipboard managers provide a "private mode", to make the clipboard stop listening for a period of time. If you forget to turn it on, or your clipboard manager doesn't support the more advanced privacy options
-    b. `Maccy` makes you [run a command to toggle it](https://github.com/p0deje/Maccy#ignore-copied-items)
-    c. `greenclip` doesn't have this level of granularity, and only allows you to clear the entire clipboard history.
+2. Some clipboard managers provide a "private mode", to make the clipboard stop listening for a period of time. If you forget to turn it on, or your clipboard manager doesn't support the more advanced privacy options
+
+    a. `Maccy` makes you [run a command to toggle it](https://github.com/p0deje/Maccy#ignore-copied-items)
+
+    b. `greenclip` doesn't have this level of granularity, and only allows you to clear the entire clipboard history.
 
 2. `greenclip` will happily write your copied password to the clipboard manager cache file, where it can be read by any program running with your user permissions.
 
