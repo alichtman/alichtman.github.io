@@ -2,6 +2,23 @@
    TABLES
    ========================================================================== */
 
+table.lines , table.lines th, table.lines td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+table.lines  td {
+  padding-right: 1ch;
+  padding-top: 0.8ch;
+  padding-bottom: 0.8ch;
+  text-align: center;
+}
+
+table.lines th {
+  font-weight: bold;
+  background-color: #FFF;
+}
+
+
 table {
   display: block;
   margin-bottom: 1em;

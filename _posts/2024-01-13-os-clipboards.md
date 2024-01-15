@@ -130,7 +130,7 @@ There are two special registers for the system clipboard, called [selection regi
 
 ```lua
 vim.opt.clipboard = "unnamedplus"
-````
+```
 
 After doing that, the workflow becomes:
 
@@ -165,19 +165,18 @@ Which is ... pretty slick. If (when) you become a `vim` addict, you'll be able t
 
 To make `tmux` and the system clipboard play nicely together, I use [`tmux-yank`](https://github.com/tmux-plugins/tmux-yank) in my [`tmux.conf`](https://github.com/alichtman/dotfiles/blob/main/.config/tmux/tmux.conf#L197).
 
-
 ## Clipboard Manager Setup
 
 I primarily work on `macOS` and `Linux` machines, and have a clipboard manager workflow for each.
 
 ### Requirements
 
-- Extended clipboard history storage
-- Easily browsable / searchable clipboard history
-- Support for media (images / videos) in the clipboard
-    - Previewing the media is not required, but is a nice-to-have
-- Same keychord for the clipboard manager on all OSes
-    - One which wasn't a common keybinding in other tools I use
+-   Extended clipboard history storage
+-   Easily browsable / searchable clipboard history
+-   Support for media (images / videos) in the clipboard
+    -   Previewing the media is not required, but is a nice-to-have
+-   Same keychord for the clipboard manager on all OSes
+    -   One which wasn't a common keybinding in other tools I use
 
 ### Keychord Configuration
 
@@ -211,21 +210,17 @@ It leaves you wondering: Why hasn't Apple shipped this as part of the core OS?
   <figcaption>{{ fig_caption | markdownify | remove: "<p>" | remove: "</p>" }}</figcaption>
 </figure>
 
-
-
 `macOS` has a reputation for **Just Working™**.
 
 The `macOS` clipboard manager **does NOT Just Work™**.
 
 --
 
-Interesting note: `Cut / Copy / Paste` was  [invented by Larry Tesler](http://worrydream.com/refs/Tesler%20-%20A%20Personal%20History%20of%20Modeless%20Text%20Editing%20and%20Cut-Copy-Paste.pdf) in the 70s. Tesler became the systems software lead for the Apple Lisa, and eventually Apple's chief scientist in 1993.
-
+Interesting note: `Cut / Copy / Paste` was [invented by Larry Tesler](http://worrydream.com/refs/Tesler%20-%20A%20Personal%20History%20of%20Modeless%20Text%20Editing%20and%20Cut-Copy-Paste.pdf) in the 70s. Tesler became the systems software lead for the Apple Lisa, and eventually Apple's chief scientist in 1993.
 
 ### Windows
 
 Surprisingly, `Windows` seems to be the only OS that gets this right. The default clipboard manager has a built-in clipboard history. But the default file manager (in **2024!!!**) still reports all file sizes in `KB`, so rest assured that there is plenty left to complain about.
-
 
 ## Sane Defaults
 
@@ -234,8 +229,6 @@ It's _great_ that I can make this all work. But it's kind of ridiculous that I n
 Jeff Atwood (Stack Overflow co-founder) had similar things to say about the Windows Vista introduction of [typing to search for files, executables, emails, etc in the Start Menu](https://blog.codinghorror.com/typing-trumps-pointing/):
 
 > ... with Vista, typing to navigate is now quite literally the cornerstone of the operating system. I've gone from tedious, manually defined hotkeys and shortcuts in Windows XP to simply typing what I want and letting the computer find it for me. It also utterly obsoletes the Start, Run menu because it works for file paths.
->
->
 >
 > There are dozens of third-party solutions that deliver very similar interactive full-text search UI experiences. But **there's one key difference between those solutions and the one in Vista: I have to install them**. You may argue that, in the near term, I also have to install Vista. Fair enough. But over the next five years, millions of users will buy computers with Vista pre-installed. And they'll immediately benefit from the built-in, default full-text search UI that's accessible right out of the box with a single press of the Windows key.
 
@@ -256,8 +249,7 @@ I'd love to see clipboard managers provide first class support for sensitive str
 
     b. `greenclip` doesn't have this level of granularity, and only allows you to clear the entire clipboard history.
 
-2. `greenclip` will happily write your copied password to the clipboard manager cache file, where it can be read by any program running with your user permissions.
-
+3. `greenclip` will happily write your copied password to the clipboard manager cache file, where it can be read by any program running with your user permissions.
 
 I'll demonstrate this with a password copied from [`1Password`](https://1password.com/).
 
@@ -289,9 +281,43 @@ Ignoring the fact that the [clipboard text is sniffable by any application on th
 
 The native `macOS` clipboard doesn't suffer from the same issue that `greenclip` does since it only remembers one item. A short time after copying a password to the clipboard, many password managers will copy an empty string -- effectively removing the sensitive data from the clipboard.
 
-### Sensitive String Protocol
+### How Could Schematized Clipboard Data Help?
 
-What if password managers made a deal with clipboard managers (that opted in by setting some environment variable) that they'll prepend the string `THIS_IS_AN_EXTREMELY_SENSITIVE_STRING_DO_NOT_LOSE_THIS_PLEASE!` to all sensitive info when copied. The clipboard manager can then know to dispose of the string after it's used one time, not show a notification containing it, or prompt for a password to paste the data.
+**I want my clipboard to understand what kind of data it's holding.**
+
+If I copy an SSH private key and go to paste it into a GitHub comment, I want my clipboard manager to go:
+
+![you sure about that?](/assets/gifs/you-sure-about-that.gif){: .align-center}
+
+Or if I copy my Google password out of 1Password and some random app tries to read the clipboard:
+
+![no clipboard for you](/assets/images/no-clipboard-meme.jpg){: .align-center}
+
+Or maybe you want to lock down what programs can write to your clipboard when you [copy a bitcoin address](https://www.bleepingcomputer.com/news/security/new-clipboard-hijacker-replaces-crypto-wallet-addresses-with-lookalikes/).
+
+There seems to be a lot of opportunity here.
+### What a Schematized Clipboard Protocol Could Look Like
+
+First, a visual representation of what a schematized string could look like:
+
+- `🗸` means the byte was forwarded to the clipboard to become paste-able text
+- `🤔` means the byte was part of the marker string
+- `↑` means the byte was part of the schema
+
+
+| a | \_ |  l |  o | n   | g   | \_  | p   | a   | s   | s   | w   | o   | r   | d   | 0x01 | 0x02 | 0x03 | 0x04 | P   | A   | S   | S   |W    | O   | R   | D   |
+| - | - |    - |    - | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ---- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 🗸 | 🗸 | 🗸 | 🗸 | 🗸   | 🗸   | 🗸   | 🗸   | 🗸   | 🗸   | 🗸   | 🗸   | 🗸   | 🗸   | 🗸   |🤔    |  🤔  |🤔   |   🤔 | ↑  |   ↑  |    ↑ |    ↑|   ↑|    ↑ |   ↑  |  ↑ |
+{:.table .lines}
+
+This could be implemented in an opt-in fashion by putting this behavior behind an env-var-based feature flag.
+
+1. Password managers would check for the env var. If it is set, they'll send the raw text to be copied, a 4-byte marker string (`0x01 0x02 0x03 0x04`) and then an item schema -- (`PASSWORD`, for passwords; `SSH` for `SSH` keys; etc).
+2. Clipboard managers would also check for the env var. If it's set, when text is received by the clipboard that contains the 4-byte marker string, an attempt will be made to parse the datatype out. If the clipboard finds a valid datatype, label the data in the clipboard properly. If not, append every byte between the start of the marker string and the end of the invalid schema to the clipboard buffer.
+3. You'd be able to configure what datatypes can go where, and what kind of protections you want to enable.
+
+
 
 ## Thanks
-- [`grht`](https://gr.ht/) for providing feedback on this post.
+
+-   [`grht`](https://gr.ht/) for providing feedback on this post.
