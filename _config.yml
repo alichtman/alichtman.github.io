@@ -84,14 +84,17 @@ author:
     Not a bug I plan on fixing.
   links:
     - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
+      icon: "fab fa-fw fa-twitter-square black-on-white-button"
       url: "https://twitter.com/aaronlichtman"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/alichtman"
     - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
+      icon: "fab fa-fw fa-instagram black-on-white-button"
       url: "https://instagram.com/aaronlichtman"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin black-on-white-button"
+      url: "https://www.linkedin.com/in/aaron-lichtman/"
     - label: "Résumé"
       icon: "fa fa-fw fa-id-badge"
       url: https://rawgit.com/alichtman/resume/master/resume/resume.pdf
@@ -99,22 +102,22 @@ author:
 footer:
   links:
     - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
+      icon: "fab fa-fw fa-twitter-square white-on-black-button"
       url: "https://twitter.com/aaronlichtman"
     - label: "GitHub"
-      icon: "fab fa-fw fa-github"
+      icon: "fab fa-fw fa-github white-on-black-button"
       url: "https://github.com/alichtman"
     - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
+      icon: "fab fa-fw fa-instagram white-on-black-button"
       url: "https://instagram.com/aaronlichtman"
     - label: "LinkedIn"
-      icon: "fab fa-fw fa-linkedin"
+      icon: "fab fa-fw fa-linkedin white-on-black-button"
       url: "https://www.linkedin.com/in/aaron-lichtman/"
 
 # Reading Files
 include:
   - .htaccess
-  - _pages
+  - _pages           t
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"

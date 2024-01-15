@@ -12,8 +12,7 @@
 $ bundle config set --local path 'vendor/bundle'
 $ bundle install
 $ bundle add webrick # https://github.com/jekyll/jekyll/issues/8523#issuecomment-751409319
-$ rm .jekyll-metadata
-$ bundle exec jekyll serve --incremental
+$ rm .jekyll-metadata && bundle exec jekyll serve --incremental
 ```
 
 ## Troubleshooting

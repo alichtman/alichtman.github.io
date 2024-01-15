@@ -244,6 +244,12 @@ body:hover .visually-hidden button {
   .fa-github-square {
     color: $github-color;
   }
+  .fa-github-white,
+  .fa-github-white-alt,
+  .fa-github-white-square {
+    color: $github-white-color;
+  }
+
 
   .fa-gitlab {
     color: $gitlab-color;
@@ -284,7 +290,7 @@ body:hover .visually-hidden button {
 
   .fa-rss,
   .fa-rss-square {
-    color: $rss-color;
+    color: $background-color;
   }
 
   .fa-soundcloud {
@@ -323,6 +329,16 @@ body:hover .visually-hidden button {
   .fa-xing,
   .fa-xing-square {
     color: $xing-color;
+  }
+
+
+  .white-on-black-button {
+    color: $background-color;
+  }
+
+
+  .black-on-white-button {
+    color: #15141A;
   }
 }
 
