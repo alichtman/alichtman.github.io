@@ -22,7 +22,7 @@ I expect system clipboards to do **one thing -- store text and let me paste it l
 
 For reasons I will never understand, the default `macOS` and `linux` clipboards hold a max of one (1) item.
 
-## Here's an example
+## This sucks! Let's walk through why...
 
 Imagine you are copying two sections from `File 1` to `File 2`.
 
@@ -36,7 +36,7 @@ Imagine you are copying two sections from `File 1` to `File 2`.
 └────────────────────────────────────┘
 ```
 
-You open VS Code (we'll ignore `vim` workflows for this example, since they can make changing file focus less of a big deal by not requiring your hands to come off the keyboard), and split the screen vertically: `File 1` on the left, `File 2` on the right.
+You open VS Code (we'll ignore `vim` workflows for this example, since you can use registers as a clipboard manager), and split the screen vertically: `File 1` on the left, `File 2` on the right.
 
 1. Copy the first section from `File 1`
     - Drag cursor to select text (or click and use `Shift+Arrows`)
@@ -72,11 +72,14 @@ With a clipboard that retained your copy history, the workflow could be:
 
 ## Moving at the speed of thought: `vim` and `tmux`
 
-You can perform the above task in `vim` without ever taking your hands off the keyboard. You'll ~~break things~~ **build stable infra** faster by learning CLI / modal-editing workflows (and obsessing over [`nvim` and `tmux` configs](https://github.com/alichtman/dotfiles)).
+If you read this section, and your eyes glaze over, don't worry! Skip to [Clipboard Manager Setup](#clipboard-manager-setup) and come back to `vim` some other time :) You will get a bunch of value out of this post anyways.
+{: .notice--primary}
+
+You can perform the above task in `vim` using the default settings, without ever taking your hands off the keyboard. You'll ~~break things~~ **build stable infra** faster by learning CLI / modal-editing workflows (and obsessing over [`nvim` and `tmux` configs](https://github.com/alichtman/dotfiles)).
 {: .notice--info}
 
 [![break things faster](/assets/images/move-fast.webp)](/assets/images/move-fast.webp){: .align-center}
-[<cite>Image attributed to Facebook [here](https://medium.com/swlh/move-fast-and-break-things-is-not-dead-8260b0718d90)</cite>
+<cite>[Image attributed to Facebook](https://medium.com/swlh/move-fast-and-break-things-is-not-dead-8260b0718d90)</cite>
 {: .small}
 
 Although, what limits me is definitely not the speed at which I can operate my computer. If only it were as straightforward to type _better things_ as it is to _type things faster_ :)
@@ -120,9 +123,15 @@ o<ESC>
 :wq
 ```
 
-Registers are awesome for working _inside_ of `vim` but aren't exposed _outside_ of `vim`. This means we can't use them as the clipboard manager, even though they roughly have the behavior I'm looking for. Here's a peek at what's currently in my `vim` registers while I'm working on this article:
+Registers are awesome for working _inside_ of `vim` but aren't exposed _outside_ of `vim`. This means we can't use them as the clipboard manager, even though they roughly have the behavior I'm looking for. Here's a peek at what's currently in my `vim` registers while I'm working on this article.
+
+- The register name is on the left
+- Its content is displayed in the middle
+- Some of them have nice descriptions on the right
 
 [![vim registers](/assets/images/vim-registers.png)](/assets/images/vim-registers.png){: .align-center}
+<cite>You can click on the image to make it larger</cite>
+{: .small}
 
 There are two special registers for the system clipboard, called [selection registers](https://learnvim.irian.to/basics/registers#the-selection-registers). If you want to copy text from inside `vim` and paste it outside of `vim`, you need to copy to them explicitly (`"+y`). For more reasons I will never understand, copying to the system clipboard isn't the default copy behavior.
 
@@ -167,16 +176,16 @@ To make `tmux` and the system clipboard play nicely together, I use [`tmux-yank`
 
 ## Clipboard Manager Setup
 
-I primarily work on `macOS` and `Linux` machines, and have a clipboard manager workflow for each.
+Now that `vim` and `tmux` are hooked up to the system clipboard, I need to set up the clipboard manager to keep track of the history, searching, etc. I primarily work on `macOS` and `Linux` machines, and have a clipboard manager workflow for each.
 
-### Requirements
+### Clipboard Manager Requirements
 
--   Extended clipboard history storage
--   Easily browsable / searchable clipboard history
--   Support for media (images / videos) in the clipboard
-    -   Previewing the media is not required, but is a nice-to-have
--   Same keychord for the clipboard manager on all OSes
-    -   One which wasn't a common keybinding in other tools I use
+- Efficient clipboard history storage and retrieval
+- User-friendly and searchable clipboard history
+- Media (images/videos) support in the clipboard
+    - Optional media preview
+- Consistent keychord for the clipboard manager across all OSes
+    - Unique keybinding to avoid conflicts with other tools
 
 ### Keychord Configuration
 
@@ -241,11 +250,9 @@ I'd love to see clipboard managers provide first class support for sensitive str
 
 1. Imagine you get toast confirmations when you copy a string. If you are streaming your desktop somewhere and you copy a password from a password manager, the toast will leak your password.
 
-2. Some clipboard managers provide a "private mode", to make the clipboard stop listening for a period of time. If you forget to turn it on, or your clipboard manager doesn't support the more advanced privacy options
+1. Some clipboard managers provide a ["private mode" command](https://github.com/p0deje/Maccy#ignore-copied-items) to stop clipboard history logging for a period of time. If you forget to turn it on, or your clipboard manager doesn't support this, you're forced to clear the entire clipboard history to remove sensitive strings.
 
-    a. `Maccy` makes you [run a command to toggle it](https://github.com/p0deje/Maccy#ignore-copied-items)
-
-    b. `greenclip` doesn't have this level of granularity, and only allows you to clear the entire clipboard history.
+    a. `greenclip` doesn't have this feature, and also does not let you delete individual history lines easily. You can only clear the entire clipboard history. I'd add the feature, but it's written in Haskell, and I would rather rewrite it in ... any other language (`rust`, maybe).
 
 3. `greenclip` will happily write your copied password to the clipboard manager cache file, where it can be read by any program running with your user permissions.
 
