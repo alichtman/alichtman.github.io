@@ -16,7 +16,7 @@ An easily searchable clipboard manager that retains extended history is a part o
 
 ## Where does it hurt?
 
-![where does it hurt](/assets/images/where-does-it-hurt-clipboard.jpg){: .align-center}
+[![where does it hurt](/assets/images/where-does-it-hurt-clipboard.jpg)](/assets/images/where-does-it-hurt-clipboard.jpg){: .align-center}
 
 I expect system clipboards to do **one thing -- store text and let me paste it later**. If you're counting along and got two things, you are _off-by-one_. This is one of the [two hard problems in CS](https://martinfowler.com/bliki/TwoHardThings.html).
 
@@ -75,11 +75,11 @@ With a clipboard that retained your copy history, the workflow could be:
 You can perform the above task in `vim` without ever taking your hands off the keyboard. You'll ~~break things~~ **build stable infra** faster by learning CLI / modal-editing workflows (and obsessing over [`nvim` and `tmux` configs](https://github.com/alichtman/dotfiles)).
 {: .notice--info}
 
-![break things faster](/assets/images/move-fast.webp){: .align-center}
+[![break things faster](/assets/images/move-fast.webp)](/assets/images/move-fast.webp){: .align-center}
+[<cite>Image attributed to Facebook [here](https://medium.com/swlh/move-fast-and-break-things-is-not-dead-8260b0718d90)</cite>
+{: .small}
 
-> Image attributed to Facebook [here](https://medium.com/swlh/move-fast-and-break-things-is-not-dead-8260b0718d90)
-
-Although, what limits me is definitely not the speed at which I can operate my computer. If only it were as straightforward to type _better things_ as it is to _type things faster_. :)
+Although, what limits me is definitely not the speed at which I can operate my computer. If only it were as straightforward to type _better things_ as it is to _type things faster_ :)
 
 ### `vim` Workflow
 
@@ -122,7 +122,7 @@ o<ESC>
 
 Registers are awesome for working _inside_ of `vim` but aren't exposed _outside_ of `vim`. This means we can't use them as the clipboard manager, even though they roughly have the behavior I'm looking for. Here's a peek at what's currently in my `vim` registers while I'm working on this article:
 
-![vim registers](/assets/images/vim-registers.png){: .align-center}
+[![vim registers](/assets/images/vim-registers.png)](/assets/images/vim-registers.png){: .align-center}
 
 There are two special registers for the system clipboard, called [selection registers](https://learnvim.irian.to/basics/registers#the-selection-registers). If you want to copy text from inside `vim` and paste it outside of `vim`, you need to copy to them explicitly (`"+y`). For more reasons I will never understand, copying to the system clipboard isn't the default copy behavior.
 
@@ -137,7 +137,7 @@ After doing that, the workflow becomes:
 ```
 # Open the first file
 $ vim file1.txt
-g'/home/alichtman/Pictures/Screenshots/Screenshot from 2024-01-14 07-58-24.png' g0
+gg0
 
 # Copy line to system clipboard
 yy
@@ -145,7 +145,7 @@ yy
 yy
 :vs file2.txt
 Ctrl-w l
-" Paste from system clipboard register
+# Paste from system clipboard register
 p
 
 # Open the clipboard manager -- read the next section!
@@ -158,6 +158,8 @@ Down Arrow
 p
 :wq
 ```
+
+Which is ... pretty slick. If (when) you become a `vim` addict, you'll be able to do this without thinking about it.
 
 ### `tmux`
 
@@ -181,13 +183,13 @@ I primarily work on `macOS` and `Linux` machines, and have a clipboard manager w
 
 I set the `macOS` keychord to `Shift+Cmd+Option+V` and the Linux keychord to `Shift+Alt+Super+V`.
 
-You might be saying to yourself: _"Those are definitely different keychords, man"_. I use a [Razer Chroma Ornata](https://www.amazon.com/Razer-Ornata-Gaming-Keyboard-Spill-Resistant/dp/B09X6FKCBD) keyboard for my Linux machine, and the built-in Apple Keyboard for my macOS machine. The keychords are identical in terms of where the keys are on the keyboards, which is what's really important here.
+You might be thinking: _"Man, you literally just said you wanted to use the same keychords on every system"_. I use a [Razer Chroma Ornata](https://www.amazon.com/Razer-Ornata-Gaming-Keyboard-Spill-Resistant/dp/B09X6FKCBD) keyboard for my Linux machine, and the built-in Apple Keyboard for my macOS machine. **The keychords are identical in terms of where the keys are on the keyboards**, so my muscle memory works no matter which system I'm on.
 
 ### Ubuntu Linux (with GNOME)
 
 I use [`greenclip`](https://github.com/erebe/greenclip) integrated with [`rofi`](https://github.com/davatorium/rofi) to manage my clipboard history. Note that it does not provide media previews, and can only handle [small images](https://github.com/erebe/greenclip#faq). If that's a critical feature set, check out [Pano](https://github.com/oae/gnome-shell-pano).
 
-![greenclip](/assets/images/rofi-greenclip.jpg){: .align-center}
+[![greenclip](/assets/images/rofi-greenclip.jpg)](/assets/images/rofi-greenclip.jpg){: .align-center}
 
 Using GNOME Keyboard Custom Shortcuts, I map `rofi -modi 'clipboard:~/bin/greenclip print' -show clipboard` to the keychord I mentioned above.
 
@@ -195,13 +197,13 @@ Using GNOME Keyboard Custom Shortcuts, I map `rofi -modi 'clipboard:~/bin/greenc
 
 ### macOS
 
-I install [`Maccy`](https://github.com/p0deje/Maccy) with `brew`. It looks like a native macOS app, is free and open-source, and is intuitive to use.
+I install [`Maccy`](https://github.com/p0deje/Maccy) with `brew`. It's a performant, free and open-source, native macOS app that is intuitive to use.
 {% capture fig_img %}
 ![maccy](/assets/images/maccy.png)
 {% endcapture %}
 
 {% capture fig_caption %}
-It leaves you wondering: Why doesn't Apple ship this experience by default?
+It leaves you wondering: Why hasn't Apple shipped this as part of the core OS?
 {% endcapture %}
 
 <figure>
@@ -213,10 +215,9 @@ It leaves you wondering: Why doesn't Apple ship this experience by default?
 
 `macOS` has a reputation for **Just Working™**.
 
-The clipboard manager **does NOT Just Work™**.
-{: style="text-align: right;"}
+The `macOS` clipboard manager **does NOT Just Work™**.
 
----
+--
 
 Interesting note: `Cut / Copy / Paste` was  [invented by Larry Tesler](http://worrydream.com/refs/Tesler%20-%20A%20Personal%20History%20of%20Modeless%20Text%20Editing%20and%20Cut-Copy-Paste.pdf) in the 70s. Tesler became the systems software lead for the Apple Lisa, and eventually Apple's chief scientist in 1993.
 
@@ -249,7 +250,12 @@ I'd love to see clipboard managers provide first class support for sensitive str
 
 1. Imagine you get toast confirmations when you copy a string. If you are streaming your desktop somewhere and you copy a password from a password manager, the toast will leak your password.
 
+1. Some clipboard managers provide a "private mode", to make the clipboard stop listening for a period of time. If you forget to turn it on, or your clipboard manager doesn't support the more advanced privacy options
+    b. `Maccy` makes you [run a command to toggle it](https://github.com/p0deje/Maccy#ignore-copied-items)
+    c. `greenclip` doesn't have this level of granularity, and only allows you to clear the entire clipboard history.
+
 2. `greenclip` will happily write your copied password to the clipboard manager cache file, where it can be read by any program running with your user permissions.
+
 
 I'll demonstrate this with a password copied from [`1Password`](https://1password.com/).
 
