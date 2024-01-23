@@ -1,5 +1,5 @@
 ---
-title: "Sane Behavior for OS Clipboards (and a bit about command line tools)"
+title: "Sane Behavior for OS Clipboards"
 date: 2024-01-13T05:56:30-04:00
 categories:
     - blog
@@ -125,9 +125,9 @@ o<ESC>
 
 Registers are awesome for working _inside_ of `vim` but aren't exposed _outside_ of `vim`. This means we can't use them as the clipboard manager, even though they roughly have the behavior I'm looking for. Here's a peek at what's currently in my `vim` registers while I'm working on this article.
 
-- The register name is on the left
-- Its content is displayed in the middle
-- Some of them have nice descriptions on the right
+-   The register name is on the left
+-   Its content is displayed in the middle
+-   Some of them have nice descriptions on the right
 
 [![vim registers](/assets/images/vim-registers.png)](/assets/images/vim-registers.png){: .align-center}
 <cite>You can click on the image to make it larger</cite>
@@ -180,12 +180,12 @@ Now that `vim` and `tmux` are hooked up to the system clipboard, I need to set u
 
 ### Clipboard Manager Requirements
 
-- Efficient clipboard history storage and retrieval
-- User-friendly and searchable clipboard history
-- Media (images/videos) support in the clipboard
-    - Optional media preview
-- Consistent keychord for the clipboard manager across all OSes
-    - Unique keybinding to avoid conflicts with other tools
+-   Efficient clipboard history storage and retrieval
+-   User-friendly and searchable clipboard history
+-   Media (images/videos) support in the clipboard
+    -   Optional media preview
+-   Consistent keychord for the clipboard manager across all OSes
+    -   Unique keybinding to avoid conflicts with other tools
 
 ### Keychord Configuration
 
@@ -219,9 +219,9 @@ It leaves you wondering: Why hasn't Apple shipped this as part of the core OS?
   <figcaption>{{ fig_caption | markdownify | remove: "<p>" | remove: "</p>" }}</figcaption>
 </figure>
 
-- `macOS` has a reputation for **Just Working™**
+-   `macOS` has a reputation for **Just Working™**
 
-- The `macOS` clipboard manager **does NOT Just Work™**
+-   The `macOS` clipboard manager **does NOT Just Work™**
 
 Interesting note: `Cut / Copy / Paste` was [invented by Larry Tesler](http://worrydream.com/refs/Tesler%20-%20A%20Personal%20History%20of%20Modeless%20Text%20Editing%20and%20Cut-Copy-Paste.pdf) in the 70s. Tesler became the systems software lead for the Apple Lisa, and eventually Apple's chief scientist in 1993.
 
@@ -254,7 +254,7 @@ I'd love to see clipboard managers provide first class support for sensitive str
 
     a. `greenclip` doesn't have this feature, and also does not let you delete individual history lines easily. You can only clear the entire clipboard history. I'd add the feature, but it's written in Haskell, and I would rather rewrite it in ... any other language (`rust`, maybe).
 
-3. `greenclip` will happily write your copied password to the clipboard manager cache file, where it can be read by any program running with your user permissions.
+1. `greenclip` will happily write your copied password to the clipboard manager cache file, where it can be read by any program running with your user permissions.
 
 I'll demonstrate this with a password copied from [`1Password`](https://1password.com/).
 
@@ -301,27 +301,35 @@ Or if I copy my Google password out of 1Password and [some random app tries to r
 Or maybe you want to lock down what programs can write to your clipboard when you [copy a bitcoin address](https://www.bleepingcomputer.com/news/security/new-clipboard-hijacker-replaces-crypto-wallet-addresses-with-lookalikes/).
 
 There seems to be a lot of opportunity here.
+
 ### What a Schematized Clipboard Protocol Could Look Like
 
-First, a visual representation of what a schematized string could look like:
-
-- `🗸` means the byte was forwarded to the clipboard to become paste-able text
-- `🤔` means the byte was part of the marker string
-- `↑` means the byte was part of the schema
+Clients (like 1Password, or other password managers) would send their passwords to the clipboard with something like the following format:
 
 
-| a | \_ |  l |  o | n   | g   | \_  | p   | a   | s   | s   | w   | o   | r   | d   | 0x01 | 0x02 | 0x03 | 0x04 | P   | A   | S   | S   |W    | O   | R   | D   |
-| - | - |    - |    - | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ---- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 🗸 | 🗸 | 🗸 | 🗸 | 🗸   | 🗸   | 🗸   | 🗸   | 🗸   | 🗸   | 🗸   | 🗸   | 🗸   | 🗸   | 🗸   |🤔    |  🤔  |🤔   |   🤔 | ↑  |   ↑  |    ↑ |    ↑|   ↑|    ↑ |   ↑  |  ↑ |
-{:.table .lines}
+```json
+{
+    "data": "Data to be copied to the clipboard",
+    "type": ClipboardDataType.PASSWORD
+    "magicString": "0xSOMEMAGIC"
+}
+```
 
-This could be implemented in an opt-in fashion by putting this behavior behind an env-var-based feature flag.
+Clipboard managers would attempt to parse every copied string into this format. If it fails to parse properly, the clipboard manager will assume that it's raw text and treat it as such. The only edge case here is where you're copying a string that matches this format, but is really meant to be raw text (like if you copied the `JSON` blob above.)
 
-1. Password managers would check for the env var. If it is set, they'll send the raw text to be copied, a 4-byte marker string (`0x01 0x02 0x03 0x04`) and then an item schema -- (`PASSWORD`, for passwords; `SSH` for `SSH` keys; etc).
-2. Clipboard managers would also check for the env var. If it's set, when text is received by the clipboard that contains the 4-byte marker string, an attempt will be made to parse the datatype out. If the clipboard finds a valid datatype, label the data in the clipboard properly. If not, append every byte between the start of the marker string and the end of the invalid schema to the clipboard buffer.
-3. You'd be able to configure what datatypes can go where, and what kind of protections you want to enable.
+`ClipboardDataType` might look something like:
 
+```javascript
+enum ClipboardDataType {
+    PASSWORD,
+    SSH_KEY,
+    UNSENSITIVE,
+    SENSITIVE_GENERIC,
+    ...
+}
+```
 
+It would be great to then be able to configure what datatypes can go where, and what kind of limitations you want to enable. For example, "never let me paste an SSH key into Discord".
 
 ## Thanks
 
