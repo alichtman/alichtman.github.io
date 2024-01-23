@@ -6,6 +6,8 @@ search: false
 ---
 
 ![](/assets/images/snow/snow3.jpg)
+<cite>AI artwork from [here](https://www.artstation.com/artwork/WBQEEN)</cite>
+{: .small}
 
 
 > I found this post [on Reddit](https://www.reddit.com/r/AskReddit/comments/8pks1u/suicide_prevention_megathread/e0cbafs/) originally. It's one of the best descriptions of depression I've ever read. As things on the internet tend to disappear, here's a copy:
