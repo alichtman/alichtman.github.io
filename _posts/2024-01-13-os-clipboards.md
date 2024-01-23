@@ -11,7 +11,7 @@ toc_label: "Table of Contents"
 toc_icon: "cog"
 ---
 
-An easily searchable clipboard manager that retains extended history is a part of key workflows; and should be configured by default.
+An easily searchable clipboard manager that retains extended history, and has a semantic understanding of the data it's copying, is a part of key workflows; and should be configured by default.
 {: .notice--info}
 
 ## Where does it hurt?
@@ -244,7 +244,7 @@ Jeff Atwood (Stack Overflow co-founder) had similar things to say about the Wind
 
 I wish macOS and GNOME provided these clipboard manager features by default -- _batteries included_. More people would use them, and the effort to figure out how to nicely build and integrate these features wouldn't be duplicated by me and other engineers.
 
-## Security Issues with the Clipboard Manager Experience
+## Some Security Issues with the Clipboard Manager Experience
 
 I'd love to see clipboard managers provide first class support for sensitive strings (passwords, SSNs, SSH private keys, etc). The current _"all text in the clipboard is equal"_ approach has a few flaws:
 
@@ -252,9 +252,9 @@ I'd love to see clipboard managers provide first class support for sensitive str
 
 1. Some clipboard managers provide a ["private mode" command](https://github.com/p0deje/Maccy#ignore-copied-items) to stop clipboard history logging for a period of time. If you forget to turn it on, or your clipboard manager doesn't support this, you're forced to clear the entire clipboard history to remove sensitive strings.
 
-    a. `greenclip` doesn't have this feature, and also does not let you delete individual history lines easily. You can only clear the entire clipboard history. I'd add the feature, but it's written in Haskell, and I would rather rewrite it in ... any other language (`rust`, maybe).
+    * `greenclip` doesn't have this feature, and also does not let you delete individual history lines easily. You can only clear the entire clipboard history. I'd add the feature, but it's written in Haskell, and I'd rather rewrite it in ... literally any other language
 
-1. `greenclip` will happily write your copied password to the clipboard manager cache file, where it can be read by any program running with your user permissions.
+1. `greenclip` will happily write your copied password to the clipboard manager cache file, where it can be read by any program running with your user permissions. This problem is not really unique to `greenclip`. I'm just using it as an example since it's what I use.
 
 I'll demonstrate this with a password copied from [`1Password`](https://1password.com/).
 

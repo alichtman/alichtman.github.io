@@ -8,11 +8,12 @@ tags:
   - hack-the-box
 ---
 
+Find a leftover shell on a development server and use that to pick up a reverse shell. Then, privilege escalate to by abusing a bad `sudo` configuration, and then escalate to `root` using a `cronjob`.
+
 ![bashed](/assets/images/HackTheBox/bashed.png)
 
 ### Summary
 
-In this box, we find a leftover shell on a development server and use that to pick up a reverse shell. Then, we escalate to user privileges with a `sudo` trick, and then escalate to `root` using a `cronjob`.
 
 ### Enumeration
 

@@ -8,11 +8,14 @@ tags:
   - hack-the-box
 ---
 
+Exploiting a vulnerable `HTTP` server (`nostromo`) to get a reverse shell. Then finding an archived, encrypted `SSH` key that we crack with `john` to escalate to user privileges. And then using `less` to escalate to `root` privileges.
+{: .notice--info}
+
 ![traverxec](/assets/images/HackTheBox/traverxec.png)
 
 ### Summary
 
-In this box, we find a vulnerable `HTTP` server (`nostromo`) and use an RCE exploit to get a reverse shell. We then find an archived, encrypted `SSH` key that we crack with `john` to escalate to user privileges. And then we use `less` to escalate to `root` privileges. Let's jump into it!
+In this box,
 
 ### Enumeration
 

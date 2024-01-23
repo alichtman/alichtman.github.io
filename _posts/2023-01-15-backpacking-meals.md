@@ -8,6 +8,9 @@ tags:
     - outdoors
 ---
 
+Freeze-dried meals that taste good.
+{: .notice--info}
+
 ![adventure Meals](/assets/images/adventure-meals.jpg)
 
 > This is mostly a note-to-self. I thought it would be useful to make this easily accessible (and now it lives on my website)
