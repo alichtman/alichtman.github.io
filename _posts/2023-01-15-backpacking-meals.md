@@ -40,6 +40,9 @@ Here are the meals I like, and how much water I use for them:
 - [Trailtopia Ramen Noodles with Chicken Flavor and Broccoli](https://www.rei.com/product/188960/trailtopia-gluten-free-ramen-noodles-with-chicken-flavor-and-broccoli-1-serving)
   - Tastes decent. Not a ton of food.
   - Water suggestion is accurate.
+- [Wild Zora Herb Roasted Chicken Quinoa](https://www.rei.com/product/219334/wild-zora-herb-roasted-chicken-quinoa-bowl-1-serving)
+  - Followed water suggestion.
+  - Tastes great. Not a ton of food.
 
 _more to come..._
 
