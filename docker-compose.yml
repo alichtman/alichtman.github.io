@@ -1,0 +1,25 @@
+services:
+  jekyll:
+    image: jekyll/jekyll:4.2.2
+    container_name: jekyll-dev
+    command: sh -c "bundle install && bundle exec jekyll serve --host 0.0.0.0 --livereload --drafts --trace"
+    volumes:
+      - .:/srv/jekyll:z
+    ports:
+      - "4000:4000"
+      - "35729:35729" # LiveReload port
+    environment:
+      - JEKYLL_ENV=development
+    stdin_open: true
+    tty: true
+
+  node:
+    image: node:18-alpine
+    container_name: node-assets
+    working_dir: /app
+    command: sh -c "npm install && npm run watch:js"
+    volumes:
+      - .:/app:z
+    stdin_open: true
+    tty: true
+

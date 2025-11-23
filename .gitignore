@@ -5,3 +5,4 @@ Gemfile.lock
 .bundle
 .ruby-version
 vendor
+node_modules

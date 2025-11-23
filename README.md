@@ -8,6 +8,45 @@
 
 ## Development Commands
 
+### Docker (Recommended)
+
+Start the development environment with Docker Compose:
+```bash
+docker-compose up
+```
+
+The site will be available at `http://localhost:4000` with live reload enabled.
+
+**Services:**
+- **Jekyll**: Runs Jekyll with live reload and drafts enabled (ports 4000 and 35729)
+- **Node**: Watches and builds JavaScript assets automatically
+
+**Common commands:**
+```bash
+# Start services
+docker-compose up
+
+# Start in detached mode (background)
+docker-compose up -d
+
+# Stop services
+docker-compose down
+
+# View logs
+docker-compose logs -f
+
+# Rebuild after dependency changes
+docker-compose down && docker-compose up --build
+
+# Run bundle commands
+docker-compose exec jekyll bundle update
+
+# Clean up everything (including volumes)
+docker-compose down -v
+```
+
+### Local Development (Without Docker)
+
 ```bash
 $ bundle config set --local path 'vendor/bundle'
 $ bundle install
