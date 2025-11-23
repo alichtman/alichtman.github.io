@@ -113,6 +113,9 @@ footer:
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin white-on-black-button"
       url: "https://www.linkedin.com/in/aaron-lichtman/"
+    - label: "Résumé"
+      icon: "fa fa-fw fa-id-badge white-on-black-button"
+      url: "https://rawgit.com/alichtman/resume/master/resume/resume.pdf"
 
 # Reading Files
 include:
