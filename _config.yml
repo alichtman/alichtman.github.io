@@ -97,7 +97,7 @@ author:
       url: "https://www.linkedin.com/in/aaron-lichtman/"
     - label: "Résumé"
       icon: "fa fa-fw fa-id-badge"
-      url: https://rawgit.com/alichtman/resume/master/resume/resume.pdf
+      url: "https://cdn.jsdelivr.net/gh/alichtman/resume@master/resume/resume.pdf"
 
 footer:
   links:
@@ -115,7 +115,7 @@ footer:
       url: "https://www.linkedin.com/in/aaron-lichtman/"
     - label: "Résumé"
       icon: "fa fa-fw fa-id-badge white-on-black-button"
-      url: "https://rawgit.com/alichtman/resume/master/resume/resume.pdf"
+      url: "https://cdn.jsdelivr.net/gh/alichtman/resume@master/resume/resume.pdf"
 
 # Reading Files
 include:
