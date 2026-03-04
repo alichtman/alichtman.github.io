@@ -11,4 +11,4 @@ main:
   - title: "About"
     url: /about/
   - title: "Résumé"
-    url: https://rawgit.com/alichtman/resume/master/resume/resume.pdf
+    url: https://cdn.jsdelivr.net/gh/alichtman/resume@master/resume/resume.pdf
