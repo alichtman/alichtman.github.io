@@ -6,9 +6,9 @@ import styles from './Navigation.module.css';
 
 const NAV_LINKS = [
   { href: '/posts/', label: 'posts' },
-  { href: '/about/', label: 'about' },
   { href: '/projects/', label: 'projects' },
-  { href: 'https://github.com/alichtman', label: 'github', external: true },
+  { href: '/resume/', label: 'résumé' },
+  { href: '/about/', label: 'about' },
 ];
 
 export default function Navigation() {
@@ -18,22 +18,16 @@ export default function Navigation() {
     <nav className={styles.nav}>
       <div className={styles.inner}>
         <Link href="/" className={styles.brand}>
-          alichtman<span className={styles.sep}>/</span>bits&amp;pieces
+          alichtman.com<span className={styles.brandSep}>|</span>Bits &amp; Pieces
         </Link>
         <ul className={styles.links}>
-          {NAV_LINKS.map(({ href, label, external }) => {
-            const isActive = !external && (
+          {NAV_LINKS.map(({ href, label }) => {
+            const isActive =
               pathname === href ||
-              (href !== '/' && pathname.startsWith(href))
-            );
+              (href !== '/' && pathname.startsWith(href));
             return (
               <li key={href}>
-                <Link
-                  href={href}
-                  className={isActive ? styles.active : undefined}
-                  target={external ? '_blank' : undefined}
-                  rel={external ? 'noopener noreferrer' : undefined}
-                >
+                <Link href={href} className={isActive ? styles.active : undefined}>
                   {label}
                 </Link>
               </li>

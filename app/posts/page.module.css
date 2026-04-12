@@ -1,18 +1,19 @@
 .layout {
   display: flex;
   flex-direction: column;
-  gap: var(--space-lg);
-  padding: var(--space-lg) 0;
+  gap: var(--space-sm);
+  padding: var(--space-md) 0 var(--space-xl);
 }
 
 .postTable {
   width: 100%;
   border-collapse: collapse;
+  margin-bottom: 0;
 }
 
 .postTable td {
-  padding: var(--space-sm) 0;
-  border-bottom: 1px solid rgb(220, 220, 220);
+  padding: var(--space-xs) 0;
+  border-bottom: 1px solid rgb(60, 60, 60);
   vertical-align: top;
 }
 
@@ -25,18 +26,22 @@
   color: var(--theme-text-subdued);
   font-size: 0.875rem;
   padding-right: 3ch;
-  padding-top: calc(var(--space-sm) + 2px); /* align with title */
+  width: 7ch;
 }
 
 .titleCell {
   padding-right: 3ch;
 }
 
+.title {
+  display: block;
+}
+
 .excerpt {
+  display: block;
   color: var(--theme-text-subdued);
   font-size: 0.875rem;
-  margin-top: var(--space-xs);
-  margin-bottom: 0;
+  margin-top: 2px;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -44,21 +49,27 @@
 }
 
 .tagCell {
-  white-space: nowrap;
-  padding-top: calc(var(--space-sm) + 2px);
+  vertical-align: top;
+  padding-top: calc(var(--space-xs) + 1px);
+  padding-left: 2ch;
+  width: 24ch;
+  text-align: right;
 }
 
 .tag {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   font-size: 0.75rem;
   color: var(--theme-text-subdued);
   padding: 0 0.5ch;
-  border: 1px solid rgb(200, 200, 200);
-  margin-right: 0.5ch;
-  margin-bottom: 0.25rem;
+  border: 1px solid rgb(80, 80, 80);
 }
 
-@media (max-width: 560px) {
+.tagCell > .tag + .tag {
+  margin-left: 0.5ch;
+}
+
+@media (max-width: 700px) {
   .dateCell,
   .tagCell {
     display: none;

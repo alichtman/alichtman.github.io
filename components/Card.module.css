@@ -14,6 +14,7 @@
 .card {
   position: relative;
   display: block;
+  background: var(--theme-background);
 }
 
 /* ─── Titled header ──────────────────────────────────────────────────────── */
@@ -71,7 +72,7 @@
     inset -2px 0 0 0 var(--theme-text),
     inset 0 -2px 0 0 var(--theme-text);
   display: block;
-  padding: var(--space-sm) 2ch var(--space-md);
+  padding: var(--space-sm) 2ch var(--space-sm);
   overflow-x: auto;
   overflow-y: hidden;
 }

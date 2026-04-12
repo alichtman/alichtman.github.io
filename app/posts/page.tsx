@@ -33,12 +33,12 @@ export default function PostsPage() {
                   {byYear[year].map((post) => (
                     <tr key={post.slug}>
                       <td className={styles.dateCell}>
-                        <time dateTime={post.date}>{post.dateFormatted}</time>
+                        <time dateTime={post.date}>{post.dateShort}</time>
                       </td>
                       <td className={styles.titleCell}>
-                        <Link href={`/posts/${post.slug}/`}>{post.title}</Link>
+                        <Link href={`/posts/${post.slug}/`} className={styles.title}>{post.title}</Link>
                         {post.excerpt && (
-                          <p className={styles.excerpt}>{post.excerpt}</p>
+                          <span className={styles.excerpt}>{post.excerpt}</span>
                         )}
                       </td>
                       <td className={styles.tagCell}>

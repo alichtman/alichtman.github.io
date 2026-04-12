@@ -1,8 +1,29 @@
+/* ─── Two-column layout ──────────────────────────────────────────────────── */
+
 .layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  grid-template-areas: 'sidebar main';
+  gap: var(--space-md);
+  padding: var(--space-md) 0 var(--space-md);
+  align-items: start;
+}
+
+.sidebar {
+  grid-area: sidebar;
   display: flex;
   flex-direction: column;
-  gap: var(--space-lg);
-  padding: var(--space-lg) 0;
+  gap: var(--space-md);
+  /* Stick the sidebar as the main content scrolls */
+  position: sticky;
+  top: calc(var(--theme-line-height) * 1.5 + var(--space-md));
+}
+
+.main {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
 }
 
 /* ─── Profile ────────────────────────────────────────────────────────────── */
@@ -13,15 +34,54 @@
   gap: var(--space-sm);
 }
 
-.profileLinks {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5ch;
-  align-items: center;
+.bioPhoto {
+  display: block;
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  object-position: center 32%;
+  margin-bottom: var(--space-sm);
+  border: 1px solid rgb(60, 60, 60);
 }
 
-.dot {
+.location {
+  display: flex;
+  align-items: baseline;
+  gap: 1ch;
+  margin-bottom: 0 !important;
+}
+
+.prompt {
   color: var(--theme-text-subdued);
+  user-select: none;
+}
+
+.locationValue {
+  color: var(--theme-text-subdued);
+}
+
+.profileLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding-top: var(--space-xs);
+  border-top: var(--theme-border-width) solid var(--theme-text);
+}
+
+.profileLinks a {
+  display: block;
+  padding: var(--space-xs) 0;
+  text-decoration: none;
+  border-bottom: 1px solid rgb(60, 60, 60);
+}
+
+.profileLinks a:last-child {
+  border-bottom: none;
+}
+
+.profileLinks a:hover {
+  text-decoration: none;
+  padding-left: 1ch;
 }
 
 /* ─── Post table ─────────────────────────────────────────────────────────── */
@@ -29,12 +89,13 @@
 .postTable {
   width: 100%;
   border-collapse: collapse;
+  margin-bottom: 0;
 }
 
 .postTable th,
 .postTable td {
   padding: var(--space-xs) 0;
-  border-bottom: 1px solid rgb(220, 220, 220);
+  border-bottom: 1px solid rgb(60, 60, 60);
   vertical-align: top;
 }
 
@@ -67,22 +128,34 @@
 .allPostsLink {
   margin-top: var(--space-sm);
   padding-top: var(--space-sm);
-  border-top: 1px solid rgb(220, 220, 220);
+  border-top: 1px solid rgb(60, 60, 60);
+  margin-bottom: 0 !important;
 }
 
 /* ─── Contact ────────────────────────────────────────────────────────────── */
 
 .contactList {
-  list-style: none;
-  padding: 0;
+  list-style: disc;
+  padding-left: 1.5rem;
   display: flex;
   flex-direction: column;
   gap: var(--space-xs);
 }
 
-/* ─── Responsive ─────────────────────────────────────────────────────────── */
+/* ─── Responsive — stack on narrow screens ───────────────────────────────── */
 
-@media (max-width: 560px) {
+@media (max-width: 700px) {
+  .layout {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'sidebar'
+      'main';
+  }
+
+  .sidebar {
+    position: static;
+  }
+
   .hideMobile {
     display: none;
   }

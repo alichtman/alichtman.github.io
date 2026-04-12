@@ -1,13 +1,13 @@
 .layout {
   display: flex;
   flex-direction: column;
-  gap: var(--space-lg);
-  padding: var(--space-lg) 0;
+  gap: var(--space-md);
+  padding: var(--space-md) 0 var(--space-xl);
 }
 
 .contactList {
-  list-style: none;
-  padding: 0;
+  list-style: disc;
+  padding-left: 1.5rem;
   display: flex;
   flex-direction: column;
   gap: var(--space-xs);

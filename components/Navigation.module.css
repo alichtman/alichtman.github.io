@@ -3,10 +3,13 @@
   top: 0;
   z-index: 100;
   background: var(--theme-background);
+  /* Extend full-width background behind the sticky bar */
+  box-shadow: 0 0 0 100vmax var(--theme-background);
+  clip-path: inset(0 -100vmax);
 }
 
 .inner {
-  max-width: 800px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 0 2ch;
   display: flex;
@@ -20,9 +23,8 @@
 .brand {
   display: flex;
   align-items: center;
-  gap: 1ch;
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 400;
   color: var(--theme-text);
   padding: var(--space-xs) 0;
   flex-shrink: 0;
@@ -32,8 +34,8 @@
   text-decoration: none;
 }
 
-.brand span.sep {
-  font-weight: 400;
+.brandSep {
+  margin: 0 0.5ch;
   color: var(--theme-text-subdued);
 }
 
@@ -58,15 +60,19 @@
   text-decoration: none;
   color: var(--theme-text);
   font-size: var(--font-size);
-  border-left: var(--theme-border-width) solid transparent;
+  /* Vertical separator between each nav item */
+  border-left: var(--theme-border-width) solid var(--theme-text);
   transition: none;
 }
 
 .links a:hover {
   text-decoration: none;
-  box-shadow: inset 0 -2px 0 0 var(--theme-text);
+  background: var(--theme-text);
+  color: var(--theme-background);
 }
 
 .links a.active {
   font-weight: 700;
+  /* Bottom underline on active item — same technique as hover but persistent */
+  box-shadow: inset 0 -3px 0 0 var(--theme-text);
 }

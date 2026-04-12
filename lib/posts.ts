@@ -6,25 +6,40 @@ import remarkGfm from 'remark-gfm';
 import remarkHtml from 'remark-html';
 
 const postsDirectory = path.join(process.cwd(), '_posts');
+const POST_FILENAME_PREFIX = /^\d{4}-\d{2}-\d{2}-/;
 
 export interface Post {
   slug: string;
   title: string;
   date: string;
   dateFormatted: string;
+  dateShort: string;
   excerpt: string;
   categories: string[];
   tags: string[];
   content: string;
+  hidden?: boolean;
 }
 
 export interface PostWithHtml extends Post {
   html: string;
 }
 
-function slugFromFilename(filename: string): string {
-  // "2024-01-13-os-clipboards.md" → "2024-01-13-os-clipboards"
-  return filename.replace(/\.md$/, '');
+function routeSlugFromFilename(filename: string): string {
+  // "2024-01-13-os-clipboards.md" → "os-clipboards"
+  return filename.replace(POST_FILENAME_PREFIX, '').replace(/\.md$/, '');
+}
+
+function filenameFromRouteSlug(slug: string): string {
+  const matchingFilename = fs
+    .readdirSync(postsDirectory)
+    .find((filename) => filename.endsWith('.md') && routeSlugFromFilename(filename) === slug);
+
+  if (!matchingFilename) {
+    throw new Error(`No post found for slug: ${slug}`);
+  }
+
+  return matchingFilename;
 }
 
 function formatDate(dateStr: string): string {
@@ -33,6 +48,19 @@ function formatDate(dateStr: string): string {
     return d.toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'long',
+      day: 'numeric',
+      timeZone: 'UTC',
+    });
+  } catch {
+    return dateStr;
+  }
+}
+
+function formatDateShort(dateStr: string): string {
+  try {
+    const d = new Date(dateStr);
+    return d.toLocaleDateString('en-US', {
+      month: 'short',
       day: 'numeric',
       timeZone: 'UTC',
     });
@@ -52,15 +80,34 @@ function stripJekyllMarkup(content: string): string {
     .trim();
 }
 
+/**
+ * Strip markdown syntax from a string to produce plain text suitable for
+ * use as an excerpt or description.
+ */
+function stripMarkdownSyntax(text: string): string {
+  return text
+    .replace(/!\[[^\]]*\]\([^)]*\)/g, '')          // images: ![alt](url)
+    .replace(/\[([^\]]+)\]\([^)]*\)/g, '$1')        // links: [text](url) → text
+    .replace(/\[([^\]]+)\]\[[^\]]*\]/g, '$1')       // ref links: [text][ref] → text
+    .replace(/`[^`]+`/g, '')                         // inline code
+    .replace(/(\*\*|__)([^*_]+)\1/g, '$2')           // bold
+    .replace(/(\*|_)([^*_]+)\1/g, '$2')              // italic
+    .replace(/<[^>]+>/g, '')                          // HTML tags (e.g. <cite>)
+    .replace(/\{\{[^}]*\}\}/g, '')                   // Jekyll/Liquid: {{...}}
+    .replace(/^>\s*/gm, '')                           // blockquote markers
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
 export function getAllPostSlugs(): string[] {
   return fs
     .readdirSync(postsDirectory)
     .filter((f) => f.endsWith('.md'))
-    .map(slugFromFilename);
+    .map(routeSlugFromFilename);
 }
 
 export function getPostBySlug(slug: string): Post {
-  const fullPath = path.join(postsDirectory, `${slug}.md`);
+  const fullPath = path.join(postsDirectory, filenameFromRouteSlug(slug));
   const fileContents = fs.readFileSync(fullPath, 'utf8');
   const { data, content } = matter(fileContents);
 
@@ -70,24 +117,31 @@ export function getPostBySlug(slug: string): Post {
       : (data.date as Date).toISOString()
     : '';
 
-  // First non-empty paragraph as excerpt
-  const firstParagraph =
-    content
-      .split(/\n\n+/)
-      .map((s) => s.trim())
-      .find((s) => s.length > 0 && !s.startsWith('#') && !s.startsWith('---')) ?? '';
+  // Find the first paragraph that contains meaningful prose (not headings,
+  // images, code fences, or Jekyll/Liquid blocks).
+  const paragraphs = content.split(/\n\n+/).map((s) => s.trim());
+  const firstProse = paragraphs.find((s) => {
+    if (!s || s.startsWith('#') || s.startsWith('---')) return false;
+    if (s.startsWith('![]') || s.startsWith('![')) return false;  // pure image
+    if (s.startsWith('```') || s.startsWith('~~~')) return false;  // code fence
+    if (s.startsWith('{{')) return false;                           // Liquid tag
+    const plain = stripMarkdownSyntax(s);
+    return plain.length > 20;  // skip near-empty paragraphs after stripping
+  }) ?? '';
 
-  const excerpt = stripJekyllMarkup(firstParagraph).slice(0, 240);
+  const excerpt = stripMarkdownSyntax(stripJekyllMarkup(firstProse)).slice(0, 400);
 
   return {
     slug,
     title: (data.title as string) ?? slug,
     date: rawDate,
     dateFormatted: formatDate(rawDate),
+    dateShort: formatDateShort(rawDate),
     excerpt,
     categories: (data.categories as string[]) ?? [],
     tags: (data.tags as string[]) ?? [],
     content,
+    hidden: Boolean(data.hidden),
   };
 }
 
@@ -107,5 +161,6 @@ export function getAllPosts(): Post[] {
   const slugs = getAllPostSlugs();
   return slugs
     .map(getPostBySlug)
+    .filter((post) => !post.hidden)
     .sort((a, b) => (a.date > b.date ? -1 : 1));
 }
