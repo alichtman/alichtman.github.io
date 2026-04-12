@@ -70,13 +70,16 @@ function formatDateShort(dateStr: string): string {
 }
 
 /**
- * Strip Jekyll-specific markup that doesn't render in standard markdown:
- *   {: .notice--info}  {: .align-center}  etc.
+ * Strip Jekyll/Liquid markup that doesn't render in standard markdown:
+ *   {% tag %}  {%- tag -%}  {{ var | filter }}  {: .notice--info}  etc.
  */
 function stripJekyllMarkup(content: string): string {
   return content
-    .replace(/\{:\s*\.[^}]+\}/g, '')      // block IAL like {: .notice--info}
+    .replace(/\{%-?[\s\S]*?-?%\}/g, '')   // Liquid block tags: {% ... %} / {%- ... -%}
+    .replace(/\{\{[\s\S]*?\}\}/g, '')      // Liquid output tags: {{ ... }} (including multiline)
+    .replace(/\{:\s*\.[^}]+\}/g, '')       // IAL attributes: {: .notice--info}
     .replace(/^\[.*?\]\[.*?\]$/gm, '')     // orphaned reference-style links
+    .replace(/\n{3,}/g, '\n\n')            // collapse runs of blank lines left by removals
     .trim();
 }
 
@@ -93,7 +96,8 @@ function stripMarkdownSyntax(text: string): string {
     .replace(/(\*\*|__)([^*_]+)\1/g, '$2')           // bold
     .replace(/(\*|_)([^*_]+)\1/g, '$2')              // italic
     .replace(/<[^>]+>/g, '')                          // HTML tags (e.g. <cite>)
-    .replace(/\{\{[^}]*\}\}/g, '')                   // Jekyll/Liquid: {{...}}
+    .replace(/\{%-?[\s\S]*?-?%\}/g, '')               // Liquid block tags: {% ... %}
+    .replace(/\{\{[\s\S]*?\}\}/g, '')                 // Liquid output tags: {{ ... }}
     .replace(/^>\s*/gm, '')                           // blockquote markers
     .replace(/\s+/g, ' ')
     .trim();

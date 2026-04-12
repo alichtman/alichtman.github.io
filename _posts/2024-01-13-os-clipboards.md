@@ -206,18 +206,9 @@ Using GNOME Keyboard Custom Shortcuts, I map `rofi -modi 'clipboard:~/bin/greenc
 ### macOS
 
 I install [`Maccy`](https://github.com/p0deje/Maccy) with `brew`. It's a performant, free and open-source, native macOS app that is intuitive to use.
-{% capture fig_img %}
 ![maccy](/assets/images/maccy.png)
-{% endcapture %}
 
-{% capture fig_caption %}
-It leaves you wondering: Why hasn't Apple shipped this as part of the core OS?
-{% endcapture %}
-
-<figure>
-  {{ fig_img | markdownify | remove: "<p>" | remove: "</p>" }}
-  <figcaption>{{ fig_caption | markdownify | remove: "<p>" | remove: "</p>" }}</figcaption>
-</figure>
+*It leaves you wondering: Why hasn't Apple shipped this as part of the core OS?*
 
 -   `macOS` has a reputation for **Just Working™**
 
