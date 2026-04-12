@@ -16,6 +16,11 @@
   --theme-text-subdued: rgb(140, 140, 140);
   --theme-border-width: 2px;
   --theme-border: var(--theme-text);
+  --code-bg: rgb(40, 40, 40);
+  --code-border: rgb(80, 73, 69);
+  --code-text: rgb(235, 219, 178);
+  --code-inline-bg: rgb(50, 48, 47);
+  --code-accent: rgb(251, 73, 52);
 
   /* Spacing helpers */
   --space-xs: calc(var(--theme-line-height) * 0.25);
@@ -123,23 +128,44 @@ samp {
 }
 
 code:not(pre code) {
-  background: rgb(40, 40, 40);
+  background: var(--code-inline-bg);
+  color: var(--code-text);
   padding: 0.1em 0.4em;
   border-radius: 0;
 }
 
 pre {
-  background: rgb(40, 40, 40);
+  background: var(--code-bg);
+  color: var(--code-text);
   padding: var(--space-sm) 2ch;
   overflow-x: auto;
-  border-left: var(--theme-border-width) solid var(--theme-text);
+  border-left: var(--theme-border-width) solid var(--code-accent);
+  box-shadow: inset 0 0 0 1px var(--code-border);
   margin-bottom: var(--space-md);
   white-space: pre;
 }
 
 pre code {
   background: none;
+  color: inherit;
   padding: 0;
+}
+
+pre [data-line] {
+  display: block;
+}
+
+pre [data-highlighted-line] {
+  background: rgb(54, 50, 48);
+  margin: 0 -2ch;
+  padding: 0 2ch;
+}
+
+pre code span[style*='--shiki-dark'] {
+  color: var(--shiki-dark);
+  font-style: var(--shiki-dark-font-style, inherit);
+  font-weight: var(--shiki-dark-font-weight, inherit);
+  text-decoration: var(--shiki-dark-text-decoration, inherit);
 }
 
 /* ─── Images ─────────────────────────────────────────────────────────────── */
@@ -225,11 +251,6 @@ blockquote {
 
 .prose a {
   word-break: break-word;
-}
-
-/* Strip Jekyll-specific IAL syntax like {: .notice--info} */
-.prose p:has(+ p) {
-  /* handled in JS */
 }
 
 /* ─── Utilities ──────────────────────────────────────────────────────────── */

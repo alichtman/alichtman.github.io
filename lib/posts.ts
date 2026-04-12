@@ -3,7 +3,9 @@ import path from 'path';
 import matter from 'gray-matter';
 import { remark } from 'remark';
 import remarkGfm from 'remark-gfm';
-import remarkHtml from 'remark-html';
+import remarkRehype from 'remark-rehype';
+import rehypePrettyCode from 'rehype-pretty-code';
+import rehypeStringify from 'rehype-stringify';
 
 const postsDirectory = path.join(process.cwd(), '_posts');
 const POST_FILENAME_PREFIX = /^\d{4}-\d{2}-\d{2}-/;
@@ -62,25 +64,12 @@ function formatDateShort(dateStr: string): string {
     return d.toLocaleDateString('en-US', {
       month: 'short',
       day: 'numeric',
+      year: 'numeric',
       timeZone: 'UTC',
-    });
+    }).toUpperCase();
   } catch {
     return dateStr;
   }
-}
-
-/**
- * Strip Jekyll/Liquid markup that doesn't render in standard markdown:
- *   {% tag %}  {%- tag -%}  {{ var | filter }}  {: .notice--info}  etc.
- */
-function stripJekyllMarkup(content: string): string {
-  return content
-    .replace(/\{%-?[\s\S]*?-?%\}/g, '')   // Liquid block tags: {% ... %} / {%- ... -%}
-    .replace(/\{\{[\s\S]*?\}\}/g, '')      // Liquid output tags: {{ ... }} (including multiline)
-    .replace(/\{:\s*\.[^}]+\}/g, '')       // IAL attributes: {: .notice--info}
-    .replace(/^\[.*?\]\[.*?\]$/gm, '')     // orphaned reference-style links
-    .replace(/\n{3,}/g, '\n\n')            // collapse runs of blank lines left by removals
-    .trim();
 }
 
 /**
@@ -96,8 +85,6 @@ function stripMarkdownSyntax(text: string): string {
     .replace(/(\*\*|__)([^*_]+)\1/g, '$2')           // bold
     .replace(/(\*|_)([^*_]+)\1/g, '$2')              // italic
     .replace(/<[^>]+>/g, '')                          // HTML tags (e.g. <cite>)
-    .replace(/\{%-?[\s\S]*?-?%\}/g, '')               // Liquid block tags: {% ... %}
-    .replace(/\{\{[\s\S]*?\}\}/g, '')                 // Liquid output tags: {{ ... }}
     .replace(/^>\s*/gm, '')                           // blockquote markers
     .replace(/\s+/g, ' ')
     .trim();
@@ -122,18 +109,17 @@ export function getPostBySlug(slug: string): Post {
     : '';
 
   // Find the first paragraph that contains meaningful prose (not headings,
-  // images, code fences, or Jekyll/Liquid blocks).
+  // images, code fences, or legacy template blocks).
   const paragraphs = content.split(/\n\n+/).map((s) => s.trim());
   const firstProse = paragraphs.find((s) => {
     if (!s || s.startsWith('#') || s.startsWith('---')) return false;
     if (s.startsWith('![]') || s.startsWith('![')) return false;  // pure image
     if (s.startsWith('```') || s.startsWith('~~~')) return false;  // code fence
-    if (s.startsWith('{{')) return false;                           // Liquid tag
     const plain = stripMarkdownSyntax(s);
     return plain.length > 20;  // skip near-empty paragraphs after stripping
   }) ?? '';
 
-  const excerpt = stripMarkdownSyntax(stripJekyllMarkup(firstProse)).slice(0, 400);
+  const excerpt = stripMarkdownSyntax(firstProse).slice(0, 400);
 
   return {
     slug,
@@ -151,12 +137,18 @@ export function getPostBySlug(slug: string): Post {
 
 export async function getPostWithHtml(slug: string): Promise<PostWithHtml> {
   const post = getPostBySlug(slug);
-  const cleaned = stripJekyllMarkup(post.content);
 
   const processedContent = await remark()
     .use(remarkGfm)
-    .use(remarkHtml, { sanitize: false })
-    .process(cleaned);
+    .use(remarkRehype, { allowDangerousHtml: true })
+    .use(rehypePrettyCode, {
+      theme: {
+        dark: 'gruvbox-dark-hard',
+      },
+      keepBackground: false,
+    })
+    .use(rehypeStringify, { allowDangerousHtml: true })
+    .process(post.content);
 
   return { ...post, html: processedContent.toString() };
 }

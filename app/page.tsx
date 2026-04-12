@@ -80,7 +80,7 @@ export default function HomePage() {
                   {recent.map((post) => (
                     <tr key={post.slug}>
                       <td className={styles.dateCell}>
-                        <time dateTime={post.date}>{post.dateFormatted}</time>
+                        <time dateTime={post.date}>{post.dateShort}</time>
                       </td>
                       <td>
                         <Link href={`/posts/${post.slug}/`}>{post.title}</Link>

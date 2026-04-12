@@ -9,7 +9,6 @@ tags:
 ---
 
 Exploiting a vulnerable `HTTP` server (`nostromo`) to get a reverse shell. Then finding an archived, encrypted `SSH` key that we crack with `john` to escalate to user privileges. And then using `less` to escalate to `root` privileges.
-{: .notice--info}
 
 ![traverxec](/assets/images/HackTheBox/traverxec.png)
 

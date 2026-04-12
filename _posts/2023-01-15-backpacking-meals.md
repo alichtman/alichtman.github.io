@@ -9,7 +9,6 @@ tags:
 ---
 
 Freeze-dried meals that taste good.
-{: .notice--info}
 
 ![adventure Meals](/assets/images/adventure-meals.jpg)
 
