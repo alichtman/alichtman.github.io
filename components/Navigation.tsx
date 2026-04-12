@@ -19,7 +19,7 @@ export default function Navigation() {
     <nav className={styles.nav}>
       <div className={styles.inner}>
         <Link href="/" className={styles.brand}>
-          alichtman.com<span className={styles.brandSep}>|</span>Bits &amp; Pieces
+          alichtman.com<span className={styles.brandSep}>|</span><span className={styles.brandTitle}>Bits &amp; Pieces</span>
         </Link>
         <ul className={styles.links}>
           {NAV_LINKS.map(({ href, label }) => {

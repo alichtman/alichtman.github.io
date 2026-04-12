@@ -99,4 +99,20 @@
   .hideMobile {
     display: none;
   }
+
+  .nameCell {
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .projectHeader {
+    width: 30%;
+    padding-right: 1ch;
+  }
+
+  .starsHeader {
+    width: auto;
+    padding-left: 1ch;
+    padding-right: 0;
+  }
 }

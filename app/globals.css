@@ -49,6 +49,7 @@ body {
   background-color: var(--theme-background-body);
   color: var(--theme-text);
   min-height: 100vh;
+  overflow-x: clip;
 }
 
 /* ─── Typography ─────────────────────────────────────────────────────────── */

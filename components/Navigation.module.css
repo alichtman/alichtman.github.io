@@ -80,3 +80,35 @@
   /* Bottom underline on active item — same technique as hover but persistent */
   box-shadow: inset 0 -3px 0 0 var(--theme-text);
 }
+
+/* ─── Responsive ─────────────────────────────────────────────────────────── */
+
+@media (max-width: 600px) {
+  .inner {
+    flex-direction: column;
+    align-items: stretch;
+    min-height: auto;
+    box-shadow: none;
+    border-bottom: var(--theme-border-width) solid var(--theme-text);
+    padding-bottom: 0;
+  }
+
+  .brand {
+    min-height: calc(var(--theme-line-height) * 1.5);
+    border-bottom: 1px solid rgb(60, 60, 60);
+  }
+
+  .brandSep,
+  .brandTitle {
+    display: none;
+  }
+
+  .links {
+    flex-wrap: wrap;
+  }
+
+  .links a {
+    padding: 0 1ch;
+    min-height: calc(var(--theme-line-height) * 1.25);
+  }
+}

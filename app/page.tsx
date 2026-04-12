@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Navigation from '@/components/Navigation';
 import Card from '@/components/Card';
+import ASCIICanvas from '@/components/ASCIICanvas';
 import { getAllPosts } from '@/lib/posts';
 import styles from './page.module.css';
 
@@ -98,6 +99,9 @@ export default function HomePage() {
                   <Link href="/posts/">⭢ all {posts.length} posts</Link>
                 </p>
               )}
+            </Card>
+            <Card title="ascii canvas">
+              <ASCIICanvas rows={12} />
             </Card>
           </div>
 
