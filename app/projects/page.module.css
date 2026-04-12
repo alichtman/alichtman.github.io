@@ -1,0 +1,49 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  padding: var(--space-lg) 0;
+}
+
+.projectTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.projectTable th,
+.projectTable td {
+  padding: var(--space-xs) 0;
+  border-bottom: 1px solid rgb(220, 220, 220);
+  vertical-align: top;
+}
+
+.projectTable th {
+  font-weight: 700;
+  border-bottom: var(--theme-border-width) solid var(--theme-text);
+}
+
+.projectTable tr:last-child td {
+  border-bottom: none;
+}
+
+.nameCell {
+  white-space: nowrap;
+  padding-right: 3ch;
+  font-weight: 700;
+}
+
+.descCell {
+  padding-right: 3ch;
+}
+
+.moreLink {
+  margin-top: var(--space-sm);
+  padding-top: var(--space-sm);
+  border-top: 1px solid rgb(220, 220, 220);
+}
+
+@media (max-width: 560px) {
+  .hideMobile {
+    display: none;
+  }
+}

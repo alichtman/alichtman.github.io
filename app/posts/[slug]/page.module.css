@@ -1,0 +1,68 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  padding: var(--space-lg) 0;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 1ch;
+  color: var(--theme-text-subdued);
+  font-size: 0.875rem;
+}
+
+.metaSep {
+  color: var(--theme-text-subdued);
+}
+
+.postBody {
+  max-width: 100%;
+}
+
+/* ─── Prose overrides inside the post card ───────────────────────────────── */
+
+.postBody h2,
+.postBody h3,
+.postBody h4 {
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-sm);
+}
+
+.postBody h2:first-child,
+.postBody h3:first-child {
+  margin-top: 0;
+}
+
+.postBody p {
+  margin-bottom: var(--space-sm);
+}
+
+.postBody ul,
+.postBody ol {
+  margin-bottom: var(--space-sm);
+}
+
+.postBody img {
+  margin: var(--space-md) auto;
+  max-width: 100%;
+}
+
+.postBody pre {
+  margin: var(--space-sm) 0;
+}
+
+.postBody table {
+  margin: var(--space-sm) 0;
+}
+
+.postBody blockquote {
+  margin: var(--space-sm) 0;
+}
+
+/* ─── Post nav ───────────────────────────────────────────────────────────── */
+
+.postNav {
+  padding-bottom: var(--space-lg);
+}
