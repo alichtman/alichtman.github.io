@@ -1,8 +1,7 @@
-_site
-.sass-cache
-.jekyll-metadata
-Gemfile.lock
-.bundle
-.ruby-version
-vendor
 node_modules
+
+# Next.js
+.next
+out
+next-env.d.ts
+public/assets

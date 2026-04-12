@@ -1,0 +1,114 @@
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--theme-background);
+  /* Extend full-width background behind the sticky bar */
+  box-shadow: 0 0 0 100vmax var(--theme-background);
+  clip-path: inset(0 -100vmax);
+}
+
+.inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2ch;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  box-shadow:
+    inset 0 -2px 0 0 var(--theme-text);
+  min-height: calc(var(--theme-line-height) * 1.5);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-weight: 400;
+  color: var(--theme-text);
+  padding: var(--space-xs) 0;
+  flex-shrink: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.brand:hover {
+  text-decoration: none;
+}
+
+.brandSep {
+  margin: 0 0.5ch;
+  color: var(--theme-text-subdued);
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.links li {
+  margin: 0;
+}
+
+.links a {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 1.5ch;
+  text-decoration: none;
+  color: var(--theme-text);
+  font-size: var(--font-size);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  /* Vertical separator between each nav item */
+  border-left: var(--theme-border-width) solid var(--theme-text);
+  transition: none;
+}
+
+.links a:hover {
+  text-decoration: none;
+  background: var(--theme-text);
+  color: var(--theme-background);
+}
+
+.links a.active {
+  font-weight: 700;
+  /* Bottom underline on active item — same technique as hover but persistent */
+  box-shadow: inset 0 -3px 0 0 var(--theme-text);
+}
+
+/* ─── Responsive ─────────────────────────────────────────────────────────── */
+
+@media (max-width: 600px) {
+  .inner {
+    flex-direction: column;
+    align-items: stretch;
+    min-height: auto;
+    box-shadow: none;
+    border-bottom: var(--theme-border-width) solid var(--theme-text);
+    padding-bottom: 0;
+  }
+
+  .brand {
+    min-height: calc(var(--theme-line-height) * 1.5);
+    border-bottom: 1px solid rgb(60, 60, 60);
+  }
+
+  .brandSep,
+  .brandTitle {
+    display: none;
+  }
+
+  .links {
+    flex-wrap: wrap;
+  }
+
+  .links a {
+    padding: 0 1ch;
+    min-height: calc(var(--theme-line-height) * 1.25);
+  }
+}

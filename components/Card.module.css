@@ -1,0 +1,91 @@
+/* ─── Card ───────────────────────────────────────────────────────────────── */
+/*
+ * SRCL-style card with box-shadow borders.
+ * The header splits into left / title / right sections so the title text
+ * sits *in* the top border line, classic windowed-terminal style:
+ *
+ *  ────────── Title ─────────────────────────────
+ *  │                                            │
+ *  │  content                                   │
+ *  │                                            │
+ *  ─────────────────────────────────────────────
+ */
+
+.card {
+  position: relative;
+  display: block;
+  background: var(--theme-background);
+}
+
+/* ─── Titled header ──────────────────────────────────────────────────────── */
+
+.header {
+  display: flex;
+  align-items: flex-end;
+}
+
+/* Left stretch of the top border */
+.headerLeft {
+  min-width: 2ch;
+  flex: 1;
+  height: calc(var(--theme-line-height) * 0.5);
+  box-shadow:
+    inset 2px 0 0 0 var(--theme-text),
+    inset 0 2px 0 0 var(--theme-text);
+}
+
+/* Title text sits in the gap of the top border line */
+.title {
+  flex-shrink: 1;
+  min-width: 0;
+  padding: 0 1ch;
+  font-size: var(--font-size);
+  font-weight: 400;
+  line-height: calc(var(--theme-line-height) * 0.5);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* Right stretch of the top border */
+.headerRight {
+  min-width: 2ch;
+  flex: 1;
+  height: calc(var(--theme-line-height) * 0.5);
+  box-shadow:
+    inset -2px 0 0 0 var(--theme-text),
+    inset 0 2px 0 0 var(--theme-text);
+}
+
+/* ─── No-title header (just a full-width top border) ────────────────────── */
+
+.headerPlain {
+  height: calc(var(--theme-line-height) * 0.5);
+  box-shadow:
+    inset 2px 0 0 0 var(--theme-text),
+    inset -2px 0 0 0 var(--theme-text),
+    inset 0 2px 0 0 var(--theme-text);
+}
+
+/* ─── Body ───────────────────────────────────────────────────────────────── */
+
+.children {
+  box-shadow:
+    inset 2px 0 0 0 var(--theme-text),
+    inset -2px 0 0 0 var(--theme-text),
+    inset 0 -2px 0 0 var(--theme-text);
+  display: block;
+  padding: var(--space-sm) 2ch var(--space-sm);
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.children::-webkit-scrollbar {
+  display: none;
+}
+
+.children {
+  scrollbar-width: none;
+}

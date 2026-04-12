@@ -12,11 +12,10 @@ toc_icon: "cog"
 ---
 
 An easily searchable clipboard manager that retains extended history, and has a semantic understanding of the data it's copying, is a part of key workflows; and should be configured by default.
-{: .notice--info}
 
 ## Where does it hurt?
 
-[![where does it hurt](/assets/images/where-does-it-hurt-clipboard.jpg)](/assets/images/where-does-it-hurt-clipboard.jpg){: .align-center}
+[![where does it hurt](/assets/images/where-does-it-hurt-clipboard.jpg)](/assets/images/where-does-it-hurt-clipboard.jpg)
 
 I expect system clipboards to do **one thing -- store text and let me paste it later**. If you're counting along and got two things, you are _off-by-one_. This is one of the [two hard problems in CS](https://martinfowler.com/bliki/TwoHardThings.html).
 
@@ -73,14 +72,11 @@ With a clipboard that retained your copy history, the workflow could be:
 ## Moving at the speed of thought: `vim` and `tmux`
 
 If you read this section, and your eyes glaze over, don't worry! Skip to [Clipboard Manager Setup](#clipboard-manager-setup) and come back to `vim` some other time :) You will get a bunch of value out of this post anyways.
-{: .notice--primary}
 
 You can perform the above task in `vim` using the default settings, without ever taking your hands off the keyboard. You'll ~~break things~~ **build stable infra** faster by learning CLI / modal-editing workflows (and obsessing over [`nvim` and `tmux` configs](https://github.com/alichtman/dotfiles)).
-{: .notice--info}
 
-[![break things faster](/assets/images/move-fast.webp)](/assets/images/move-fast.webp){: .align-center}
+[![break things faster](/assets/images/move-fast.webp)](/assets/images/move-fast.webp)
 <cite>[Image attributed to Facebook](https://medium.com/swlh/move-fast-and-break-things-is-not-dead-8260b0718d90)</cite>
-{: .small}
 
 Although, what limits me is definitely not the speed at which I can operate my computer. If only it were as straightforward to type _better things_ as it is to _type things faster_ :)
 
@@ -129,9 +125,8 @@ Registers are awesome for working _inside_ of `vim` but aren't exposed _outside_
 -   Its content is displayed in the middle
 -   Some of them have nice descriptions on the right
 
-[![vim registers](/assets/images/vim-registers.png)](/assets/images/vim-registers.png){: .align-center}
+[![vim registers](/assets/images/vim-registers.png)](/assets/images/vim-registers.png)
 <cite>You can click on the image to make it larger</cite>
-{: .small}
 
 There are two special registers for the system clipboard, called [selection registers](https://learnvim.irian.to/basics/registers#the-selection-registers). If you want to copy text from inside `vim` and paste it outside of `vim`, you need to copy to them explicitly (`"+y`). For more reasons I will never understand, copying to the system clipboard isn't the default copy behavior.
 
@@ -197,27 +192,18 @@ You might be thinking: _"Man, you literally just said you wanted to use the same
 
 I use [`greenclip`](https://github.com/erebe/greenclip) integrated with [`rofi`](https://github.com/davatorium/rofi) to manage my clipboard history. Note that it does not provide media previews, and can only handle [small images](https://github.com/erebe/greenclip#faq). If that's a critical feature set, check out [Pano](https://github.com/oae/gnome-shell-pano).
 
-[![greenclip](/assets/images/rofi-greenclip.jpg)](/assets/images/rofi-greenclip.jpg){: .align-center}
+[![greenclip](/assets/images/rofi-greenclip.jpg)](/assets/images/rofi-greenclip.jpg)
 
 Using GNOME Keyboard Custom Shortcuts, I map `rofi -modi 'clipboard:~/bin/greenclip print' -show clipboard` to the keychord I mentioned above.
 
-![gnome keyboard shortcuts](/assets/images/gnome-clipboard-shortcut.png){: .align-center}
+![gnome keyboard shortcuts](/assets/images/gnome-clipboard-shortcut.png)
 
 ### macOS
 
 I install [`Maccy`](https://github.com/p0deje/Maccy) with `brew`. It's a performant, free and open-source, native macOS app that is intuitive to use.
-{% capture fig_img %}
 ![maccy](/assets/images/maccy.png)
-{% endcapture %}
 
-{% capture fig_caption %}
-It leaves you wondering: Why hasn't Apple shipped this as part of the core OS?
-{% endcapture %}
-
-<figure>
-  {{ fig_img | markdownify | remove: "<p>" | remove: "</p>" }}
-  <figcaption>{{ fig_caption | markdownify | remove: "<p>" | remove: "</p>" }}</figcaption>
-</figure>
+<p style="text-align: center"><em>It leaves you wondering: Why hasn't Apple shipped this as part of the core OS?</em></p>
 
 -   `macOS` has a reputation for **Just Working™**
 
@@ -240,7 +226,6 @@ Jeff Atwood (Stack Overflow co-founder) had similar things to say about the Wind
 > There are dozens of third-party solutions that deliver very similar interactive full-text search UI experiences. But **there's one key difference between those solutions and the one in Vista: I have to install them**. You may argue that, in the near term, I also have to install Vista. Fair enough. But over the next five years, millions of users will buy computers with Vista pre-installed. And they'll immediately benefit from the built-in, default full-text search UI that's accessible right out of the box with a single press of the Windows key.
 
 [<cite>Jeff Atwood</cite> --- **"The Power of Defaults"**](https://blog.codinghorror.com/the-power-of-defaults/), 2007
-{: .small}
 
 I wish macOS and GNOME provided these clipboard manager features by default -- _batteries included_. More people would use them, and the effort to figure out how to nicely build and integrate these features wouldn't be duplicated by me and other engineers.
 
@@ -258,7 +243,7 @@ I'd love to see clipboard managers provide first class support for sensitive str
 
 I'll demonstrate this with a password copied from [`1Password`](https://1password.com/).
 
-![](/assets/images/1password.png){: .align-center}
+![](/assets/images/1password.png)
 
 ```bash
 $ ls -lah $XDG_CACHE_HOME/greenclip.history
@@ -292,11 +277,11 @@ The native `macOS` clipboard doesn't suffer from the same issue that `greenclip`
 
 If I copy an SSH private key and go to paste it into a GitHub comment, I want my clipboard manager to go:
 
-![you sure about that?](/assets/gifs/you-sure-about-that.gif){: .align-center}
+![you sure about that?](/assets/gifs/you-sure-about-that.gif)
 
 Or if I copy my Google password out of 1Password and [some random app tries to read the clipboard](https://attack.mitre.org/techniques/T1115/):
 
-![no clipboard for you](/assets/images/no-clipboard-meme.jpg){: .align-center}
+![no clipboard for you](/assets/images/no-clipboard-meme.jpg)
 
 Or maybe you want to lock down what programs can write to your clipboard when you [copy a bitcoin address](https://www.bleepingcomputer.com/news/security/new-clipboard-hijacker-replaces-crypto-wallet-addresses-with-lookalikes/).
 

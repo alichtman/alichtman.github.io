@@ -1,0 +1,164 @@
+/* ─── Two-column layout ──────────────────────────────────────────────────── */
+
+.layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  grid-template-areas: 'sidebar main';
+  gap: var(--space-md);
+  padding: var(--space-md) 0 var(--space-md);
+  align-items: start;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  /* Stick the sidebar as the main content scrolls */
+  position: sticky;
+  top: calc(var(--theme-line-height) * 1.5 + var(--space-md));
+}
+
+.main {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+/* ─── Profile ────────────────────────────────────────────────────────────── */
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.bioPhoto {
+  display: block;
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  object-position: center 32%;
+  margin-bottom: var(--space-sm);
+  border: 1px solid rgb(60, 60, 60);
+}
+
+.location {
+  display: flex;
+  align-items: baseline;
+  gap: 1ch;
+  margin-bottom: 0 !important;
+}
+
+.prompt {
+  color: var(--theme-text-subdued);
+  user-select: none;
+}
+
+.locationValue {
+  color: var(--theme-text-subdued);
+}
+
+.profileLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding-top: var(--space-xs);
+  border-top: var(--theme-border-width) solid var(--theme-text);
+}
+
+.profileLinks a {
+  display: block;
+  padding: var(--space-xs) 0;
+  text-decoration: none;
+  border-bottom: 1px solid rgb(60, 60, 60);
+}
+
+.profileLinks a:last-child {
+  border-bottom: none;
+}
+
+.profileLinks a:hover {
+  text-decoration: none;
+  padding-left: 1ch;
+}
+
+/* ─── Post table ─────────────────────────────────────────────────────────── */
+
+.postTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 0;
+}
+
+.postTable th,
+.postTable td {
+  padding: var(--space-xs) 0;
+  border-bottom: 1px solid rgb(60, 60, 60);
+  vertical-align: top;
+}
+
+.postTable th {
+  font-weight: 700;
+  border-bottom: var(--theme-border-width) solid var(--theme-text);
+  padding-bottom: var(--space-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.postTable tr:last-child td {
+  border-bottom: none;
+}
+
+.postTable th:first-child,
+.postTable td:first-child {
+  padding-right: 3ch;
+}
+
+.postTable th:not(:first-child):not(:last-child),
+.postTable td:not(:first-child):not(:last-child) {
+  padding-right: 3ch;
+}
+
+.dateCell {
+  white-space: nowrap;
+  color: var(--theme-text-subdued);
+  font-size: 0.875rem;
+}
+
+.allPostsLink {
+  margin-top: var(--space-sm);
+  padding-top: var(--space-sm);
+  border-top: 1px solid rgb(60, 60, 60);
+  margin-bottom: 0 !important;
+}
+
+/* ─── Contact ────────────────────────────────────────────────────────────── */
+
+.contactList {
+  list-style: disc;
+  padding-left: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+/* ─── Responsive — stack on narrow screens ───────────────────────────────── */
+
+@media (max-width: 700px) {
+  .layout {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'sidebar'
+      'main';
+  }
+
+  .sidebar {
+    position: static;
+  }
+
+  .hideMobile {
+    display: none;
+  }
+}

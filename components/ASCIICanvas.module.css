@@ -1,0 +1,14 @@
+.root {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  line-height: var(--theme-line-height-base);
+  background: transparent;
+  border: none;
+  white-space: pre;
+  user-select: none;
+}

@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* ─── SRCL Design Tokens ─────────────────────────────────────────────────── */
+
+:root {
+  --font-size: 14px;
+  --font-family: 'JetBrains Mono', 'Courier New', Courier, monospace;
+  --theme-line-height-base: 1.625;
+  --theme-line-height: calc(var(--theme-line-height-base) * 1rem);
+
+  /* Dark theme — sacred.computer / SRCL terminal aesthetic */
+  --theme-text: rgb(255, 255, 255);
+  --theme-background: rgb(17, 17, 17);          /* Card/window fill */
+  --theme-background-body: rgb(17, 17, 17);     /* Page canvas */
+  --theme-window-shadow: rgb(255, 255, 255);    /* Drop shadow colour */
+  --theme-text-subdued: rgb(140, 140, 140);
+  --theme-border-width: 2px;
+  --theme-border: var(--theme-text);
+  --code-bg: rgb(40, 40, 40);
+  --code-border: rgb(80, 73, 69);
+  --code-text: rgb(235, 219, 178);
+  --code-inline-bg: rgb(50, 48, 47);
+  --code-accent: rgb(251, 73, 52);
+
+  /* Spacing helpers */
+  --space-xs: calc(var(--theme-line-height) * 0.25);
+  --space-sm: calc(var(--theme-line-height) * 0.5);
+  --space-md: var(--theme-line-height);
+  --space-lg: calc(var(--theme-line-height) * 2);
+  --space-xl: calc(var(--theme-line-height) * 3);
+}
+
+/* ─── Reset ──────────────────────────────────────────────────────────────── */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ─── Base ───────────────────────────────────────────────────────────────── */
+
+html {
+  font-size: var(--font-size);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  line-height: var(--theme-line-height);
+  background-color: var(--theme-background-body);
+  color: var(--theme-text);
+  min-height: 100vh;
+  overflow-x: clip;
+}
+
+/* ─── Typography ─────────────────────────────────────────────────────────── */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h1 { font-size: 1.5rem; }
+h2 { font-size: 1.25rem; }
+h3 { font-size: 1.125rem; }
+h4, h5, h6 { font-size: 1rem; }
+
+p {
+  margin-bottom: var(--space-md);
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+a {
+  color: var(--theme-text);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+strong, b {
+  font-weight: 700;
+}
+
+em, i {
+  font-style: italic;
+}
+
+/* ─── Lists ──────────────────────────────────────────────────────────────── */
+
+ul,
+ol {
+  padding-left: 2ch;
+  margin-bottom: var(--space-md);
+}
+
+li {
+  margin-bottom: var(--space-xs);
+}
+
+li:last-child {
+  margin-bottom: 0;
+}
+
+/* ─── Code ───────────────────────────────────────────────────────────────── */
+
+code,
+pre,
+kbd,
+samp {
+  font-family: var(--font-family);
+  font-size: 0.9375rem;
+}
+
+code:not(pre code) {
+  background: var(--code-inline-bg);
+  color: var(--code-text);
+  padding: 0.1em 0.4em;
+  border-radius: 0;
+}
+
+pre {
+  background: var(--code-bg);
+  color: var(--code-text);
+  padding: var(--space-sm) 2ch;
+  overflow-x: auto;
+  border-left: var(--theme-border-width) solid var(--code-accent);
+  box-shadow: inset 0 0 0 1px var(--code-border);
+  margin-bottom: var(--space-md);
+  white-space: pre;
+}
+
+pre code {
+  background: none;
+  color: inherit;
+  padding: 0;
+}
+
+pre [data-line] {
+  display: block;
+}
+
+pre [data-highlighted-line] {
+  background: rgb(54, 50, 48);
+  margin: 0 -2ch;
+  padding: 0 2ch;
+}
+
+pre code span[style*='--shiki-dark'] {
+  color: var(--shiki-dark);
+  font-style: var(--shiki-dark-font-style, inherit);
+  font-weight: var(--shiki-dark-font-weight, inherit);
+  text-decoration: var(--shiki-dark-text-decoration, inherit);
+}
+
+/* ─── Images ─────────────────────────────────────────────────────────────── */
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ─── Tables ─────────────────────────────────────────────────────────────── */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--font-size);
+  margin-bottom: var(--space-md);
+}
+
+th,
+td {
+  text-align: left;
+  padding: var(--space-xs) 2ch;
+  border-bottom: var(--theme-border-width) solid var(--theme-text);
+}
+
+th {
+  font-weight: 700;
+  border-bottom-width: var(--theme-border-width);
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+/* ─── Horizontal Rule ────────────────────────────────────────────────────── */
+
+hr {
+  border: none;
+  border-top: var(--theme-border-width) solid var(--theme-text);
+  margin: var(--space-md) 0;
+}
+
+/* ─── Blockquote ─────────────────────────────────────────────────────────── */
+
+blockquote {
+  border-left: var(--theme-border-width) solid var(--theme-text);
+  padding-left: 2ch;
+  color: var(--theme-text-subdued);
+  margin-bottom: var(--space-md);
+}
+
+/* ─── Layout ─────────────────────────────────────────────────────────────── */
+
+.site-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2ch;
+}
+
+/* ─── Prose (post body content) ──────────────────────────────────────────── */
+
+.prose h2,
+.prose h3,
+.prose h4 {
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-sm);
+}
+
+.prose h2:first-child,
+.prose h3:first-child {
+  margin-top: 0;
+}
+
+.prose p + ul,
+.prose p + ol {
+  margin-top: calc(var(--space-md) * -0.5);
+}
+
+.prose img {
+  margin: var(--space-md) auto;
+}
+
+.prose a {
+  word-break: break-word;
+}
+
+/* ─── Utilities ──────────────────────────────────────────────────────────── */
+
+.text-subdued {
+  color: var(--theme-text-subdued);
+}
+
+.monospace {
+  font-family: var(--font-family);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
