@@ -63,9 +63,9 @@ export default function AboutPage() {
                 <a href="https://github.com/internet-development/www-sacred" target="_blank" rel="noopener noreferrer">
                   internet-development/www-sacred
                 </a>. Typography in{' '}
-                <a href="https://fonts.google.com/specimen/Space+Mono" target="_blank" rel="noopener noreferrer">
-                  Space Mono
-                </a>.
+                <a href="https://www.jetbrains.com/lp/mono/" target="_blank" rel="noopener noreferrer">
+                  JetBrains Mono
+                </a>{' '}— the best typeface ever created.
               </p>
               <p>
                 Previously I borrowed many ideas from{' '}

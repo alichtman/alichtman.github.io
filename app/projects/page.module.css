@@ -30,6 +30,8 @@
 .projectTable th {
   font-weight: 700;
   border-bottom: var(--theme-border-width) solid var(--theme-text);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 
 .projectTable tr:last-child td {

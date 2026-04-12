@@ -103,6 +103,8 @@
   font-weight: 700;
   border-bottom: var(--theme-border-width) solid var(--theme-text);
   padding-bottom: var(--space-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 
 .postTable tr:last-child td {
