@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@next/swc-darwin-arm64": "^16.2.3",
     "gray-matter": "^4.0.3",
     "next": "^16.2.3",
     "react": "^19.0.0",
@@ -21,6 +20,9 @@
     "remark-gfm": "^4.0.0",
     "remark-html": "^16.0.1",
     "remark-rehype": "^11.1.2"
+  },
+  "optionalDependencies": {
+    "@next/swc-darwin-arm64": "^16.2.3"
   },
   "devDependencies": {
     "@types/node": "^22",
