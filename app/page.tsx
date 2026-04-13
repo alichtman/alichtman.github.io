@@ -26,6 +26,7 @@ export default function HomePage() {
                   width={600}
                   height={600}
                   className={styles.bioPhoto}
+                  loading="eager"
                 />
                 <p>
                   SWE / SecEng. Strong passion for working on too many projects
@@ -100,7 +101,7 @@ export default function HomePage() {
                 </p>
               )}
             </Card>
-            <Card title="ascii canvas">
+            <Card title="ascii canvas" className={styles.hideMobile}>
               <ASCIICanvas rows={12} />
             </Card>
           </div>
