@@ -73,6 +73,12 @@ jobs:
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+      - name: Copy assets for static serving
+        run: |
+          mkdir -p public/assets
+          cp -r assets/images public/assets/images 2>/dev/null || true
+          cp -r assets/favicon public/assets/favicon 2>/dev/null || true
+
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Upload artifact
