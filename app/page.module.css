@@ -37,11 +37,17 @@
 .bioPhoto {
   display: block;
   width: 100%;
-  height: 240px;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
   object-position: center 32%;
   margin-bottom: var(--space-sm);
   border: 1px solid rgb(60, 60, 60);
+}
+
+@media (min-width: 701px) {
+  .bioPhoto {
+    aspect-ratio: 1 / 1;
+  }
 }
 
 .location {
