@@ -57,13 +57,6 @@ export default function HomePage() {
               </div>
             </Card>
 
-            <Card title="contact">
-              <ul className={styles.contactList}>
-                <li><code>aaronlichtman@gmail.com</code></li>
-                <li><code>alichtman@protonmail.com</code></li>
-                <li>Carrier pigeon, aimed loosely at Seattle</li>
-              </ul>
-            </Card>
           </aside>
 
           {/* ── Main ──────────────────────────────────────────────── */}
