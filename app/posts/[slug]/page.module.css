@@ -61,6 +61,38 @@
   margin: var(--space-sm) 0;
 }
 
+/* Side-by-side photos with captions: <div class="gallery"><figure>…</figure></div> */
+.postBody :global(.gallery) {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-sm);
+  align-items: start;
+  margin: var(--space-md) 0;
+}
+
+.postBody figure {
+  margin: 0;
+}
+
+.postBody figure img {
+  display: block;
+  margin: 0 auto;
+}
+
+.postBody figcaption {
+  margin-top: var(--space-xs);
+  font-size: 0.8rem;
+  font-style: italic;
+  text-align: center;
+  color: var(--theme-text-subdued);
+}
+
+@media (max-width: 700px) {
+  .postBody :global(.gallery) {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ─── Post nav ───────────────────────────────────────────────────────────── */
 
 .postNav {
