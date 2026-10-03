@@ -6,6 +6,7 @@ categories:
 tags:
     - sewing
     - myog
+image: /assets/images/double-zip-pouch/hero-front.jpg
 ---
 
 <div class="gallery single hero"><figure><a href="/assets/images/double-zip-pouch/hero-front.jpg"><img src="/assets/images/double-zip-pouch/hero-front.jpg" alt="Front: main zipper with orange side loops."></a><figcaption>Front: main zipper with orange side loops.</figcaption></figure></div>
