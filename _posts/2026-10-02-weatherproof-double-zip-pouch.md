@@ -132,7 +132,7 @@ Clip one zipper half to each 10″-wide body edge. For the first seam, lay the z
 
 The two side loops go in later, when you close the side seams.
 
-<div class="gallery"><figure><a href="/assets/images/double-zip-pouch/first-zipper-seam-unfolded.jpg"><img src="/assets/images/double-zip-pouch/first-zipper-seam-unfolded.jpg" alt="First seam: zipper sewn to the body before it is folded outward."></a><figcaption>First seam: zipper sewn to the body before it is folded outward.</figcaption></figure><figure><a href="/assets/images/double-zip-pouch/14-first-zipper-seam.jpg"><img src="/assets/images/double-zip-pouch/14-first-zipper-seam.jpg" alt="First zipper seam; topstitch after turning outward."></a><figcaption>First zipper seam; topstitch after turning outward.</figcaption></figure></div>
+<div class="gallery"><figure><a href="/assets/images/double-zip-pouch/first-zipper-seam-unfolded.jpg"><img src="/assets/images/double-zip-pouch/first-zipper-seam-unfolded.jpg" alt="First seam: with reverse-coil zippers, sew right sides together first. Don't sew too close to the teeth, since you need room to fold the zipper over afterwards."></a><figcaption>First seam: with reverse-coil zippers, sew right sides together first. Don't sew too close to the teeth, since you need room to fold the zipper over afterwards.</figcaption></figure><figure><a href="/assets/images/double-zip-pouch/14-first-zipper-seam.jpg"><img src="/assets/images/double-zip-pouch/14-first-zipper-seam.jpg" alt="First zipper seam; topstitch after turning outward."></a><figcaption>First zipper seam; topstitch after turning outward.</figcaption></figure></div>
 
 ## Make the patch-pocket window
 
