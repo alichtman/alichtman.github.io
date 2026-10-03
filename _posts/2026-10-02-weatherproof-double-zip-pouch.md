@@ -52,6 +52,8 @@ Use double-sided sewing tape inside folded hems to hold them while you sew. Add 
 
 Cut the body and pocket rectangles. The plain blue face of the XPAC RX30 is the exterior; the shiny face with the bold black Xs goes on the inside. Keep the mesh relaxed while you measure and cut.
 
+<div class="gallery single"><figure><a href="/assets/images/double-zip-pouch/cut-pieces.jpg"><img src="/assets/images/double-zip-pouch/cut-pieces.jpg" alt="Body and mesh panel cut to size."></a><figcaption>Body and mesh panel cut to size.</figcaption></figure></div>
+
 ### 2. Fold the pocket opening
 
 Along one 9¾″-long mesh edge, fold ½″ toward the wrong side, then fold another ½″ to enclose the raw edge. Hold the fold with double-sided sewing tape and secure it with clips. This uses 1″ of the cut height.
@@ -90,19 +92,27 @@ Test the settings on a folded mesh scrap first.
 
 The final zipper offset at the top is set by eye in Step 18. I aimed for about 1″ of clearance between the zipper and the top fold.
 
+<div class="gallery single"><figure><a href="/assets/images/double-zip-pouch/body-folded-crease.jpg"><img src="/assets/images/double-zip-pouch/body-folded-crease.jpg" alt="Body folded and clipped at both ends to set the bottom crease."></a><figcaption>Body folded and clipped at both ends to set the bottom crease.</figcaption></figure></div>
+
 ### 6. Position the mesh panel
 
 Lay the RX30 inside face up. Pick the half of the body that will become the **back wall** of the pouch: the wall that will carry the Gridstop patch on the outside. Mount the mesh on the **inside of that back wall**. With the finished pouch open in front of you, that's the far wall, not the near one. Center the mesh across the back wall with its raw bottom edge on the crease from Step 5, and point the hemmed opening toward the top. **Stretch the mesh evenly across the body as you install it.** That tension helps the finished pockets hold their contents instead of hanging loose. Keep the RX30 flat.
+
+<div class="gallery"><figure><a href="/assets/images/double-zip-pouch/11-mesh-positioned.jpg"><img src="/assets/images/double-zip-pouch/11-mesh-positioned.jpg" alt="Mesh positioned on the inside of the body."></a><figcaption>Mesh positioned on the inside of the body.</figcaption></figure><figure><a href="/assets/images/double-zip-pouch/mesh-clipped-top.jpg"><img src="/assets/images/double-zip-pouch/mesh-clipped-top.jpg" alt="Mesh laid on the body and clipped along the top edge."></a><figcaption>Mesh laid on the body and clipped along the top edge.</figcaption></figure></div>
 
 ### 7. Create the pocket base
 
 Leave the bottom edge of the mesh unfolded. Clip the bottom edge while keeping the stretch even across the width, then clip the sides. Sew the bottom, then the sides, to form the pocket base. Sew in the direction you want the mesh to pull, and keep the tension even without puckering the RX30. Leave the hemmed top open.
 
+<div class="gallery"><figure><a href="/assets/images/double-zip-pouch/mesh-clipped-sides.jpg"><img src="/assets/images/double-zip-pouch/mesh-clipped-sides.jpg" alt="Mesh clipped along both sides before sewing."></a><figcaption>Mesh clipped along both sides before sewing.</figcaption></figure><figure><a href="/assets/images/double-zip-pouch/mesh-side-sewing.jpg"><img src="/assets/images/double-zip-pouch/mesh-side-sewing.jpg" alt="Sewing the side of the pocket base."></a><figcaption>Sewing the side of the pocket base.</figcaption></figure></div>
+
+<div class="gallery single"><figure><a href="/assets/images/double-zip-pouch/mesh-side-sewing-closeup.jpg"><img src="/assets/images/double-zip-pouch/mesh-side-sewing-closeup.jpg" alt="Close-up: the foot follows the mesh edge."></a><figcaption>Close-up: the foot follows the mesh edge.</figcaption></figure></div>
+
 ### 8. Sew the divider
 
 Mark the divider in line with the decorative bartack from Step 4. Sew from the opening to the bottom through the mesh and the RX30. Secure both ends and reinforce the stitching at the opening. This splits the pocket into two compartments.
 
-<div class="gallery"><figure><a href="/assets/images/double-zip-pouch/11-mesh-positioned.jpg"><img src="/assets/images/double-zip-pouch/11-mesh-positioned.jpg" alt="Mesh positioned on the inside of the body."></a><figcaption>Mesh positioned on the inside of the body.</figcaption></figure><figure><a href="/assets/images/double-zip-pouch/12-divider-stitching.jpg"><img src="/assets/images/double-zip-pouch/12-divider-stitching.jpg" alt="Stitching the divider through both layers."></a><figcaption>Stitching the divider through both layers.</figcaption></figure></div>
+<div class="gallery single"><figure><a href="/assets/images/double-zip-pouch/12-divider-stitching.jpg"><img src="/assets/images/double-zip-pouch/12-divider-stitching.jpg" alt="Stitching the divider through both layers."></a><figcaption>Stitching the divider through both layers.</figcaption></figure></div>
 
 ## Add loops & the main zipper
 
@@ -112,13 +122,15 @@ Fold a piece of 1″-wide orange grosgrain, roughly 3″ long, into a loop, tuck
 
 > **Design note:** I recommend leaving out the black attachment loop if you make this design. This build has one, but it takes up room and I'd drop it from the next version. If you include it anyway, cut about 2½″ of ⅜″-wide black grosgrain, give it two twists before bringing the ends together, and attach it near a side edge. Treat it as light-duty only.
 
+<div class="gallery"><figure><a href="/assets/images/double-zip-pouch/13-orange-loop.jpg"><img src="/assets/images/double-zip-pouch/13-orange-loop.jpg" alt="Orange loop with tucked ends and reinforced base."></a><figcaption>Orange loop with tucked ends and reinforced base.</figcaption></figure><figure><a href="/assets/images/double-zip-pouch/loops-and-seam-lines.jpg"><img src="/assets/images/double-zip-pouch/loops-and-seam-lines.jpg" alt="Outside of the back wall, with the loops and the pocket seam lines."></a><figcaption>Outside of the back wall, with the loops and the pocket seam lines.</figcaption></figure></div>
+
 ### 10. Sew the main zipper halves
 
 Clip one zipper half to each 10″-wide body edge. For the first seam, lay the zipper half with its fabric edge against the plain blue face and the coil pointing toward the panel. Sew parallel to the coil using a zipper foot. Turn the zipper outward, fold the fabric away, and topstitch to keep it clear of the coil. Check that the two halves join without twisting. **Leave the main slider off for now**; it goes on in Step 18, right before the side seams are sewn.
 
 The two side loops go in later, when you close the side seams.
 
-<div class="gallery"><figure><a href="/assets/images/double-zip-pouch/13-orange-loop.jpg"><img src="/assets/images/double-zip-pouch/13-orange-loop.jpg" alt="Orange loop with tucked ends and reinforced base."></a><figcaption>Orange loop with tucked ends and reinforced base.</figcaption></figure><figure><a href="/assets/images/double-zip-pouch/14-first-zipper-seam.jpg"><img src="/assets/images/double-zip-pouch/14-first-zipper-seam.jpg" alt="First zipper seam; topstitch after turning outward."></a><figcaption>First zipper seam; topstitch after turning outward.</figcaption></figure></div>
+<div class="gallery single"><figure><a href="/assets/images/double-zip-pouch/14-first-zipper-seam.jpg"><img src="/assets/images/double-zip-pouch/14-first-zipper-seam.jpg" alt="First zipper seam; topstitch after turning outward."></a><figcaption>First zipper seam; topstitch after turning outward.</figcaption></figure></div>
 
 ## Make the patch-pocket window
 
@@ -126,15 +138,19 @@ The two side loops go in later, when you close the side seams.
 
 Start with the 11″ × 5½″ Gridstop rectangle. Turn about ½″ under at each side and about ¼″ at the top and bottom. Hold the folds with double-sided sewing tape and dry-fit the patch over the interior-pocket seam lines.
 
+<div class="gallery single"><figure><a href="/assets/images/double-zip-pouch/patch-side-fold.jpg"><img src="/assets/images/double-zip-pouch/patch-side-fold.jpg" alt="Patch with its sides folded under and clipped."></a><figcaption>Patch with its sides folded under and clipped.</figcaption></figure></div>
+
 ### 12. Mark and cut the zipper window
 
 Place a rectangular opening near the upper edge. Before cutting, lay the #5 pocket zipper behind the marked opening and size the window to the zipper. The coil should be exposed, the slider should be able to travel, and enough of the zipper's fabric edge should remain on all sides for topstitching. I used a window about 8″ long on this pouch. Leave fabric beyond both ends. Mark a center slit with diagonal branches to each corner, then cut along these lines without cutting past the corners.
+
+<div class="gallery"><figure><a href="/assets/images/double-zip-pouch/15-window-marked.jpg"><img src="/assets/images/double-zip-pouch/15-window-marked.jpg" alt="Marked slit and diagonal cuts at each end."></a><figcaption>Marked slit and diagonal cuts at each end.</figcaption></figure><figure><a href="/assets/images/double-zip-pouch/window-cut-open.jpg"><img src="/assets/images/double-zip-pouch/window-cut-open.jpg" alt="Window cut open, before the edges are folded under."></a><figcaption>Window cut open, before the edges are folded under.</figcaption></figure></div>
 
 ### 13. Turn the opening edges underneath
 
 Fold the slit allowances and end triangles to the wrong side to form a clean window. Hold the folds with double-sided sewing tape. Keep the opening straight and the corners neat.
 
-<div class="gallery"><figure><a href="/assets/images/double-zip-pouch/15-window-marked.jpg"><img src="/assets/images/double-zip-pouch/15-window-marked.jpg" alt="Marked slit and diagonal cuts at each end."></a><figcaption>Marked slit and diagonal cuts at each end.</figcaption></figure><figure><a href="/assets/images/double-zip-pouch/16-window-allowances.jpg"><img src="/assets/images/double-zip-pouch/16-window-allowances.jpg" alt="Window allowances turned to the wrong side."></a><figcaption>Window allowances turned to the wrong side.</figcaption></figure></div>
+<div class="gallery single"><figure><a href="/assets/images/double-zip-pouch/16-window-allowances.jpg"><img src="/assets/images/double-zip-pouch/16-window-allowances.jpg" alt="Window allowances turned to the wrong side."></a><figcaption>Window allowances turned to the wrong side.</figcaption></figure></div>
 
 ## Install the pocket zipper
 
@@ -147,6 +163,8 @@ If you're using continuous zipper chain, fit the pocket slider first. Place the 
 With the patch still separate from the RX30, stitch around all four sides of the window through the Gridstop and the zipper's fabric edge. At the corners, stop needle-down, lift the foot and pivot. Move the slider clear of the foot as needed, and avoid metal stops. Test the zipper before moving on.
 
 <div class="gallery"><figure><a href="/assets/images/double-zip-pouch/17-pocket-zipper-reverse.jpg"><img src="/assets/images/double-zip-pouch/17-pocket-zipper-reverse.jpg" alt="Reverse view of the zipper behind the window."></a><figcaption>Reverse view of the zipper behind the window.</figcaption></figure><figure><a href="/assets/images/double-zip-pouch/18-window-topstitching.jpg"><img src="/assets/images/double-zip-pouch/18-window-topstitching.jpg" alt="Topstitching around the window."></a><figcaption>Topstitching around the window.</figcaption></figure></div>
+
+<div class="gallery single"><figure><a href="/assets/images/double-zip-pouch/window-finished.jpg"><img src="/assets/images/double-zip-pouch/window-finished.jpg" alt="The finished window with the zipper installed."></a><figcaption>The finished window with the zipper installed.</figcaption></figure></div>
 
 ## Attach the exterior pocket
 
@@ -161,6 +179,8 @@ Lay the RX30 plain blue face up, working on the outside of the same back wall th
 Topstitch the entire folded perimeter. The zipper is the way into the pocket, so the upper edge gets sewn down too. Keep the body flat and check the mesh underneath as you sew so you don't catch an interior-pocket opening. The RX30 forms the back wall of the exterior pocket.
 
 <div class="gallery"><figure><a href="/assets/images/double-zip-pouch/19-patch-dry-fit.jpg"><img src="/assets/images/double-zip-pouch/19-patch-dry-fit.jpg" alt="Dry-fitting the patch over the visible seam lines."></a><figcaption>Dry-fitting the patch over the visible seam lines.</figcaption></figure><figure><a href="/assets/images/double-zip-pouch/20-patch-perimeter.jpg"><img src="/assets/images/double-zip-pouch/20-patch-perimeter.jpg" alt="Sewing the upper perimeter to the RX30."></a><figcaption>Sewing the upper perimeter to the RX30.</figcaption></figure></div>
+
+<div class="gallery"><figure><a href="/assets/images/double-zip-pouch/patch-zipper-sewing.jpg"><img src="/assets/images/double-zip-pouch/patch-zipper-sewing.jpg" alt="Sewing the patch down next to the zipper."></a><figcaption>Sewing the patch down next to the zipper.</figcaption></figure><figure><a href="/assets/images/double-zip-pouch/exterior-pocket-finished.jpg"><img src="/assets/images/double-zip-pouch/exterior-pocket-finished.jpg" alt="The finished exterior pocket from an angle."></a><figcaption>The finished exterior pocket from an angle.</figcaption></figure></div>
 
 ## Shape & close the pouch
 

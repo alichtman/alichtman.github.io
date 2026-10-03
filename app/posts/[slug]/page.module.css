@@ -70,6 +70,11 @@
   margin: var(--space-md) 0;
 }
 
+.postBody :global(.gallery.single) {
+  grid-template-columns: minmax(0, 60%);
+  justify-content: center;
+}
+
 .postBody figure {
   margin: 0;
 }
@@ -88,8 +93,9 @@
 }
 
 @media (max-width: 700px) {
-  .postBody :global(.gallery) {
-    grid-template-columns: 1fr;
+  .postBody :global(.gallery),
+  .postBody :global(.gallery.single) {
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 
