@@ -168,6 +168,8 @@ With the patch still separate from the RX30, stitch around all four sides of the
 
 <div class="gallery"><figure><a href="/assets/images/double-zip-pouch/17-pocket-zipper-reverse.jpg"><img src="/assets/images/double-zip-pouch/17-pocket-zipper-reverse.jpg" alt="Reverse view of the zipper behind the window."></a><figcaption>Reverse view of the zipper behind the window.</figcaption></figure><figure><a href="/assets/images/double-zip-pouch/18-window-topstitching.jpg"><img src="/assets/images/double-zip-pouch/18-window-topstitching.jpg" alt="Topstitching around the window."></a><figcaption>Topstitching around the window.</figcaption></figure></div>
 
+<div class="gallery"><figure><a href="/assets/images/double-zip-pouch/window-topstitch-closeup.jpg"><img src="/assets/images/double-zip-pouch/window-topstitch-closeup.jpg" alt="Close-up: topstitching along the edge of the window."></a><figcaption>Close-up: topstitching along the edge of the window.</figcaption></figure><figure><a href="/assets/images/double-zip-pouch/exterior-pocket-finished.jpg"><img src="/assets/images/double-zip-pouch/exterior-pocket-finished.jpg" alt="The finished topstitched window."></a><figcaption>The finished topstitched window.</figcaption></figure></div>
+
 ## Attach the exterior pocket
 
 ### 16. Position the patch
@@ -181,8 +183,6 @@ Lay the RX30 plain blue face up, working on the outside of the same back wall th
 Topstitch the entire folded perimeter. The zipper is the way into the pocket, so the upper edge gets sewn down too. Keep the body flat and check the mesh underneath as you sew so you don't catch an interior-pocket opening. The RX30 forms the back wall of the exterior pocket.
 
 <div class="gallery"><figure><a href="/assets/images/double-zip-pouch/20-patch-perimeter.jpg"><img src="/assets/images/double-zip-pouch/20-patch-perimeter.jpg" alt="Sewing the upper perimeter to the RX30."></a><figcaption>Sewing the upper perimeter to the RX30.</figcaption></figure><figure><a href="/assets/images/double-zip-pouch/patch-zipper-sewing.jpg"><img src="/assets/images/double-zip-pouch/patch-zipper-sewing.jpg" alt="Sewing the patch down next to the zipper."></a><figcaption>Sewing the patch down next to the zipper.</figcaption></figure></div>
-
-<div class="gallery single"><figure><a href="/assets/images/double-zip-pouch/exterior-pocket-finished.jpg"><img src="/assets/images/double-zip-pouch/exterior-pocket-finished.jpg" alt="The finished exterior pocket from an angle."></a><figcaption>The finished exterior pocket from an angle.</figcaption></figure></div>
 
 ## Shape & close the pouch
 
