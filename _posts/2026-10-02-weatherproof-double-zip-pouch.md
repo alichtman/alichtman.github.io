@@ -38,6 +38,8 @@ The main zipper is Uretek; the Gridstop pocket zipper is standard, non-waterproo
 
 <div class="gallery"><figure><a href="/assets/images/double-zip-pouch/05-looking-in.jpg"><img src="/assets/images/double-zip-pouch/05-looking-in.jpg" alt="Looking in: the two mesh compartments and the center bartack."></a><figcaption>Looking in: the two mesh compartments and the center bartack.</figcaption></figure><figure><a href="/assets/images/double-zip-pouch/06-laid-flat.jpg"><img src="/assets/images/double-zip-pouch/06-laid-flat.jpg" alt="Laid flat on the cutting mat."></a><figcaption>Laid flat on the cutting mat.</figcaption></figure></div>
 
+<div class="gallery"><figure><a href="/assets/images/double-zip-pouch/in-pack-front.jpg"><img src="/assets/images/double-zip-pouch/in-pack-front.jpg" alt="Front with the main zipper, sitting in a pack."></a><figcaption>Front with the main zipper, sitting in a pack.</figcaption></figure><figure><a href="/assets/images/double-zip-pouch/in-pack-back.jpg"><img src="/assets/images/double-zip-pouch/in-pack-back.jpg" alt="Back with the exterior zip pocket, sitting in a pack."></a><figcaption>Back with the exterior zip pocket, sitting in a pack.</figcaption></figure></div>
+
 ## Tools & setup
 
 Sewing machine, zipper foot, scissors or rotary cutter, cutting mat, ruler, fabric marker, double-sided sewing tape and Wonder Clips. Optional: cord pulls and a carabiner.
