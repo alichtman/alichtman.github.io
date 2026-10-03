@@ -98,7 +98,7 @@ The final zipper offset at the top is set by eye in Step 18. I aimed for about 1
 
 Lay the RX30 inside face up. Pick the half of the body that will become the **back wall** of the pouch: the wall that will carry the Gridstop patch on the outside. Mount the mesh on the **inside of that back wall**. With the finished pouch open in front of you, that's the far wall, not the near one. Center the mesh across the back wall with its raw bottom edge on the crease from Step 5, and point the hemmed opening toward the top. **Stretch the mesh evenly across the body as you install it.** That tension helps the finished pockets hold their contents instead of hanging loose. Keep the RX30 flat.
 
-<div class="gallery"><figure><a href="/assets/images/double-zip-pouch/11-mesh-positioned.jpg"><img src="/assets/images/double-zip-pouch/11-mesh-positioned.jpg" alt="Mesh positioned on the inside of the body."></a><figcaption>Mesh positioned on the inside of the body.</figcaption></figure><figure><a href="/assets/images/double-zip-pouch/mesh-clipped-top.jpg"><img src="/assets/images/double-zip-pouch/mesh-clipped-top.jpg" alt="Mesh laid on the body and clipped along the top edge."></a><figcaption>Mesh laid on the body and clipped along the top edge.</figcaption></figure></div>
+<div class="gallery single"><figure><a href="/assets/images/double-zip-pouch/mesh-clipped-top.jpg"><img src="/assets/images/double-zip-pouch/mesh-clipped-top.jpg" alt="Mesh laid on the body and clipped along the top edge."></a><figcaption>Mesh laid on the body and clipped along the top edge.</figcaption></figure></div>
 
 ### 7. Create the pocket base
 
@@ -112,7 +112,7 @@ Leave the bottom edge of the mesh unfolded. Clip the bottom edge while keeping t
 
 Mark the divider in line with the decorative bartack from Step 4. Sew from the opening to the bottom through the mesh and the RX30. Secure both ends and reinforce the stitching at the opening. This splits the pocket into two compartments.
 
-<div class="gallery single"><figure><a href="/assets/images/double-zip-pouch/12-divider-stitching.jpg"><img src="/assets/images/double-zip-pouch/12-divider-stitching.jpg" alt="Stitching the divider through both layers."></a><figcaption>Stitching the divider through both layers.</figcaption></figure></div>
+<div class="gallery"><figure><a href="/assets/images/double-zip-pouch/11-mesh-positioned.jpg"><img src="/assets/images/double-zip-pouch/11-mesh-positioned.jpg" alt="Mesh positioned on the inside of the body."></a><figcaption>Mesh positioned on the inside of the body.</figcaption></figure><figure><a href="/assets/images/double-zip-pouch/12-divider-stitching.jpg"><img src="/assets/images/double-zip-pouch/12-divider-stitching.jpg" alt="Stitching the divider through both layers."></a><figcaption>Stitching the divider through both layers.</figcaption></figure></div>
 
 ## Add loops & the main zipper
 
