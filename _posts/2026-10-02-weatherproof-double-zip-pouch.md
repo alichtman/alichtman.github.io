@@ -160,13 +160,13 @@ Fold the slit allowances and end triangles to the wrong side to form a clean win
 
 If you're using continuous zipper chain, fit the pocket slider first. Place the zipper behind the window with the slider body facing outward, so the pull will face outward. Use double-sided sewing tape to hold the folded window edges against the zipper's fabric edge, and add clips as needed. Keep the slider within the opening and check that the fabric edge extends behind every edge. A 9″ length of zipper chain gives about ½″ of overlap beyond each end of an 8″ window, which is enough to hold securely.
 
+<div class="gallery single"><figure><a href="/assets/images/double-zip-pouch/window-zipper-in-place.jpg"><img src="/assets/images/double-zip-pouch/window-zipper-in-place.jpg" alt="Zipper in place behind the window, before topstitching."></a><figcaption>Zipper in place behind the window, before topstitching.</figcaption></figure></div>
+
 ### 15. Topstitch the window
 
 With the patch still separate from the RX30, stitch around all four sides of the window through the Gridstop and the zipper's fabric edge. At the corners, stop needle-down, lift the foot and pivot. Move the slider clear of the foot as needed, and avoid metal stops. Test the zipper before moving on.
 
 <div class="gallery"><figure><a href="/assets/images/double-zip-pouch/17-pocket-zipper-reverse.jpg"><img src="/assets/images/double-zip-pouch/17-pocket-zipper-reverse.jpg" alt="Reverse view of the zipper behind the window."></a><figcaption>Reverse view of the zipper behind the window.</figcaption></figure><figure><a href="/assets/images/double-zip-pouch/18-window-topstitching.jpg"><img src="/assets/images/double-zip-pouch/18-window-topstitching.jpg" alt="Topstitching around the window."></a><figcaption>Topstitching around the window.</figcaption></figure></div>
-
-<div class="gallery single"><figure><a href="/assets/images/double-zip-pouch/window-finished.jpg"><img src="/assets/images/double-zip-pouch/window-finished.jpg" alt="The finished window with the zipper installed."></a><figcaption>The finished window with the zipper installed.</figcaption></figure></div>
 
 ## Attach the exterior pocket
 
