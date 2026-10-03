@@ -14,8 +14,6 @@ tags:
 
 This pouch has four storage zones: two interior stretch-mesh pockets, a weatherproof main compartment, and an exterior zip pocket. The finished size is about 9¼″ wide × 6″ tall.
 
-<div class="gallery"><figure><a href="/assets/images/double-zip-pouch/01-front.jpg"><img src="/assets/images/double-zip-pouch/01-front.jpg" alt="The front: main zipper with orange grosgrain side loops."></a><figcaption>The front: main zipper with orange grosgrain side loops.</figcaption></figure><figure><a href="/assets/images/double-zip-pouch/02-back.jpg"><img src="/assets/images/double-zip-pouch/02-back.jpg" alt="The back: Gridstop zip pocket, center loop and black attachment loop."></a><figcaption>The back: Gridstop zip pocket, center loop and black attachment loop.</figcaption></figure></div>
-
 The body is XPAC RX30, with tensioned mesh pockets inside, a Gridstop zip pocket outside, and bound interior seams. It's weatherproof, not waterproof: stitched seams can still let water in.
 
 ## Materials & cutting list
