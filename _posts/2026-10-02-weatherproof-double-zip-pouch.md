@@ -100,8 +100,6 @@ The final zipper offset at the top is set by eye in Step 18. I aimed for about 1
 
 Lay the RX30 inside face up. Pick the half of the body that will become the **back wall** of the pouch: the wall that will carry the Gridstop patch on the outside. Mount the mesh on the **inside of that back wall**. With the finished pouch open in front of you, that's the far wall, not the near one. Center the mesh across the back wall with its raw bottom edge on the crease from Step 5, and point the hemmed opening toward the top. **Stretch the mesh evenly across the body as you install it.** That tension helps the finished pockets hold their contents instead of hanging loose. Keep the RX30 flat.
 
-<div class="gallery single"><figure><a href="/assets/images/double-zip-pouch/mesh-clipped-top.jpg"><img src="/assets/images/double-zip-pouch/mesh-clipped-top.jpg" alt="Mesh laid on the body and clipped along the top edge."></a><figcaption>Mesh laid on the body and clipped along the top edge.</figcaption></figure></div>
-
 ### 7. Create the pocket base
 
 Leave the bottom edge of the mesh unfolded. Clip the bottom edge while keeping the stretch even across the width, then clip the sides. Sew the bottom, then the sides, to form the pocket base. Sew in the direction you want the mesh to pull, and keep the tension even without puckering the RX30. Leave the hemmed top open.
