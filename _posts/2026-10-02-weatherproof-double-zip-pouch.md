@@ -58,11 +58,13 @@ Cut the body and pocket rectangles. The plain blue face of the XPAC RX30 is the 
 
 Along one 9¾″-long mesh edge, fold ½″ toward the wrong side, then fold another ½″ to enclose the raw edge. Hold the fold with double-sided sewing tape and secure it with clips. This uses 1″ of the cut height.
 
+<div class="gallery"><figure><a href="/assets/images/double-zip-pouch/09-mesh-hem-before-bartack.jpg"><img src="/assets/images/double-zip-pouch/09-mesh-hem-before-bartack.jpg" alt="Mesh panel before hemming."></a><figcaption>Mesh panel before hemming.</figcaption></figure><figure><a href="/assets/images/double-zip-pouch/07-mesh-hem-clipped.jpg"><img src="/assets/images/double-zip-pouch/07-mesh-hem-clipped.jpg" alt="Double-folded opening held with clips."></a><figcaption>Double-folded opening held with clips.</figcaption></figure></div>
+
 ### 3. Sew the hem
 
 Stitch close to the inner folded edge, catching all layers. Guide the mesh through without stretching it. Secure the ends and trim the thread tails.
 
-<div class="gallery"><figure><a href="/assets/images/double-zip-pouch/07-mesh-hem-clipped.jpg"><img src="/assets/images/double-zip-pouch/07-mesh-hem-clipped.jpg" alt="Double-folded opening held with clips."></a><figcaption>Double-folded opening held with clips.</figcaption></figure><figure><a href="/assets/images/double-zip-pouch/08-mesh-hem-sewing.jpg"><img src="/assets/images/double-zip-pouch/08-mesh-hem-sewing.jpg" alt="Sewing the mesh hem."></a><figcaption>Sewing the mesh hem.</figcaption></figure></div>
+<div class="gallery single"><figure><a href="/assets/images/double-zip-pouch/08-mesh-hem-sewing.jpg"><img src="/assets/images/double-zip-pouch/08-mesh-hem-sewing.jpg" alt="Sewing the mesh hem."></a><figcaption>Sewing the mesh hem.</figcaption></figure></div>
 
 ## Add the decorative bartack
 
@@ -82,7 +84,7 @@ A bartack is a short, dense zigzag bar. At this stage it only goes through the m
 
 Test the settings on a folded mesh scrap first.
 
-<div class="gallery"><figure><a href="/assets/images/double-zip-pouch/09-mesh-hem-before-bartack.jpg"><img src="/assets/images/double-zip-pouch/09-mesh-hem-before-bartack.jpg" alt="The hemmed edge before the decorative stitching."></a><figcaption>The hemmed edge before the decorative stitching.</figcaption></figure><figure><a href="/assets/images/double-zip-pouch/10-mesh-bartack.jpg"><img src="/assets/images/double-zip-pouch/10-mesh-bartack.jpg" alt="The decorative bartack at the center of the hem."></a><figcaption>The decorative bartack at the center of the hem.</figcaption></figure></div>
+<div class="gallery single"><figure><a href="/assets/images/double-zip-pouch/10-mesh-bartack.jpg"><img src="/assets/images/double-zip-pouch/10-mesh-bartack.jpg" alt="The decorative bartack at the center of the hem."></a><figcaption>The decorative bartack at the center of the hem.</figcaption></figure></div>
 
 ## Attach & divide the interior pocket
 
