@@ -21,6 +21,7 @@ export interface Post {
   tags: string[];
   content: string;
   hidden?: boolean;
+  image?: string;
 }
 
 export interface PostWithHtml extends Post {
@@ -114,6 +115,7 @@ export function getPostBySlug(slug: string): Post {
   const firstProse = paragraphs.find((s) => {
     if (!s || s.startsWith('#') || s.startsWith('---')) return false;
     if (s.startsWith('![]') || s.startsWith('![')) return false;  // pure image
+    if (s.startsWith('<')) return false;  // raw HTML block (e.g. photo galleries)
     if (s.startsWith('```') || s.startsWith('~~~')) return false;  // code fence
     const plain = stripMarkdownSyntax(s);
     return plain.length > 20;  // skip near-empty paragraphs after stripping
@@ -132,6 +134,7 @@ export function getPostBySlug(slug: string): Post {
     tags: (data.tags as string[]) ?? [],
     content,
     hidden: Boolean(data.hidden),
+    image: typeof data.image === 'string' ? data.image : undefined,
   };
 }
 
