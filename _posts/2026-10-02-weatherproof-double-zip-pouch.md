@@ -31,7 +31,7 @@ All measurements are in inches (″). Rectangles are listed as width × height.
 | Orange loops | 1″-wide grosgrain / 3 pieces | Approx. 3″ long each |
 | Attachment loop | ⅜″-wide black grosgrain / 1 piece | Approx. 2½″ long; used in this build, but I recommend leaving it out |
 | Seam binding | Bias tape / 2 lengths | 1″ wide; cut approx. 7″ long each and trim after sewing |
-| Finishing | Mara Tex 70 thread, black and white; zipper pulls | Maxpedition pulls preferred |
+| Finishing | Gutermann MARA 70 thread, black and white; zipper pulls | Maxpedition pulls preferred |
 
 The main zipper is Uretek; the Gridstop pocket zipper is standard, non-waterproof coil. **Match the sliders to the zippers:** a #5 reverse-coil slider for the Uretek and a #5 standard-coil slider for the pocket.
 
@@ -45,7 +45,7 @@ The main zipper is Uretek; the Gridstop pocket zipper is standard, non-waterproo
 
 Sewing machine, zipper foot, scissors or rotary cutter, cutting mat, ruler, fabric marker, double-sided sewing tape and Wonder Clips. Optional: cord pulls and a carabiner.
 
-Use a **90/14 needle** and **Mara Tex 70** thread, black and white as needed. General stitch length is **2–3 mm**, except for the bartack settings in Step 4.
+Use a **90/14 needle** and **Gutermann MARA 70** thread, black and white as needed. General stitch length is **2–3 mm**, except for the bartack settings in Step 4.
 
 Use double-sided sewing tape inside folded hems to hold them while you sew. Add clips to support layered edges, and take them out before they reach the foot. Test your stitching on scraps. Use **⅜″ side-seam allowances** when closing the pouch.
 
